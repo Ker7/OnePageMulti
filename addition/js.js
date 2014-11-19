@@ -2,15 +2,14 @@ menuSlideSpeed = 250;   //mobile drop down menüü langemis/tousmise kiiru
 galImageClickable = true;   //kui pikka aega dragida pole enam click toimif
 
 jQuery(document).ready(function($) {
+
     console.log("JQ Document Ready!");
-        //V2=$("#mmenu").is(':visible');
-        //console.log('tere '+V2);
 
     $("#mmenu").hide();
 
     setInterval( function() {
         swapBack();
-    }, 8000 //6000+(Math.random()*4000)
+    }, 8000
     );
 
     $(".mnavbtn").click(function() {    //mobile nav pressed
@@ -29,9 +28,6 @@ jQuery(document).ready(function($) {
 
         //bootbox.alert("Hello world!");
 
-        //setTimeout(function() {
-        //    $(".navicon").css("border-color","#202F38");
-        //}, 300);
     });
 
     //kodunupp viiib ylesse
@@ -100,11 +96,6 @@ jQuery(document).ready(function($) {
 
         imgObj.data('ddreg', rim);
         imgObj.data('ddhov', him);
-
-        //imgObj.data('aaa', '123');
-
-        //console.log('O: '+rim);
-        //console.log('/: '+him);
       });
 
     $('.ttblok').hover(function(){
@@ -112,15 +103,11 @@ jQuery(document).ready(function($) {
         imgObj = $(this).children('img');
         him = imgObj.data('ddhov');
 
-      //console.log('onh* '+him);
-        //$(this).children('img').attr('src', 'http://localhost/skpinvest/wp-content/uploads/2014/08/118kuused200.png');
         imgObj.attr('src', him);
     },function(){
         imgObj = $(this).children('img');
         rim = imgObj.data('ddreg');
 
-      //console.log('offh* '+rim);
-        //$(this).children('img').attr('src', 'http://localhost/skpinvest/wp-content/uploads/2014/08/118kuused200_roheline.png');
         imgObj.attr('src', rim);
     });
 
@@ -132,14 +119,6 @@ jQuery(document).ready(function($) {
         $(this).children('.tn-regImg').show();
         $(this).children('.tn-hovImg').hide();
     });
-    //on({
-    //  "mouseover" : function() {
-    //     $(this).children('img').src = 'http://localhost/skpinvest/wp-content/uploads/2014/08/118kuused200.png ';
-    //   },
-    //   "mouseout" : function() {
-    //     $(this).children('img').src = 'http://localhost/skpinvest/wp-content/uploads/2014/08/118kuused200_roheline.png';
-    //   }
-    // });
 });
 
 
@@ -185,7 +164,7 @@ swapGallayImage = function(pid) {
 }
 
 fitGallayImage = function() {
-//console.log('fitGallayImage');
+    //console.log('fitGallayImage');
             $('#gallayimg').width('74%');   // Testin siin tagasi suureks venitamist
 
     winh = getH();
@@ -198,14 +177,13 @@ fitGallayImage = function() {
         winh = getH();
         gH=$('#gimg').height();
         hspace=winh-100-gH;
-//console.log('|');
+    //console.log('|');
     }
 
 
             $('#gallayimg').css('opacity', '1');
             $('.spinner').css('display', 'none');
 }
-
 
 /* Otsib galerii datast eelmise(arg-0) või järgmise(arg-1) pildi ID
  */
@@ -248,7 +226,7 @@ setGalDraggable = function(first) {
 
     if (first) {
         $(galtag).udraggable({
-    //otsi lehe laius, ja php'ga pane datasee kaasa mitu pilti - paju kerida voib..
+    //otsi lehe laius, ja php'ga pane datasee kaasa mitu pilti - ehk kui palju kerida voib..
             start: function(event, ui) {    //jQ UI'ga oli ", ui" peale eventi
                 $(this).addClass('noclick');
             },
