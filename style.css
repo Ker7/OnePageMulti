@@ -1,0 +1,814 @@
+@charset "UTF-8";
+/*
+Theme Name: SKP theme
+Theme URI:
+Description: WordPress theme starter pack for faster design and development.
+Author: Lifehacker
+Author URI: http://lifehacker.com
+Version: 0.1
+Tags: lifehacker
+
+This theme is property of Adam Dachis and is not available for public use.
+
+*/
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------------------------------*/
+
+/*** GLOBAL : GENERAL STYLE DEFAULTS ***/
+html
+{
+    background: #eee;
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background: #eee;
+	margin: 0;
+}
+body, input, textarea
+{
+	color: #222;
+	/*font-family: Arial, sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: normal;
+	clear: both;
+}
+hr
+{
+	background-color: #999;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+pre
+{
+	font: 11px Monaco, monospace;
+	line-height: 1.5;
+	margin-bottom: 1.5em;
+}
+code
+{
+	font: 11px Monaco, monospace;
+}
+p
+{
+	margin: 4px 0 12px 0;
+}
+a
+{
+	color: #0a77e6;
+}
+a:hover
+{
+	color: #065c88;
+}
+a:visited
+{
+	color: #8b46d1;
+}
+
+
+
+/*** PAGE LAYOUT ***/
+
+/* Styles that affect the entire layout of the page */
+div#container
+{
+	margin: 4px 4px 4px 4px;
+}
+div#content
+{
+
+}
+
+
+/*** HEADER : MENU ***/
+
+/* To see a menu in your header, you'll need to first add one in WordPress Admin */
+.menu ul
+{
+    list-style: none;
+    margin: 0;
+}
+.menu ul ul
+{
+    display: none;
+}
+.menu li
+{
+    display: inline;
+    float: left;
+	padding: 0 8px 0 4px;
+}
+.menu-item
+{
+
+}
+.menu-item a
+{
+	font-size: 30px;
+	text-decoration: none;
+	color: #3eaf00;
+}
+.menu-item a:hover
+{
+	color: #5d8a05;
+}
+
+
+
+/*** HEADER : OTHER ***/
+
+
+/*** CONTENT : POSTS AND PAGES ***/
+
+/* Entry and Page Titles */
+h1.entry-title
+{
+
+}
+h2.entry-title
+{
+
+}
+h2.entry-title a
+{
+
+}
+h1.page-title
+{
+
+}
+
+/* Media Alignment */
+.alignright
+{
+	/* Style for right-aligned images in posts */
+	padding: 8px 0 8px 8px;
+	float: right;
+}
+.alignleft
+{
+	/* Style for left-aligned images in posts */
+	padding: 8px 8px 8px 0;
+	float: left;
+}
+
+/* Entry Content */
+.entry-content
+{
+	/* Style that affects actual entry/post content */
+}
+.entry-content a
+{
+
+}
+.entry-content a:hover
+{
+
+}
+.entry-content h1, h2, h3, h4, h5
+{
+
+}
+.entry-content ol li
+{
+
+}
+
+.entry-utility
+{
+	/* Style for the entry utility, which sits below a post and provides info like categories, tags, feeds, and an edit link (for authors) */
+}
+.entry-meta
+{
+	/* Style for the entry metadata (author, etc.) */
+}
+.skip-link
+{
+	/* Style for the skip link */
+	/*position: absolute;
+	left: -9000px;*/
+}
+.navigation
+{
+	/* Style for the navigation links (next/previous post) on a given post */
+}
+
+
+/*** CONTENT : COMMENTS ***/
+
+div#comments
+{
+	/* Style that affects the DIV containing all the comments */
+}
+.comments h3
+{
+	/* H3 header style for comments */
+}
+.comments ol
+{
+	/* Comments are displayed as ordered lists by default, so you want to style that list so it looks the way you want */
+}
+.comments ol li
+{
+	/* Style each list item in the comments ordered list */
+}
+.comments img
+{
+	/* Style for the user avatar beside each comment */
+	float: left;
+	margin: 0 12px 8px 0;
+}
+.comments .comment
+{
+	/* Style that applies to each individual comment in a series of comments */
+}
+
+.children ul li
+{
+	/* A style that refers to the children (as in, responses to) any given comment */
+}
+
+.comment-reply-link
+{
+	/* Style for the "Reply" link on a comment */
+}
+.comment-meta
+{
+	/* Style for metadata for a comment */
+}
+div#respond
+{
+	/* DIV that contains the comment response form */
+}
+div#respond h3
+{
+	/* H3 header for the comment response form */
+}
+
+
+/*** CONTENT : SIDEBAR ***/
+div#primary
+{
+	/* Primary Widget Area DIV */
+}
+div#secondary
+{
+	/* Secondary Widget Area DIV */
+}
+.widget-area
+{
+	/* Class that applies to BOTH widget areas */
+}
+.xoxo
+{
+	/* Class that applies to each item in each widget area (an unordered list class) */
+}
+
+
+/*** FOOTER ***/
+div#footer
+{
+background-color: #202f38;
+/*	float: left;
+	clear: both;*/
+}
+
+
+/*** YOUR CSS ***/
+
+#main {
+    /*max-width: 1600px;*/
+    background-color: #ddd;
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#ylariba {
+width: 100%;
+    background-color:#ddd;
+    opacity: 0.94;
+
+position: fixed;
+width:100%;
+}
+
+#navnimi {
+/*background-color: #a2f000;*/
+}
+
+#navkontakt {
+/*background-color: #b6f000;*/
+}
+
+#navnupud {
+/*background-color: #c0f000;*/
+margin-top: 28px;
+}
+#mnavnimi {
+/*background-color: #a2f000;*/
+}
+
+#mnavkontakt {
+/*background-color: #b6f000;*/
+}
+
+#mnavnupud {
+/*background-color: #c0f000;*/
+}
+
+#pilt {
+    height: 728px;
+    background: url(img/forest2.jpg) 0px 0px no-repeat;
+}
+
+.mbtn {
+    cursor: pointer;
+}
+
+.logodiv {
+    background: url(img/logo.png) 0px center no-repeat;
+    background-size: 100%;
+    max-width: 247px;
+    margin-top: 10px;
+    /*max-height: 40px;*/
+    /*min-height: 30px;*/
+    /*padding-top:0;*/
+    height: 60px;
+}
+
+.primtext1 {
+    font-size: 1.7em;
+}
+
+.kontext {
+    /*font-family: 'Raleway', sans-serif;*/
+    font-size: 1em;
+}
+
+.navbtn, .kontblk {
+    padding-left: 1%;
+    padding-right: 1%;
+    /*padding-top: 15px;*/
+    display: block;
+    float: left;
+    color: black;
+}
+
+.kontblk {
+    padding-top: 28px;
+    /*vertical-align: middle;*/
+}
+
+.htel {
+    /*margin-left: calc(10% - 10px);*/
+    /*margin-right: calc(10% - 10px);*/
+    float: left;
+    margin-left: calc(15% - 30px);
+    /*margin-right: calc(15% - 30px);*/
+}
+.hemail {
+    float: right;
+    /*margin-left: calc(15% - 30px);*/
+    margin-right: calc(15% - 30px);
+}
+
+.navbtn:hover, .mnavbtn:hover {
+    color: green;
+}
+
+/* mobiili nav nuppude stiil, keskel box*/
+.mnavbtn {
+    /*padding-top: 15px;*/
+
+    margin-right: 20px;
+    display: block;
+    text-align: center;
+    color: black;
+}
+
+#navnupud a {
+display: inline;
+text-decoration: none;
+color: black;
+}
+
+nav#pc {
+    height:80px;
+    width:100%;
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+    display:block;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.center {
+    text-align: center;
+}
+
+#banner {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1020px;
+    color: white;
+}
+
+#banner h2{
+    padding-top: 300px;
+    font-size: 3em;
+}
+
+#banner h3{
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+.btxt-2 {
+    font-size: 2em;
+}
+
+/* top-padding läheb querites väiksemaks! */
+#teenused {
+    padding-top: 70px;
+    background-color: #fff;
+}
+
+#teenused a {
+    display: block;
+    color:green;
+    cursor: pointer;
+}
+
+.tcont {
+    overflow: auto;
+    width: 100%;
+}
+
+.tn-img {
+    height: 100px;
+}
+.tn-11 {
+    background: url(img/ikoon-mets.jpg) center 20px no-repeat;
+}
+
+.tn-cont {
+    float:right;
+}
+
+.tcont:after {
+	clear:both;
+}
+
+/* teenustekastide äärised, suurel lehel suurem pros */
+.tsection {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#saadapakkumine {
+    height: 80px;
+
+    padding-top: 60px;
+    margin-top: 40px;
+
+    background-color: #fff;
+    border-top: 1px dashed gray;
+}
+
+#tutvustus {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #E6E6E6;
+}
+
+#galerii {
+    height: 580px;
+}
+
+#galerii td {
+    border: 1px dashed purple;
+    width: 290px;
+    height: 290px;
+}
+
+
+.mcenter {
+margin: 0 auto;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------*/
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP col muutub MQ's väiksemateks, aga .tcol ei muutu */
+.col, .tcol {
+	display: block;
+	float:left;
+	margin: 0 0 0 1.6%;/* TOP ja BOTTOM 1% maha */
+}
+
+.tcol {
+    word-wrap: break-word;
+}
+
+.col:first-child, .tcol:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/* GRIDS */
+
+.span_3_of_3 {
+	width: calc(100% - 4px);
+}
+.span_2_of_3 {
+	width: calc(66.1% - 4px);
+}
+.span_1_of_3 {
+	width: calc(32.2% - 4px);
+}
+
+.span_4_of_4 {
+	width: 100%;
+}
+
+.span_3_of_4 {
+	width: 74.6%;
+}
+
+.span_2_of_4 {
+	width: 49.2%;
+}
+
+.span_1_of_4 {
+	width: 23.8%;
+}
+
+/* Teenuse blokkides sees olevad jaotused laienevad erinevalt */
+.tspan_3_of_4 {
+	width: 74.6%;
+}
+
+.tspan_1_of_4 {
+	width: 23.8%;
+}
+
+/* Tutvustuse sektsioonis on 45-55 % jaotus */
+.tutspan1 {
+    width: 43%;
+}
+
+.tutspan2 {
+    width: 55%;
+}
+
+/* mobile nav ribas olevad nimi kontakt ja menu-togle nupp */
+.nspan_4_of_4 {
+	width: 100%;
+}
+
+.nspan_3_of_4 {
+	width: 74.6%;
+}
+
+.nspan_2_of_4 {
+	width: 49.2%;
+}
+
+.nspan_1_of_4 {
+	width: 23.8%;
+}
+
+.span_3_of_3, .span_2_of_3, .span_1_of_3 {
+    border: 1px dashed blue;
+}
+
+
+/* Def pole menüü akent näha
+menu <a> peab ka eraldi none'ma */
+nav#mobile, #mmenu, #mmenu a {
+    display:none;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+
+
+
+@media only screen and (max-width: 1380px) { /* 480 */
+
+    #teenused {
+        padding-top: 60px;
+    }
+
+    .tsection {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 1160px) { /* 480 */
+
+    #teenused {
+        padding-top: 50px;
+    }
+
+    .tsection {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .mnavbtn {
+        margin-right: 0px;
+    }
+
+@media screen and (max-width: 960px) {
+
+    #teenused {
+        padding-top: 40px;
+    }
+
+    .tsection {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    /* menuyy mobile asjad */
+    #navnupud, #navnimi, #navkontakt {
+        display:none;
+    }
+
+    nav#mobile {
+        background-color:#ddd;
+        opacity: 0.94;
+        /*box-shadow: 0 0 3px 2px #b6f000;/*rgba(0,0,0,0.3);*/
+        display:block;
+        min-width: 300px;
+    }
+    nav#pc {
+        display:none;
+
+    }
+    /*
+    Top black bar that holds the toggle button
+    */
+
+    nav#mobile #toggle-bar {
+        /*line-height:70px;*/
+        height:80px;
+    }
+
+    /*
+    Toggle button #1 ("Menu")
+    */
+
+/*    nav#mobile strong a {
+        margin-left:30px;
+        border:1px solid #444;
+        padding:10px;
+    }*/
+
+    /*
+    Toggle button #2 ("Navicon")
+    */
+
+    nav#mobile .navicon {
+        float: right;
+        height: 6px;
+        width: 34px;
+        margin: 20px;
+        border-top: 18px double #b6f000;
+        border-bottom: 6px solid #b6f000;
+        font-size:0;
+    }
+
+    /*
+    The dropdown menu
+    */
+
+    #mmenu a {
+        display:block;
+        overflow: auto;
+        /*background-color:#b6f000;*/
+
+        background-color: #DDD;
+        opacity: 0.94;
+
+        text-transform:uppercase;
+        text-decoration: none;
+        letter-spacing:.2em;
+        margin:2px 0;
+        padding:6px 0 6px 8px;
+
+        box-sizing: border-box
+    }
+
+    #mmenu a:visited {
+        color:black;
+        /*padding-left:8px;*/
+    }
+
+    #mmenu a:before {
+        /*content: "2192";*/
+        padding-right:8px;
+    }
+}
+
+@media only screen and (max-width: 780px) { /* 480 */
+
+	.col {
+		margin: 0 0 0 0%; /* TOP ja BOTTOM 1% maha */
+	}
+
+	.span_3_of_3, .span_2_of_3, .span_1_of_3, .span_4_of_4, .span_3_of_4, .span_2_of_4, .span_1_of_4 {
+		width: 100%;
+	}
+
+/*    .primtext {
+        font-size: 1.5em;
+    }
+    .primtext1 {
+        font-size: 1.3em;
+    }*/
+    /*.kontext {*/
+    /*    font-size: 0.8em;*/
+    /*}*/
+
+}
+
+@media only screen and (max-width: 580px) {
+
+    .htel {
+    margin-left: calc(20% - 10px);
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    }
+
+    .hemail {
+    display:none;
+    }
+
+}
