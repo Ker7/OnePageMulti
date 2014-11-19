@@ -1,1 +1,4 @@
-/sasskaust/*
+/sasskaust/.sass-cache/*
+/sasskaust/sass/config.rb
+/sasskaust/sass/stylesheets/
+/sasskaust/sass/sass/.sass-cache/*

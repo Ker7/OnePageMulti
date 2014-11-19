@@ -1322,12 +1322,19 @@ div#pc {
   margin-bottom: 20px;
 }
 /* line 1174, sasskaust/sass/sass/screen.scss */
+#teenusedSingle #teenused-sisu .teenus-sisu-sisu h5 {
+  color: #000000;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+/* line 1179, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-sisu a {
   color: #008000;
 }
-/* line 1178, sasskaust/sass/sass/screen.scss */
+/* line 1183, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu li {
-  display: inline-block;
+  display: block;
+  /*inline*/
   background: url("img/tahtis_punkt.png") no-repeat left top;
   background-size: 14px 11px;
   background-position: 3px 6px;
@@ -1340,27 +1347,27 @@ div#pc {
   color: #606A71;
 }
 @media screen and (max-width: 650px) {
-  /* line 1193, sasskaust/sass/sass/screen.scss */
+  /* line 1198, sasskaust/sass/sass/screen.scss */
   #teenusedSingle #teenused-sisu .teenus-sisu-img {
     display: none;
   }
-  /* line 1197, sasskaust/sass/sass/screen.scss */
+  /* line 1202, sasskaust/sass/sass/screen.scss */
   #teenusedSingle #teenused-sisu .teenus-sisu-sisu {
     width: 100%;
   }
 }
 
-/* line 1207, sasskaust/sass/sass/screen.scss */
+/* line 1212, sasskaust/sass/sass/screen.scss */
 .tcont {
   overflow: auto;
   width: 100%;
 }
 
-/* line 1212, sasskaust/sass/sass/screen.scss */
+/* line 1217, sasskaust/sass/sass/screen.scss */
 .tn-img {
   height: 100px;
 }
-/* line 1214, sasskaust/sass/sass/screen.scss */
+/* line 1219, sasskaust/sass/sass/screen.scss */
 .tn-img img {
   margin-top: 20px;
   display: block;
@@ -1388,17 +1395,17 @@ div#pc {
 /*.tn-6 {*/
 /*    background: url(img/pencil100.png) center 20px no-repeat;*/
 /*}*/
-/* line 1243, sasskaust/sass/sass/screen.scss */
+/* line 1248, sasskaust/sass/sass/screen.scss */
 .tn-cont {
   float: right;
 }
 
-/* line 1247, sasskaust/sass/sass/screen.scss */
+/* line 1252, sasskaust/sass/sass/screen.scss */
 .tcont:after {
   clear: both;
 }
 
-/* line 1251, sasskaust/sass/sass/screen.scss */
+/* line 1256, sasskaust/sass/sass/screen.scss */
 #saadapakkumine {
   /*height: 80px;*/
   /*max-width: 800px;*/
@@ -1409,35 +1416,35 @@ div#pc {
   border-top: 1px dashed #ABBAC5;
   /*606a71;*/
 }
-/* line 1261, sasskaust/sass/sass/screen.scss */
+/* line 1266, sasskaust/sass/sass/screen.scss */
 #saadapakkumine p {
   font-size: 1.2em;
   color: #606a71;
 }
-/* line 1266, sasskaust/sass/sass/screen.scss */
+/* line 1271, sasskaust/sass/sass/screen.scss */
 #saadapakkumine .spbl1 {
   width: calc(60% - 10px);
 }
-/* line 1269, sasskaust/sass/sass/screen.scss */
+/* line 1274, sasskaust/sass/sass/screen.scss */
 #saadapakkumine .spbl2 {
   width: 40%;
 }
-/* line 1274, sasskaust/sass/sass/screen.scss */
+/* line 1279, sasskaust/sass/sass/screen.scss */
 #saadapakkumine .spbl2 p {
   color: white;
   padding-top: 14px;
   font-size: 1em;
 }
-/* line 1280, sasskaust/sass/sass/screen.scss */
+/* line 1285, sasskaust/sass/sass/screen.scss */
 #saadapakkumine .sptekst2 {
   padding-top: 6px;
 }
-/* line 1283, sasskaust/sass/sass/screen.scss */
+/* line 1288, sasskaust/sass/sass/screen.scss */
 #saadapakkumine .spbl2 span {
   color: #606A71;
   font-size: 0.9em;
 }
-/* line 1287, sasskaust/sass/sass/screen.scss */
+/* line 1292, sasskaust/sass/sass/screen.scss */
 #saadapakkumine .spbl2 a {
   text-decoration: none;
   display: inline-block;
@@ -1448,18 +1455,18 @@ div#pc {
   cursor: pointer;
   /*margin-bottom: 2em;*/
 }
-/* line 1300, sasskaust/sass/sass/screen.scss */
+/* line 1305, sasskaust/sass/sass/screen.scss */
 #saadapakkumine .spbl2 a:hover {
   color: #5bc100;
 }
 @media screen and (max-width: 650px) {
-  /* line 1304, sasskaust/sass/sass/screen.scss */
+  /* line 1309, sasskaust/sass/sass/screen.scss */
   #saadapakkumine .spcont, #saadapakkumine .spbl1, #saadapakkumine .spbl2 {
     width: 100%;
   }
 }
 
-/* line 1310, sasskaust/sass/sass/screen.scss */
+/* line 1315, sasskaust/sass/sass/screen.scss */
 .spcont {
   max-width: 800px;
   /*width: 100%;*/
@@ -1467,18 +1474,18 @@ div#pc {
   overflow: auto;
 }
 
-/* line 1317, sasskaust/sass/sass/screen.scss */
+/* line 1322, sasskaust/sass/sass/screen.scss */
 .spbl1, .spbl2 {
   float: left;
 }
 
-/* line 1321, sasskaust/sass/sass/screen.scss */
+/* line 1326, sasskaust/sass/sass/screen.scss */
 .spbl1 {
   margin-right: 10px;
   padding-top: 12px;
 }
 
-/* line 1326, sasskaust/sass/sass/screen.scss */
+/* line 1331, sasskaust/sass/sass/screen.scss */
 #tutvustus {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -1487,19 +1494,19 @@ div#pc {
   background-size: 507px 235px, 100px 100px;
   color: #606a71;
 }
-/* line 1336, sasskaust/sass/sass/screen.scss */
+/* line 1341, sasskaust/sass/sass/screen.scss */
 #tutvustus h2 {
   font-size: 2.3em;
   font-weight: 300;
   padding-bottom: 20px;
 }
 @media screen and (max-width: 700px) {
-  /* line 1336, sasskaust/sass/sass/screen.scss */
+  /* line 1341, sasskaust/sass/sass/screen.scss */
   #tutvustus h2 {
     font-size: 2em;
   }
 }
-/* line 1345, sasskaust/sass/sass/screen.scss */
+/* line 1350, sasskaust/sass/sass/screen.scss */
 #tutvustus h3 {
   font-size: 1.7em;
   line-height: 1.4em;
@@ -1507,14 +1514,14 @@ div#pc {
   padding-right: 30px;
 }
 @media screen and (max-width: 700px) {
-  /* line 1345, sasskaust/sass/sass/screen.scss */
+  /* line 1350, sasskaust/sass/sass/screen.scss */
   #tutvustus h3 {
     /*text-align:justify;*/
     /*text-justify:inter-word;*/
     font-size: 1.4em;
   }
 }
-/* line 1359, sasskaust/sass/sass/screen.scss */
+/* line 1364, sasskaust/sass/sass/screen.scss */
 #tutvustus p {
   font-size: 0.9em;
   line-height: 1.6em;
@@ -1524,7 +1531,7 @@ div#pc {
 }
 
 /* teenustekastide ├ż├żrised, suurel lehel suurem pros */
-/* line 1370, sasskaust/sass/sass/screen.scss */
+/* line 1375, sasskaust/sass/sass/screen.scss */
 .tsection {
   /*padding-left: 15%;*/
   /*padding-right: 15%;*/
@@ -1535,7 +1542,7 @@ div#pc {
 }
 
 /* Tutvustuse sektsioonis on 45-55 % jaotus */
-/* line 1380, sasskaust/sass/sass/screen.scss */
+/* line 1385, sasskaust/sass/sass/screen.scss */
 .tutspan1 {
   float: left;
   width: 50%;
@@ -1543,7 +1550,7 @@ div#pc {
   margin-left: 30px;
 }
 
-/* line 1387, sasskaust/sass/sass/screen.scss */
+/* line 1392, sasskaust/sass/sass/screen.scss */
 .tutspan2 {
   float: left;
   width: 50%;
@@ -1552,14 +1559,14 @@ div#pc {
   margin-left: 30px;
 }
 
-/* line 1395, sasskaust/sass/sass/screen.scss */
+/* line 1400, sasskaust/sass/sass/screen.scss */
 #galcont {
   position: relative;
   overflow: hidden;
   height: 580px;
 }
 
-/* line 1401, sasskaust/sass/sass/screen.scss */
+/* line 1406, sasskaust/sass/sass/screen.scss */
 #galerii {
   /*max-height: 580px;*/
   height: inherit;
@@ -1567,7 +1574,7 @@ div#pc {
   /* 100% */
   position: absolute;
 }
-/* line 1406, sasskaust/sass/sass/screen.scss */
+/* line 1411, sasskaust/sass/sass/screen.scss */
 #galerii .galrida {
   overflow: hidden;
   /*overflow-x: scroll;*/
@@ -1578,7 +1585,7 @@ div#pc {
   position: abolute;
   /* abs */
 }
-/* line 1414, sasskaust/sass/sass/screen.scss */
+/* line 1419, sasskaust/sass/sass/screen.scss */
 #galerii .galrida .galimg {
   /*float: left;*/
   position: relative;
@@ -1587,23 +1594,23 @@ div#pc {
   width: 290px;
   height: 290px;
 }
-/* line 1420, sasskaust/sass/sass/screen.scss */
+/* line 1425, sasskaust/sass/sass/screen.scss */
 #galerii .galrida .galimg img {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-/* line 1427, sasskaust/sass/sass/screen.scss */
+/* line 1432, sasskaust/sass/sass/screen.scss */
 #galerii .galrida:last-child {
   top: 290px;
 }
 
-/* line 1432, sasskaust/sass/sass/screen.scss */
+/* line 1437, sasskaust/sass/sass/screen.scss */
 .galimg:hover, #gimg:hover, #galblack:hover, .ppc:hover {
   cursor: pointer;
 }
 
-/* line 1436, sasskaust/sass/sass/screen.scss */
+/* line 1441, sasskaust/sass/sass/screen.scss */
 .galimcap {
   position: absolute;
   top: 0;
@@ -1617,7 +1624,7 @@ div#pc {
   /*#202f38;  #202f38 <- alumine HP-sinine ; #333;   ynge roheline-041302*/
   transition: opacity 0.5s ease;
 }
-/* line 1447, sasskaust/sass/sass/screen.scss */
+/* line 1452, sasskaust/sass/sass/screen.scss */
 .galimcap p {
   /*transition: opacity 0.5s ease;*/
   position: absolute;
@@ -1628,7 +1635,7 @@ div#pc {
   text-transform: uppercase;
 }
 
-/* line 1458, sasskaust/sass/sass/screen.scss */
+/* line 1463, sasskaust/sass/sass/screen.scss */
 #gallay {
   display: none;
   z-index: 4999;
@@ -1638,14 +1645,14 @@ div#pc {
   top: 80px;
   max-width: 1600px;
 }
-/* line 1470, sasskaust/sass/sass/screen.scss */
+/* line 1475, sasskaust/sass/sass/screen.scss */
 #gallay #galblack {
   background-color: #000;
   opacity: 0.8;
   width: 100%;
   height: 100%;
 }
-/* line 1477, sasskaust/sass/sass/screen.scss */
+/* line 1482, sasskaust/sass/sass/screen.scss */
 #gallay #gallayimg {
   position: absolute;
   top: 20px;
@@ -1657,13 +1664,13 @@ div#pc {
   transition: opacity 0.25;
   opacity: 1;
 }
-/* line 1490, sasskaust/sass/sass/screen.scss */
+/* line 1495, sasskaust/sass/sass/screen.scss */
 #gallay #gallayimg #gimg {
   margin-left: -50%;
   width: 100%;
   /* IMPORTANT */
 }
-/* line 1494, sasskaust/sass/sass/screen.scss */
+/* line 1499, sasskaust/sass/sass/screen.scss */
 #gallay #gallayimg #gallayprev {
   position: absolute;
   /*top: calc(50% - 20px);*/
@@ -1675,7 +1682,7 @@ div#pc {
   background: url(img/noolvasakule.png) 0px center no-repeat;
   background-size: 40px 40px;
 }
-/* line 1505, sasskaust/sass/sass/screen.scss */
+/* line 1510, sasskaust/sass/sass/screen.scss */
 #gallay #gallayimg #gallaynext {
   position: absolute;
   /*top: calc(50% - 20px);*/
@@ -1688,18 +1695,18 @@ div#pc {
   background: url(img/noolparemale.png) 0px center no-repeat;
   background-size: 40px 40px;
 }
-/* line 1517, sasskaust/sass/sass/screen.scss */
+/* line 1522, sasskaust/sass/sass/screen.scss */
 #gallay #gallayimg #gallayprev:hover {
   background: url(img/noolvasakule_over.png) 0px center no-repeat;
   background-size: 40px 40px;
 }
-/* line 1522, sasskaust/sass/sass/screen.scss */
+/* line 1527, sasskaust/sass/sass/screen.scss */
 #gallay #gallayimg #gallaynext:hover {
   background: url(img/noolparemale_over.png) 0px center no-repeat;
   background-size: 40px 40px;
 }
 
-/* line 1529, sasskaust/sass/sass/screen.scss */
+/* line 1534, sasskaust/sass/sass/screen.scss */
 .galrida, .galimg, img.galimg {
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -1714,17 +1721,17 @@ div#pc {
   -webkit-touch-callout: none;
 }
 
-/* line 1546, sasskaust/sass/sass/screen.scss */
+/* line 1551, sasskaust/sass/sass/screen.scss */
 .galimg:hover .galimcap {
   opacity: .6;
 }
-/* line 1548, sasskaust/sass/sass/screen.scss */
+/* line 1553, sasskaust/sass/sass/screen.scss */
 .galimg:hover .galimcap h5 {
   opacity: 1;
 }
 
 /* gale loading spinner */
-/* line 1555, sasskaust/sass/sass/screen.scss */
+/* line 1560, sasskaust/sass/sass/screen.scss */
 .spinner {
   /*margin: 40px auto;*/
   display: none;
@@ -1735,7 +1742,7 @@ div#pc {
   left: calc(50% - 20px);
 }
 
-/* line 1565, sasskaust/sass/sass/screen.scss */
+/* line 1570, sasskaust/sass/sass/screen.scss */
 .container1 > div, .container2 > div, .container3 > div {
   width: 8px;
   height: 8px;
@@ -1749,110 +1756,110 @@ div#pc {
   animation-fill-mode: both;
 }
 
-/* line 1579, sasskaust/sass/sass/screen.scss */
+/* line 1584, sasskaust/sass/sass/screen.scss */
 .spinner .spinner-container {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-/* line 1585, sasskaust/sass/sass/screen.scss */
+/* line 1590, sasskaust/sass/sass/screen.scss */
 .container2 {
   -webkit-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
 }
 
-/* line 1590, sasskaust/sass/sass/screen.scss */
+/* line 1595, sasskaust/sass/sass/screen.scss */
 .container3 {
   -webkit-transform: rotateZ(90deg);
   transform: rotateZ(90deg);
 }
 
-/* line 1595, sasskaust/sass/sass/screen.scss */
+/* line 1600, sasskaust/sass/sass/screen.scss */
 .circle1 {
   top: 0;
   left: 0;
 }
 
-/* line 1596, sasskaust/sass/sass/screen.scss */
+/* line 1601, sasskaust/sass/sass/screen.scss */
 .circle2 {
   top: 0;
   right: 0;
 }
 
-/* line 1597, sasskaust/sass/sass/screen.scss */
+/* line 1602, sasskaust/sass/sass/screen.scss */
 .circle3 {
   right: 0;
   bottom: 0;
 }
 
-/* line 1598, sasskaust/sass/sass/screen.scss */
+/* line 1603, sasskaust/sass/sass/screen.scss */
 .circle4 {
   left: 0;
   bottom: 0;
 }
 
-/* line 1600, sasskaust/sass/sass/screen.scss */
+/* line 1605, sasskaust/sass/sass/screen.scss */
 .container2 .circle1 {
   -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
 }
 
-/* line 1605, sasskaust/sass/sass/screen.scss */
+/* line 1610, sasskaust/sass/sass/screen.scss */
 .container3 .circle1 {
   -webkit-animation-delay: -1.0s;
   animation-delay: -1.0s;
 }
 
-/* line 1610, sasskaust/sass/sass/screen.scss */
+/* line 1615, sasskaust/sass/sass/screen.scss */
 .container1 .circle2 {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
 
-/* line 1615, sasskaust/sass/sass/screen.scss */
+/* line 1620, sasskaust/sass/sass/screen.scss */
 .container2 .circle2 {
   -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
 }
 
-/* line 1620, sasskaust/sass/sass/screen.scss */
+/* line 1625, sasskaust/sass/sass/screen.scss */
 .container3 .circle2 {
   -webkit-animation-delay: -0.7s;
   animation-delay: -0.7s;
 }
 
-/* line 1625, sasskaust/sass/sass/screen.scss */
+/* line 1630, sasskaust/sass/sass/screen.scss */
 .container1 .circle3 {
   -webkit-animation-delay: -0.6s;
   animation-delay: -0.6s;
 }
 
-/* line 1630, sasskaust/sass/sass/screen.scss */
+/* line 1635, sasskaust/sass/sass/screen.scss */
 .container2 .circle3 {
   -webkit-animation-delay: -0.5s;
   animation-delay: -0.5s;
 }
 
-/* line 1635, sasskaust/sass/sass/screen.scss */
+/* line 1640, sasskaust/sass/sass/screen.scss */
 .container3 .circle3 {
   -webkit-animation-delay: -0.4s;
   animation-delay: -0.4s;
 }
 
-/* line 1640, sasskaust/sass/sass/screen.scss */
+/* line 1645, sasskaust/sass/sass/screen.scss */
 .container1 .circle4 {
   -webkit-animation-delay: -0.3s;
   animation-delay: -0.3s;
 }
 
-/* line 1645, sasskaust/sass/sass/screen.scss */
+/* line 1650, sasskaust/sass/sass/screen.scss */
 .container2 .circle4 {
   -webkit-animation-delay: -0.2s;
   animation-delay: -0.2s;
 }
 
-/* line 1650, sasskaust/sass/sass/screen.scss */
+/* line 1655, sasskaust/sass/sass/screen.scss */
 .container3 .circle4 {
   -webkit-animation-delay: -0.1s;
   animation-delay: -0.1s;
@@ -1877,43 +1884,43 @@ div#pc {
   }
 }
 /* Postituslehtedel on header tume, seal nupud heledad */
-/* line 1672, sasskaust/sass/sass/screen.scss */
+/* line 1677, sasskaust/sass/sass/screen.scss */
 .tumeTcol {
   color: #919ba2;
 }
 
-/* line 1676, sasskaust/sass/sass/screen.scss */
+/* line 1681, sasskaust/sass/sass/screen.scss */
 .heleTcol {
   color: #404f59;
 }
 
 /* ----------- */
-/* line 1682, sasskaust/sass/sass/screen.scss */
+/* line 1687, sasskaust/sass/sass/screen.scss */
 .mcenter {
   margin: 0 auto;
 }
 
 /*  */
-/* line 1687, sasskaust/sass/sass/screen.scss */
+/* line 1692, sasskaust/sass/sass/screen.scss */
 .tblock {
   margin-top: 2em;
   /*height: 2em;*/
 }
 
-/* line 1692, sasskaust/sass/sass/screen.scss */
+/* line 1697, sasskaust/sass/sass/screen.scss */
 #colophon {
   /*border: 1px dashed blue;*/
   background-color: white;
   padding: 30px 0px;
   /*min-height: 30px;*/
 }
-/* line 1697, sasskaust/sass/sass/screen.scss */
+/* line 1702, sasskaust/sass/sass/screen.scss */
 #colophon #kontakt {
   margin: 0px auto;
   max-width: 1200px;
   height: 30px;
 }
-/* line 1701, sasskaust/sass/sass/screen.scss */
+/* line 1706, sasskaust/sass/sass/screen.scss */
 #colophon #kontakt p {
   /*border: 1px dashed red;*/
   /*text-align: center;*/
@@ -1926,34 +1933,34 @@ div#pc {
   font-size: inherit;
 }
 @media screen and (max-width: 1050px) {
-  /* line 1697, sasskaust/sass/sass/screen.scss */
+  /* line 1702, sasskaust/sass/sass/screen.scss */
   #colophon #kontakt {
     max-width: 650px;
     height: 70px;
   }
-  /* line 1715, sasskaust/sass/sass/screen.scss */
+  /* line 1720, sasskaust/sass/sass/screen.scss */
   #colophon #kontakt span {
     /*padding: 8px 30px;*/
   }
 }
 @media screen and (max-width: 650px) {
-  /* line 1697, sasskaust/sass/sass/screen.scss */
+  /* line 1702, sasskaust/sass/sass/screen.scss */
   #colophon #kontakt {
     max-width: 450px;
     height: 110px;
   }
-  /* line 1722, sasskaust/sass/sass/screen.scss */
+  /* line 1727, sasskaust/sass/sass/screen.scss */
   #colophon #kontakt span {
     /*padding: 15px 30px;*/
   }
 }
 @media screen and (max-width: 450px) {
-  /* line 1697, sasskaust/sass/sass/screen.scss */
+  /* line 1702, sasskaust/sass/sass/screen.scss */
   #colophon #kontakt {
     max-width: 280px;
     height: 230px;
   }
-  /* line 1729, sasskaust/sass/sass/screen.scss */
+  /* line 1734, sasskaust/sass/sass/screen.scss */
   #colophon #kontakt span {
     /*padding: 15px 30px;*/
   }
@@ -1961,7 +1968,7 @@ div#pc {
 
 /*------------------------------------------------------------------------------*/
 /*  SECTIONS  */
-/* line 1742, sasskaust/sass/sass/screen.scss */
+/* line 1747, sasskaust/sass/sass/screen.scss */
 .section {
   clear: both;
   padding: 0px;
@@ -1969,7 +1976,7 @@ div#pc {
 }
 
 /*  COLUMN SETUP col muutub MQ's v├żiksemateks, aga .tcol ei muutu */
-/* line 1749, sasskaust/sass/sass/screen.scss */
+/* line 1754, sasskaust/sass/sass/screen.scss */
 .col, .tcol {
   display: block;
   float: left;
@@ -1977,103 +1984,103 @@ div#pc {
   /* TOP ja BOTTOM 1% maha */
 }
 
-/* line 1755, sasskaust/sass/sass/screen.scss */
+/* line 1760, sasskaust/sass/sass/screen.scss */
 .tcol {
   word-wrap: break-word;
 }
 
-/* line 1759, sasskaust/sass/sass/screen.scss */
+/* line 1764, sasskaust/sass/sass/screen.scss */
 .col:first-child, .tcol:first-child {
   margin-left: 0;
 }
 
 /*  GROUPING  */
-/* line 1763, sasskaust/sass/sass/screen.scss */
+/* line 1768, sasskaust/sass/sass/screen.scss */
 .group:before,
 .group:after {
   content: "";
   display: table;
 }
 
-/* line 1768, sasskaust/sass/sass/screen.scss */
+/* line 1773, sasskaust/sass/sass/screen.scss */
 .group:after {
   clear: both;
 }
 
-/* line 1771, sasskaust/sass/sass/screen.scss */
+/* line 1776, sasskaust/sass/sass/screen.scss */
 .group {
   zoom: 1;
   /* For IE 6/7 */
 }
 
 /* GRIDS */
-/* line 1777, sasskaust/sass/sass/screen.scss */
+/* line 1782, sasskaust/sass/sass/screen.scss */
 .span_3_of_3 {
   width: calc(100% - 4px);
 }
 
-/* line 1780, sasskaust/sass/sass/screen.scss */
+/* line 1785, sasskaust/sass/sass/screen.scss */
 .span_2_of_3 {
   width: calc(66.1% - 4px);
 }
 
-/* line 1783, sasskaust/sass/sass/screen.scss */
+/* line 1788, sasskaust/sass/sass/screen.scss */
 .span_1_of_3 {
   width: calc(32.2% - 4px);
 }
 
-/* line 1787, sasskaust/sass/sass/screen.scss */
+/* line 1792, sasskaust/sass/sass/screen.scss */
 .span_4_of_4 {
   width: 100%;
 }
 
-/* line 1791, sasskaust/sass/sass/screen.scss */
+/* line 1796, sasskaust/sass/sass/screen.scss */
 .span_3_of_4 {
   width: 74.6%;
 }
 
-/* line 1795, sasskaust/sass/sass/screen.scss */
+/* line 1800, sasskaust/sass/sass/screen.scss */
 .span_2_of_4 {
   width: 49.2%;
 }
 
-/* line 1799, sasskaust/sass/sass/screen.scss */
+/* line 1804, sasskaust/sass/sass/screen.scss */
 .span_1_of_4 {
   width: 23.8%;
 }
 
 /* Teenuse blokkides sees olevad jaotused laienevad erinevalt */
-/* line 1804, sasskaust/sass/sass/screen.scss */
+/* line 1809, sasskaust/sass/sass/screen.scss */
 .tspan_3_of_4 {
   width: 74.6%;
 }
 
-/* line 1808, sasskaust/sass/sass/screen.scss */
+/* line 1813, sasskaust/sass/sass/screen.scss */
 .tspan_1_of_4 {
   width: 23.8%;
 }
 
 /* mobile nav ribas olevad nimi kontakt ja menu-togle nupp */
-/* line 1817, sasskaust/sass/sass/screen.scss */
+/* line 1822, sasskaust/sass/sass/screen.scss */
 .nspan_1_of_4 {
   /* logo */
   width: 34%;
 }
 @media only screen and (max-width: 580px) {
-  /* line 1817, sasskaust/sass/sass/screen.scss */
+  /* line 1822, sasskaust/sass/sass/screen.scss */
   .nspan_1_of_4 {
     width: 45%;
     min-width: 180px;
   }
 }
 
-/* line 1825, sasskaust/sass/sass/screen.scss */
+/* line 1830, sasskaust/sass/sass/screen.scss */
 .nspan_2_of_4 {
   width: 48%;
   /* logofix- tel ja email */
 }
 @media only screen and (max-width: 580px) {
-  /* line 1825, sasskaust/sass/sass/screen.scss */
+  /* line 1830, sasskaust/sass/sass/screen.scss */
   .nspan_2_of_4 {
     /*margin-left: calc(20% - 10px);*/
     /*margin-left: 0;*/
@@ -2082,20 +2089,20 @@ div#pc {
   }
 }
 
-/* line 1835, sasskaust/sass/sass/screen.scss */
+/* line 1840, sasskaust/sass/sass/screen.scss */
 .nspan_3_of_4 {
   width: 17.5%;
   /* nupp mobile */
 }
 
-/* line 1839, sasskaust/sass/sass/screen.scss */
+/* line 1844, sasskaust/sass/sass/screen.scss */
 .span_3_of_3, .span_2_of_3, .span_1_of_3 {
   /*    border: 1px dashed blue;*/
 }
 
 /* Def pole men├╝├╝ akent n├żha
 menu <a> peab ka eraldi none'ma */
-/* line 1846, sasskaust/sass/sass/screen.scss */
+/* line 1851, sasskaust/sass/sass/screen.scss */
 div#mobile, #mmenu, #mmenu a {
   display: none;
 }
@@ -2103,7 +2110,7 @@ div#mobile, #mmenu, #mmenu a {
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 @media only screen and (max-width: 1380px) {
   /* 480 */
-  /* line 1857, sasskaust/sass/sass/screen.scss */
+  /* line 1862, sasskaust/sass/sass/screen.scss */
   #teenused {
     padding-top: 60px;
   }
@@ -2115,7 +2122,7 @@ div#mobile, #mmenu, #mmenu a {
 }
 @media only screen and (max-width: 1160px) {
   /* 480 */
-  /* line 1869, sasskaust/sass/sass/screen.scss */
+  /* line 1874, sasskaust/sass/sass/screen.scss */
   #teenused {
     padding-top: 50px;
   }
@@ -2124,7 +2131,7 @@ div#mobile, #mmenu, #mmenu a {
   /*    padding-left: 5%;*/
   /*    padding-right: 5%;*/
   /*}*/
-  /* line 1878, sasskaust/sass/sass/screen.scss */
+  /* line 1883, sasskaust/sass/sass/screen.scss */
   .mnavbtn {
     margin-right: 0px;
   }
@@ -2139,12 +2146,12 @@ div#mobile, #mmenu, #mmenu a {
   /*    padding-right: 2%;*/
   /*}*/
   /* menuyy mobile asjad */
-  /* line 1895, sasskaust/sass/sass/screen.scss */
+  /* line 1900, sasskaust/sass/sass/screen.scss */
   #navnupud, #navnimi, #navkontakt {
     display: none;
   }
 
-  /* line 1899, sasskaust/sass/sass/screen.scss */
+  /* line 1904, sasskaust/sass/sass/screen.scss */
   div#mobile {
     background-color: #ddd;
     opacity: 0.94;
@@ -2153,7 +2160,7 @@ div#mobile, #mmenu, #mmenu a {
     min-width: 300px;
   }
 
-  /* line 1906, sasskaust/sass/sass/screen.scss */
+  /* line 1911, sasskaust/sass/sass/screen.scss */
   div#pc {
     display: none;
   }
@@ -2161,7 +2168,7 @@ div#mobile, #mmenu, #mmenu a {
   /*
   Top black bar that holds the toggle button
   */
-  /* line 1914, sasskaust/sass/sass/screen.scss */
+  /* line 1919, sasskaust/sass/sass/screen.scss */
   div#mobile #toggle-bar {
     /*line-height:70px;*/
     height: 80px;
@@ -2179,7 +2186,7 @@ div#mobile, #mmenu, #mmenu a {
   /*
   Toggle button #2 ("Navicon")
   */
-  /* line 1934, sasskaust/sass/sass/screen.scss */
+  /* line 1939, sasskaust/sass/sass/screen.scss */
   div#mobile .navicon {
     float: right;
     height: 25px;
@@ -2191,7 +2198,7 @@ div#mobile, #mmenu, #mmenu a {
     font-size: 0;
   }
 
-  /* line 1944, sasskaust/sass/sass/screen.scss */
+  /* line 1949, sasskaust/sass/sass/screen.scss */
   div#mobile .naviconTume {
     float: right;
     height: 25px;
@@ -2206,7 +2213,7 @@ div#mobile, #mmenu, #mmenu a {
   /*
   The dropdown menu
   */
-  /* line 1959, sasskaust/sass/sass/screen.scss */
+  /* line 1964, sasskaust/sass/sass/screen.scss */
   #mmenu a {
     display: block;
     overflow: auto;
@@ -2223,12 +2230,12 @@ div#mobile, #mmenu, #mmenu a {
     box-sizing: border-box;
   }
 
-  /* line 1978, sasskaust/sass/sass/screen.scss */
+  /* line 1983, sasskaust/sass/sass/screen.scss */
   #mmenu a:first-child {
     padding-top: 18px;
   }
 
-  /* line 1981, sasskaust/sass/sass/screen.scss */
+  /* line 1986, sasskaust/sass/sass/screen.scss */
   #mmenu a:last-child {
     padding-bottom: 18px;
   }
@@ -2237,13 +2244,13 @@ div#mobile, #mmenu, #mmenu a {
   /*    color:white;*/
   /*    padding-left:8px;*/
   /*}*/
-  /* line 1989, sasskaust/sass/sass/screen.scss */
+  /* line 1994, sasskaust/sass/sass/screen.scss */
   #mmenu a:hover {
     color: #4BA000;
     /*padding-left:8px;*/
   }
 
-  /* line 1994, sasskaust/sass/sass/screen.scss */
+  /* line 1999, sasskaust/sass/sass/screen.scss */
   #mmenu a:before {
     /*content: "2192";*/
     padding-right: 8px;
@@ -2251,23 +2258,23 @@ div#mobile, #mmenu, #mmenu a {
 }
 @media only screen and (max-width: 780px) {
   /* 480 komm */
-  /* line 2002, sasskaust/sass/sass/screen.scss */
+  /* line 2007, sasskaust/sass/sass/screen.scss */
   .col {
     margin: 0 0 0 0%;
     /* TOP ja BOTTOM 1% maha */
   }
 
-  /* line 2006, sasskaust/sass/sass/screen.scss */
+  /* line 2011, sasskaust/sass/sass/screen.scss */
   .span_3_of_3, .span_2_of_3, .span_1_of_3, .span_4_of_4, .span_3_of_4, .span_2_of_4, .span_1_of_4 {
     width: 100%;
   }
 
-  /* line 2010, sasskaust/sass/sass/screen.scss */
+  /* line 2015, sasskaust/sass/sass/screen.scss */
   .tutspan1, .tutspan2 {
     width: 100%;
   }
 
-  /* line 2013, sasskaust/sass/sass/screen.scss */
+  /* line 2018, sasskaust/sass/sass/screen.scss */
   .tutspan2 {
     margin-top: 30px;
   }
@@ -2283,48 +2290,48 @@ div#mobile, #mmenu, #mmenu a {
   /*}*/
 }
 @media only screen and (max-width: 1400px) {
-  /* line 2030, sasskaust/sass/sass/screen.scss */
+  /* line 2035, sasskaust/sass/sass/screen.scss */
   #galcont {
     height: 440px;
   }
-  /* line 2033, sasskaust/sass/sass/screen.scss */
+  /* line 2038, sasskaust/sass/sass/screen.scss */
   #galcont #galerii {
     /*height: 560px;*/
     /*background-color: #5b1def;*/
   }
-  /* line 2036, sasskaust/sass/sass/screen.scss */
+  /* line 2041, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida:last-child {
     top: 220px;
   }
-  /* line 2039, sasskaust/sass/sass/screen.scss */
+  /* line 2044, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida {
     height: 220px;
   }
-  /* line 2041, sasskaust/sass/sass/screen.scss */
+  /* line 2046, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida .galimg {
     width: 220px;
     height: 220px;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 2051, sasskaust/sass/sass/screen.scss */
+  /* line 2056, sasskaust/sass/sass/screen.scss */
   #galcont {
     height: 290px;
   }
-  /* line 2054, sasskaust/sass/sass/screen.scss */
+  /* line 2059, sasskaust/sass/sass/screen.scss */
   #galcont #galerii {
     /*height: 520px;*/
     /*background-color: #d17bb3;*/
   }
-  /* line 2057, sasskaust/sass/sass/screen.scss */
+  /* line 2062, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida:last-child {
     top: 145px;
   }
-  /* line 2060, sasskaust/sass/sass/screen.scss */
+  /* line 2065, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida {
     height: 145px;
   }
-  /* line 2062, sasskaust/sass/sass/screen.scss */
+  /* line 2067, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida .galimg {
     width: 145px;
     height: 145px;
