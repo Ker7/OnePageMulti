@@ -25,7 +25,7 @@
 
         <div id="mmenu">
             <a data-targ="#teenused" class="mnavbtn mbtn mnb">TEENUSED</a>
-            <a data-targ="#tutvustus" class="mnavbtn mbtn">ETTEVÕTTEST</a>
+            <a href="<?php echo get_home_url().'/ettevottest' ?>" class="mnavbtn mbtn">ETTEVÕTTEST</a>
             <a data-targ="#galerii" class="mnavbtn mbtn">GALERII</a>
             <a data-targ="#fcont" class="mnavbtn mbtn">HINNAPÄRING</a>
             <a data-targ="#kontakt" class="mnavbtn mbtn">KONTAKT</a>
@@ -44,7 +44,7 @@
 
                 <div id="navnupud" class="col span_2_of_4">
                     <a data-targ="#teenused" class="heleTcol mnavbtn mbtn">TEENUSED</a>
-                    <a data-targ="#tutvustus" class="heleTcol mnavbtn mbtn">ETTEVÕTTEST</a>
+                    <a href="<?php echo get_home_url().'/ettevottest' ?>" class="heleTcol mnavbtn mbtn">ETTEVÕTTEST</a>
                     <a data-targ="#galerii" class="heleTcol mnavbtn mbtn">GALERII</a>
                     <a data-targ="#fcont" class="heleTcol mnavbtn mbtn">HINNAPÄRING</a>
                     <a data-targ="#kontakt" class="heleTcol mnavbtn mbtn">KONTAKT</a>

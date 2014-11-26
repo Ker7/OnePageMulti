@@ -15,30 +15,26 @@ if (have_posts()) {
     <div id="main">
     <!--div id="taust"></div -->
     <div id="ylaribatume" >
-        <div class="section group">
-            <div id="mobile">
-                <div id="mnavnimi" class="mbtn col nspan_1_of_4"> <!-- mnavnimi oli ..-->
-                    <!--<a href="<?php //echo get_home_url() ?>" class="mbtn">--><!-- //todo lisada koduka URL! -->
-                        <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a> <!-- retina systeem -->
-                        <!--<span class="primtext2"> sakumata </span>-->
-                    <!--</a>-->
-                </div>
+      <div class="section group">
+        <div id="mobile">
+          <div id="mnavnimi" class="mbtn col nspan_1_of_4"> <!-- mnavnimi oli ..-->
+            <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a> <!-- retina systeem -->
+          </div>
 
-                <div id="mnavkontakt" class="col nspan_2_of_4">
-                    <span class="tumeTcol kontblk kontext htel"><?php echo constant('inf-etel') ?></span>
-                    <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
-                </div>
+          <div id="mnavkontakt" class="col nspan_2_of_4">
+            <span class="tumeTcol kontblk kontext htel"><?php echo constant('inf-etel') ?></span>
+            <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
+          </div>
 
-                <div id="toggle-bar" class="">
-                    <!--<strong><a class="mtoggle" href="#">MAIN MENU</a></strong>-->
-                    <a class="naviconTume mtoggle"> </a>
-                </div>
-            </div>
+          <div id="toggle-bar" class="">
+            <a class="naviconTume mtoggle"> </a>
+          </div>
         </div>
+      </div>
 
         <div id="mmenu">
             <a data-targ="#teenused" class="tumeTcol mnavbtn mbtn mnb">TEENUSED</a>
-            <a data-targ="#tutvustus" class="tumeTcol mnavbtn mbtn">ETTEVÕTTEST</a>
+            <a href="<?php echo get_home_url().'/ettevottest' ?>" class="tumeTcol mnavbtn mbtn">ETTEVÕTTEST</a>
             <a data-targ="#galerii" class="tumeTcol mnavbtn mbtn">GALERII</a>
             <a data-targ="#fcont" class="tumeTcol mnavbtn mbtn">HINNAPÄRING</a>
             <a data-targ="#kontakt" class="tumeTcol mnavbtn mbtn">KONTAKT</a>
@@ -58,7 +54,7 @@ if (have_posts()) {
 
                 <div id="navnupud" class="col span_2_of_4">
                     <a data-targ="#teenused" class="tumeTcol mnavbtn mbtn">TEENUSED</a>
-                    <a data-targ="#tutvustus" class="tumeTcol mnavbtn mbtn">ETTEVÕTTEST</a>
+                    <a href="<?php echo get_home_url().'/ettevottest' ?>" class="tumeTcol mnavbtn mbtn">ETTEVÕTTEST</a>
                     <a data-targ="#galerii" class="tumeTcol mnavbtn mbtn">GALERII</a>
                     <a data-targ="#fcont" class="tumeTcol mnavbtn mbtn">HINNAPÄRING</a>
                     <a data-targ="#kontakt" class="tumeTcol mnavbtn mbtn">KONTAKT</a>
