@@ -33,9 +33,9 @@ if (have_posts()) {
       </div>
 
         <div id="mmenu">
-            <a data-targ="#teenused" class="tumeTcol mnavbtn mbtn mnb">TEENUSED</a>
+            <a data-targ="#teenused-rida" class="tumeTcol mnavbtn mbtn mnb">TEENUSED</a>
             <a href="<?php echo get_home_url().'/ettevottest' ?>" class="tumeTcol mnavbtn mbtn">ETTEVÕTTEST</a>
-            <a data-targ="#galerii" class="tumeTcol mnavbtn mbtn">GALERII</a>
+            <!--<a data-targ="#galerii" class="tumeTcol mnavbtn mbtn">GALERII</a>-->
             <a data-targ="#fcont" class="tumeTcol mnavbtn mbtn">HINNAPÄRING</a>
             <a data-targ="#kontakt" class="tumeTcol mnavbtn mbtn">KONTAKT</a>
         </div>
@@ -53,9 +53,9 @@ if (have_posts()) {
                 </div>
 
                 <div id="navnupud" class="col span_2_of_4">
-                    <a data-targ="#teenused" class="tumeTcol mnavbtn mbtn">TEENUSED</a>
+                    <a data-targ="#teenused-rida" class="tumeTcol mnavbtn mbtn">TEENUSED</a>
                     <a href="<?php echo get_home_url().'/ettevottest' ?>" class="tumeTcol mnavbtn mbtn">ETTEVÕTTEST</a>
-                    <a data-targ="#galerii" class="tumeTcol mnavbtn mbtn">GALERII</a>
+                    <!--<a data-targ="#galerii" class="tumeTcol mnavbtn mbtn">GALERII</a>-->
                     <a data-targ="#fcont" class="tumeTcol mnavbtn mbtn">HINNAPÄRING</a>
                     <a data-targ="#kontakt" class="tumeTcol mnavbtn mbtn">KONTAKT</a>
                 </div>
@@ -73,10 +73,7 @@ if (have_posts()) {
             <h2><?php echo constant('inf-ehtxt1') ?></h2>
             <h3><?php echo constant('inf-ehtxt2') ?></h3>
             */ ?>
-            <div class="rohnupp4" onclick="keriTo('#fcont', 1200)">
-              <!--<p>SOOVIN PARIMAT HINDA</p>-->
-              <p><?php echo lisaBlokk($postId, 'TeenusNupuTekst'); ?></p>
-            </div>
+            <!--<div class="rohnupp4" onclick="keriTo('#fcont', 1200)"><p>SOOVIN PARIMAT HINDA</p></div>-->
           </div>
         </div>
         <?php
@@ -105,7 +102,7 @@ if (have_posts()) {
 
     <div id="teenusedSingle">
 
-    <?php require('req-teenusedTeenustes.php'); ?>
+    <?php require('req-teenusedEttevottest.php'); ?>
 
     </div>
 

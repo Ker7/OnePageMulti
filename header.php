@@ -5,9 +5,11 @@
  $onTeenusePost = false;
 
  bloginfo('name'); print ' | ';
- //single_post_title();    get_the_ID();
  $hcat = get_the_category();
- $cat = $hcat[0]->term_id;
+ $cat = '';
+ if (isset($hcat[0])) {
+   $cat = $hcat[0]->term_id;
+ }
  if ($cat == constant('TEENUSE_KATEGOORIA')) {
     $onTeenusePost = true;
     print mb_ucfirst( mb_convert_case(get_the_title(), MB_CASE_LOWER, "UTF-8"), 'utf8' );
@@ -25,26 +27,6 @@
 
     <!-- ie9+ rendering support for latest standards -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-
-    <meta name="description" content="<?php
-    if ($onTeenusePost) {
-      $nson = lisaBlokk(get_the_ID(), 'TeenusTekstLyhike');
-      $nson = substr($nson, 3, -4);
-      echo $nson;
-    } else {
-      echo 'Tegelema metsakinnistute, põllumaa ja raieõiguse ostuga. Lisaks metsaraie, kokkuvedu ning metsamajandamiskavade koostamine. Saada oma hinnapäring!';
-    }
-    ?>" />
-	<meta name="keywords" content="<?php
-    if ($onTeenusePost) {
-      $mson = lisaBlokk(get_the_ID(), 'TeenusMetaSonad');
-      $mson = substr($mson, 3, -4);
-      echo $mson;
-    } else {
-      echo 'mets, metsa, maa, ost, müük';
-    }
-    ?>" />
 
     <link type="image/png" rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/img/favicon.png"/>
 

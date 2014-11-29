@@ -233,8 +233,6 @@ add_image_size( 'gallaythumb', 290, 290, true );
     if ( $infop->have_posts() ) {
         while ( $infop->have_posts() ) {
             $infop->the_post();
-            //$fmuutuja = 'sain midagi, ID: '.$myposts->post->ID;
-            //define('inf-enimi',lisaBlokk($myposts->post->ID, "inf-enimi"));
 			foreach($infoVars as $id){
 				define($id, lisaBlokk($infop->post->ID, $id));
 			}
