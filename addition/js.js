@@ -13,21 +13,29 @@ jQuery(document).ready(function($) {
     );
 
     $(".mnavbtn").click(function() {    //mobile nav pressed
-            killGallery();
+        killGallery();
         $("#mmenu").slideToggle(menuSlideSpeed);   //fade-out mobile nav
         var target = $(this).data("targ"); //Get the target
-        $('html, body').animate({
-            scrollTop: $(target).offset().top -80
-        }, 1200);
+
+        if (undefined != target) {  //If link is to another page, then there might not be data-targ
+          $('html, body').animate({
+              scrollTop: $(target).offset().top - 80
+          }, 1200);
+        }
+
     });
 
     $(".mtoggle").click(function() {    // YLEVAL PAREMAL nurgas nupp
             killGallery();
         $("#mmenu").slideToggle(menuSlideSpeed);
         $(".navicon").css("border-color","#4BA000");
+        $(".naviconTume").css("border-color","#4BA000");
 
         //bootbox.alert("Hello world!");
-
+        setTimeout(function() {
+            $(".navicon").css("border-color","#202F38");
+            $(".naviconTume").css("border-color","#919ba2");
+        }, 300);
     });
 
     //kodunupp viiib ylesse

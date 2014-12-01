@@ -40,8 +40,10 @@
             echo '<div class="tsection group">';
         }
         ///// SISU OSA
+        //print_r($post);
             echo '<div class="col span_1_of_3">'
-                    .'<a class="nulllink" href="'.get_site_url().'?p='.$post->ID.'">'
+                    //.'<a class="nulllink" href="'.get_site_url().'?p='.$post->ID.'">' //tahan nime järgi linkida
+                    .'<a class="nulllink" href="'.get_site_url().'/'.$post->post_name.'">'
                       .'<div class="tn-img tcol tspan_1_of_4">'
                         .'<div class="tn-regImg">'.eemaldaAP(lisaBlokk($post->ID, "TeenusIkoon")).'</div>'
                         .'<div class="tn-hovImg" style="display: none;">'.eemaldaAP(lisaBlokk($post->ID, "TeenusIkoonHover")).'</div>'

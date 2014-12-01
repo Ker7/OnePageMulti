@@ -32,13 +32,7 @@ if (have_posts()) {
         </div>
       </div>
 
-        <div id="mmenu">
-            <a data-targ="#teenused" class="tumeTcol mnavbtn mbtn mnb">TEENUSED</a>
-            <a href="<?php echo get_home_url().'/ettevottest' ?>" class="tumeTcol mnavbtn mbtn">ETTEVÕTTEST</a>
-            <a data-targ="#galerii" class="tumeTcol mnavbtn mbtn">GALERII</a>
-            <a data-targ="#fcont" class="tumeTcol mnavbtn mbtn">HINNAPÄRING</a>
-            <a data-targ="#kontakt" class="tumeTcol mnavbtn mbtn">KONTAKT</a>
-        </div>
+        <?php require('req-menu-mob.php') ?>
 
         <div class="section group">
             <div id="pc">
@@ -52,13 +46,7 @@ if (have_posts()) {
                     <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
                 </div>
 
-                <div id="navnupud" class="col span_2_of_4">
-                    <a data-targ="#teenused" class="tumeTcol mnavbtn mbtn">TEENUSED</a>
-                    <a href="<?php echo get_home_url().'/ettevottest' ?>" class="tumeTcol mnavbtn mbtn">ETTEVÕTTEST</a>
-                    <a data-targ="#galerii" class="tumeTcol mnavbtn mbtn">GALERII</a>
-                    <a data-targ="#fcont" class="tumeTcol mnavbtn mbtn">HINNAPÄRING</a>
-                    <a data-targ="#kontakt" class="tumeTcol mnavbtn mbtn">KONTAKT</a>
-                </div>
+                <?php require('req-menu-pc.php') ?>
             </div>
         </div>
     </div>

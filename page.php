@@ -47,7 +47,6 @@ if (have_posts()) {
                 </div>
 
                 <?php require('req-menu-pc.php') ?>
-
             </div>
         </div>
     </div>
@@ -91,7 +90,7 @@ if (have_posts()) {
 
     <div id="teenusedSingle">
 
-    <?php require('req-teenusedEttevottest.php'); ?>
+    <?php require('req-teenusedPage.php'); ?>
 
     </div>
 

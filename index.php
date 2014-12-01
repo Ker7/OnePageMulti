@@ -5,10 +5,7 @@
         <div class="section group">
             <div id="mobile">
                 <div id="mnavnimi" class="mbtn col nspan_1_of_4"> <!-- mnavnimi oli ..-->
-                    <!--<a href="<?php //echo get_home_url() ?>" class="mbtn">--><!-- //todo lisada koduka URL! -->
-                        <div class="logodiv"></div> <!-- retina systeem -->
-                        <!--<span class="primtext2"> sakumata </span>-->
-                    <!--</a>-->
+                    <div class="logodiv"></div> <!-- retina systeem -->
                 </div>
 
                 <div id="mnavkontakt" class="col nspan_2_of_4">
@@ -17,19 +14,12 @@
                 </div>
 
                 <div id="toggle-bar" class="">
-                    <!--<strong><a class="mtoggle" href="#">MAIN MENU</a></strong>-->
                     <a class="navicon mtoggle"> </a>
                 </div>
             </div>
         </div>
 
-        <div id="mmenu">
-            <a data-targ="#teenused" class="mnavbtn mbtn mnb">TEENUSED</a>
-            <a href="<?php echo get_home_url().'/ettevottest' ?>" class="mnavbtn mbtn">ETTEVÕTTEST</a>
-            <a data-targ="#galerii" class="mnavbtn mbtn">GALERII</a>
-            <a data-targ="#fcont" class="mnavbtn mbtn">HINNAPÄRING</a>
-            <a data-targ="#kontakt" class="mnavbtn mbtn">KONTAKT</a>
-        </div>
+        <?php require('req-menu-mob.php') ?>
 
         <div class="section group">
             <div id="pc">
@@ -42,13 +32,7 @@
                     <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
                 </div>
 
-                <div id="navnupud" class="col span_2_of_4">
-                    <a data-targ="#teenused" class="heleTcol mnavbtn mbtn">TEENUSED</a>
-                    <a href="<?php echo get_home_url().'/ettevottest' ?>" class="heleTcol mnavbtn mbtn">ETTEVÕTTEST</a>
-                    <a data-targ="#galerii" class="heleTcol mnavbtn mbtn">GALERII</a>
-                    <a data-targ="#fcont" class="heleTcol mnavbtn mbtn">HINNAPÄRING</a>
-                    <a data-targ="#kontakt" class="heleTcol mnavbtn mbtn">KONTAKT</a>
-                </div>
+                <?php require('req-menu-pc.php') ?>
             </div>
         </div>
     </div>
@@ -96,27 +80,11 @@
                     'post_status'   => array('inherit', 'publish'),
                    'posts_per_page' => 1,
                    'category_name'  => 'tutvustus', );
-    //$mypostst = get_posts( $args );
-    //print_r($mypostst);
-    //foreach ( $mypostst as $k => $post ) : setup_postdata( $post );
-    //
-    //    echo '<div id="tutvustus">'
-    //            .'<div class="tsection">'
-    //                .'<div class="tutspan1">'
-    //                    .'<h2>TUTVUSTUS</h2>'
-    //                    .'<h3>'.apply_filters( 'get_the_content', $post->post_title ).'</h3>'
-    //                    .'</div>'
-    //                    .'<div class="tutspan2">'
-    //                    .apply_filters( 'the_content', $post->post_content )
-    //        .'</div></div></div>';
-    //
-    //endforeach;
+
     $myposts = new WP_Query( $argstut );
-    //print_r($myposts);
         if ( $myposts->have_posts() ) {
             while ( $myposts->have_posts() ) {
                 $myposts->the_post();
-                //echo $myposts->post->post_title;
                 echo '<div id="tutvustus">'
                         .'<div class="tsection">'
                             .'<div class="tutspan1">'
@@ -129,11 +97,7 @@
             }
         }
     wp_reset_postdata();
-?>
-        <!--<table>-->
-        <!--    <tr>-->
 
-        <?php
         $args = array (
             'post_type'              => 'attachment',
             'post_status'            => array('inherit', 'publish'),
@@ -176,28 +140,10 @@
 
                 $thumbImgUrl = $uploadsUrl.$thumbRelImgPath.'/'.$imgMeta['sizes']['gallaythumb']['file']; //thumbnail 150x medium, gallaythumb on 290x290-max size
 
-                //echo 'UPS-'.$uploadsUrl.'-'.$fullImgFile;
-                //praegune VALE!
-//[full] => http://localhost/skpinvest/wp-content/themes/skptheme/wp-content/uploads/2014/08/Pilt1613.jpg
-
-                //echo '<br>postID: '.$myposts->post->ID;
-                //////print_r( 'file'.$imgFile );
-                //echo 'real URL: '.$fullImgUrl.', thumb: '.$thumbImgUrl;
-                //print_r($imgMeta);
                 $allGalSrc[$k]['full'] = $fullImgUrl;   //fulli ei kauta
                 $allGalSrc[$k]['thumb'] = $thumbImgUrl;
                 $allGalSrc[$k]['caption'] = $imgCaption;    //pildi tekst
                 $allGalSrc[$k]['pid'] = $k; //pildicounteri mille järgi vahetab pilte
-
-                //echo '<div class="galimg"><img  src="'.$myposts->post->guid.'" /></div>';
-                //if (($k+1) % 2 != 0) {
-                //    //k-0 läheb esimesse ritta, peaks nii olema, edasi 2,4,6..
-                //    $esimeneGaleriiRida .= '<div class="tgalimg"><img src="'.$myposts->post->guid.'" /></div>';
-                //    //$k1++;
-                //} else {
-                //    $teineGaleriiRida .= '<div class="tgalimg"><img src="'.$myposts->post->guid.'" /></div>';
-                //    //$k2++;
-                //}
                 $k++;
             }
         } else {
@@ -211,7 +157,7 @@
         $r2=$picsC-$r1;
         //echo 'Count: '.$picsC.'r1.: '.$r1.', r2.: '.$r2."\n<br>";
 
-        //WARNING very not OOP style..
+        //CAUTION OOP-free area..
         for($v=0; $v<$r1; $v++) {
             $esimeneGaleriiRida .= '<div class="galimg">'
                                     .'<img'
