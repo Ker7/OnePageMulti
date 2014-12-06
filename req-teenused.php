@@ -50,7 +50,7 @@
                       .'</div>'
                     .'</a>'
                         .'<div class="tn-cont tcol tspan_3_of_4">'
-                            .'<a class="headlink" href="'.get_site_url().'?p='.$post->ID.'">'.'<h3>'.mb_strtoupper(apply_filters( 'get_the_content', $post->post_title )).'</h3></a>'
+                            .'<a class="headlink" href="'.get_site_url().'/'.$post->post_name.'">'.'<h3>'.mb_strtoupper(apply_filters( 'get_the_content', $post->post_title )).'</h3></a>'
                             //.'<p>'.apply_filters( 'get_the_content', $post->post_content ).'</p>' //vanas oli posti sisu ka tutv. tekst
                             //.'<p>'.lisaBlokk($post->ID, "TeenusTekstLyhike").'</p>' // x-formattinguga õige asi
                             //.'<p>'.apply_filters( 'the_content', lisaBlokk($post->ID, "TeenusTekstLyhike") ).'</p>'
