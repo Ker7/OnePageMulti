@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
     }, 8000
     );
 
-    $(".mnavbtn").click(function() {    //mobile nav pressed
+    $(".mnavbtnlink").click(function() {    //mobile nav pressed
         killGallery();
         $("#mmenu").slideToggle(menuSlideSpeed);   //fade-out mobile nav
         var target = $(this).data("targ"); //Get the target
@@ -399,22 +399,4 @@ function swapBack() {   // 1 #PILT > div.taust peab olema opacity:1'ga
         }
         cc++;
     });
-}
-delayMsg = function(msg, delay) {
-    setTimeout( function() {
-      bootbox.dialog({
-        message: msg,
-        //title: "Custom title",
-        buttons: {
-          main: {
-            label: "Sulge",
-            className: "btn-success",
-            callback: function() {
-              //Example.show("Primary button");
-            }
-          }
-        }
-      });
-    }
-    , delay);
 }

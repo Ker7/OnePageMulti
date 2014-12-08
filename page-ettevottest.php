@@ -27,6 +27,7 @@ if (have_posts()) {
           </div>
 
           <div id="toggle-bar" class="">
+                <div id="mnavlangsw" class="col nspan_x_of_4"><?php other_languages(); ?></div>
             <a class="naviconTume mtoggle"> </a>
           </div>
         </div>
@@ -89,6 +90,7 @@ if (have_posts()) {
         <div id="rkolnTume"></div>
     </div>
 
+    <div id="servicesteenused"></div>
     <div id="teenusedSingle">
 
     <?php require('req-teenusedEttevottest.php'); ?>

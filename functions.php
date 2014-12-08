@@ -215,9 +215,11 @@ add_action( 'restrict_manage_posts', 'olab_add_image_category_filter' );
 add_image_size( 'gallaythumb', 290, 290, true );
 
 //info posti muutujatesse kirjutamine...
-    $args = array('post_type'       => 'post',
+    $args = array(
+                  'post_type'       => 'post',
                   'posts_per_page' => 1,
-                  'category_name' => 'skpinfo' );
+                  'category_name' => 'skpinfo',
+                  );
 	$infoVars = array();
 	$infoVars[]='inf-enimi';
 	$infoVars[]='inf-etel';
@@ -249,6 +251,83 @@ function mb_ucfirst($string, $encoding)
     $firstChar = mb_substr($string, 0, 1, $encoding);
     $then = mb_substr($string, 1, $strlen - 1, $encoding);
     return mb_strtoupper($firstChar, $encoding) . $then;
+}
+
+
+//proovin koodi et menüüasjadele data-target lisada
+add_filter( 'nav_menu_link_attributes', 'skpmenudata_contact_menu_atts', 10, 3 );
+
+function skpmenudata_contact_menu_atts( $atts, $item, $args )
+{
+  // The ID of the target menu item
+  $menu_targets1 = array(214,213,215); //teenustelingid
+  $menu_targets2 = array(218,220,221); //Hinnap lingid
+  $menu_targets3 = array(219,222,223); //kontakt
+  // inspect $item
+  foreach($menu_targets1 as $menu_target1){
+    if ($item->ID == $menu_target1) {
+      $atts['data-targ'] = '#servicesteenused';
+      $atts['class'] = 'mnavbtnlink';
+    }
+  }
+  foreach($menu_targets2 as $menu_target2){
+    if ($item->ID == $menu_target2) {
+      $atts['data-targ'] = '#fcont';
+      $atts['class'] = 'mnavbtnlink';
+    }
+  }
+  foreach($menu_targets3 as $menu_target3){
+    if ($item->ID == $menu_target3) {
+      $atts['data-targ'] = '#kontakt';
+      $atts['class'] = 'mnavbtnlink';
+    }
+  }
+
+  return $atts;
+}
+
+//icl_register_string($context, $name, $value)
+//$context – the name of the plugin, in a human readable format
+//$name – the name of the string which helps the user (or translator) understand what’s being translated.
+//$value – the string that needs to be translated
+//hilejm use: icl_t($context, $name, $value) => echo icl_t('skptheme', 'FormSulge', 'CLOSE');
+
+icl_register_string('skptheme', 'EsimeneSuurNupp', 'OFFER REAL ESTATE');
+icl_register_string('skptheme', 'HinnaparingPealkiri', 'PRICE INQUIRY');
+icl_register_string('skptheme', 'KiriSaadetud', 'Your message has been sent. We will contact you within two business days.');
+icl_register_string('skptheme', 'TurvakoodEiKlapi', 'The security code you entered does not appear to be correct.');
+icl_register_string('skptheme', 'FormValiTeenus', 'Select a suitable service');
+
+icl_register_string('skptheme', 'FormNimi', 'Name');
+icl_register_string('skptheme', 'FormTelefon', 'Telephone');
+icl_register_string('skptheme', 'FormEpost', 'E-mail');
+icl_register_string('skptheme', 'FormKinnistu', 'Name of property');
+icl_register_string('skptheme', 'FormVald', 'Rular municipality');
+icl_register_string('skptheme', 'FormKyla', 'Village');
+icl_register_string('skptheme', 'FormKataster', 'Cadastral register number');
+icl_register_string('skptheme', 'FormKommentaarid', 'Remarks');
+icl_register_string('skptheme', 'FormSisestaKood', 'Enter the code');
+icl_register_string('skptheme', 'FormSaada', 'SEND');
+icl_register_string('skptheme', 'FormSulge', 'CLOSE');
+//icl_register_string('skptheme', '', '');
+//icl_register_string('skptheme', '', '');
+//icl_register_string('skptheme', '', '');
+//icl_register_string('skptheme', '', '');
+//icl_register_string('skptheme', '', '');
+
+// keelte linkida kuvamine
+function other_languages(){
+    $languages = icl_get_languages('skip_missing=0&orderby=code');
+    if(!empty($languages)){
+        foreach($languages as $l){
+            if(!$l['active']){
+                echo '<a href="'.$l['url'].'"class="lang-button">';
+                echo mb_convert_case($l['language_code'], MB_CASE_UPPER, "UTF-8").' ';
+                echo '</a>';
+                //print_r($l);
+            }
+        }
+    }
 }
 
 ?>

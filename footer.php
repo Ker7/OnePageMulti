@@ -2,7 +2,7 @@
 
                 <div id="footer">
                     <div id="fcont">
-                        <h2>HINNAPÄRING</h2>
+                        <h2><?php echo icl_t('skptheme', 'HinnaparingPealkiri', 'PRICE INQUIRY'); ?></h2>
                         <p><?php echo constant('inf-ehptxt') ?></p>
                         <div id="form_container">
 <?php
@@ -62,13 +62,13 @@ $sent=false;
                         . "Content-Transfer-Encoding: base64\r\n";
                 mail($let_to, $let_title, $let_bodyenc, $let_headers);
 
-				echo "<script type='text/javascript'>delayMsg('Kiri on saadetud! Võtame Teiega ühendust kahe tööpäeva jooksul.', 1000);</script>";
+				echo "<script type='text/javascript'>delayMsg('".icl_t('skptheme', 'KiriSaadetud', 'Your message has been sent. We will contact you within two business days.')."', 1000);</script>";
                 $_POST = array();
                 $sent=true;
 
             } else {
                 //postis on kiri, aga kaptcha ei matchi, tuleb teha uus kaptcha
-				echo "<script type='text/javascript'>keriTo('#form_container', 1000); delayMsg('Sisestatud turvakood ei klapi.', 1000);</script>";
+				echo "<script type='text/javascript'>keriTo('#form_container', 1000); delayMsg('".icl_t('skptheme', 'TurvakoodEiKlapi', 'The security code you entered does not appear to be correct.')."', 1000);</script>";
             }
         }
         if ($captcha_correct == false) {
@@ -84,7 +84,7 @@ $sent=false;
                     <div class="form-block">
                         <div class="fcol fcol1">
                             <select id="teenusmenu" name="teenusmenu" class="felem valiteenus" >';
-        echo '<option class="topt" value="0" >Vali sobiv teenus</option>';
+        echo '<option class="topt" value="0" >'.icl_t('skptheme', 'FormValiTeenus', 'Select a suitable service').'</option>';
 
         //echo 'asddd'.$_POST['teenusmenu'];
         echo $teenusOptions;
@@ -100,31 +100,31 @@ $vel8= (isset($_POST['fel8'])?esc_attr(stripslashes($_POST['fel8'])):'');
         echo    '</select>
                     </div>
                     <div class="fcol fcol2">
-                        <input id="fel1" name="fel1" class="felem" type="text" maxlength="255" value="'. $vel1 .'" spellcheck="false" placeholder="Nimi"/>
+                        <input id="fel1" name="fel1" class="felem" type="text" maxlength="255" value="'. $vel1 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormNimi', 'Name').'"/>
                     </div>
                     <div class="fcol fcol3">
-                        <input id="fel2" name="fel2" class="felem" type="text" maxlength="255" value="'. $vel2 .'" spellcheck="false" placeholder="Telefon"/>
+                        <input id="fel2" name="fel2" class="felem" type="text" maxlength="255" value="'. $vel2 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormTelefon', 'Telephone').'"/>
                     </div>
                     <div class="fcol fcol4">
-                        <input id="fel3" name="fel3" class="felem" type="text" maxlength="255" value="'. $vel3 .'" spellcheck="false" placeholder="E-post"/>
+                        <input id="fel3" name="fel3" class="felem" type="text" maxlength="255" value="'. $vel3 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormEpost', 'E-mail').'"/>
                     </div>
                     <div class="fcol fcol5">
-                        <input id="fel4" name="fel4" class="felem" type="text" maxlength="255" value="'. $vel4 .'" spellcheck="false" placeholder="Kinnistu nimi"/>
+                        <input id="fel4" name="fel4" class="felem" type="text" maxlength="255" value="'. $vel4 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormKinnistu', 'Name of property').'"/>
                     </div>
                 </div>
                 <div class="form-block">
-                    <!-- ------------------------------------->
+                    <!-- brk -->
                     <div class="fcol fcol6">
-                        <input id="fel5" name="fel5" class="felem" type="text" maxlength="255" value="'. $vel5 .'" spellcheck="false" placeholder="Vald"/>
+                        <input id="fel5" name="fel5" class="felem" type="text" maxlength="255" value="'. $vel5 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormVald', 'Rular municipality').'"/>
                     </div>
                     <div class="fcol fcol7">
-                        <input id="fel6" name="fel6" class="felem" type="text" maxlength="255" value="'. $vel6 .'" spellcheck="false" placeholder="Küla"/>
+                        <input id="fel6" name="fel6" class="felem" type="text" maxlength="255" value="'. $vel6 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormKyla', 'Village').'"/>
                     </div>
                     <div class="fcol fcol8">
-                        <input id="fel7" name="fel7" class="felem" type="text" maxlength="255" value="'. $vel7 .'" spellcheck="false" placeholder="Katastritunnus"/>
+                        <input id="fel7" name="fel7" class="felem" type="text" maxlength="255" value="'. $vel7 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormKataster', 'Cadastral register number').'"/>
                     </div>
                     <div class="fcol fcol9">
-                        <textarea id="fel8" name="fel8" class="felem" type="text" maxlength="255" spellcheck="false" placeholder="Kommentaarid" >'.$vel8 .'</textarea>
+                        <textarea id="fel8" name="fel8" class="felem" type="text" maxlength="255" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormKommentaarid', 'Remarks').'" >'.$vel8 .'</textarea>
                     </div>
                 </div>';
 
@@ -135,14 +135,14 @@ if ($sent==false) {
     echo '<div class="capfloat">'
           .'<div class="capcont">'
             .'<img class="bCapImg" src="'.$captcha_file.'" />'
-            .'<input class="cap" type="text" name="captcha_code" placeholder="Sisesta kood" value="" spellcheck="false" />'
+            .'<input class="cap" type="text" name="captcha_code" placeholder="'.icl_t('skptheme', 'FormSisestaKood', 'Enter the code').'" value="" spellcheck="false" />'
             .'<input type="hidden" name="captcha_prefix" value="'. $captcha_prefix .'" />'
           .'</div>'
         .'</div>';
 }
             echo '<input type="hidden" name="form_id" value="teenusform" />
                 <div class="fsubmit">
-                    <input id="saada" class="button_text rohnupp" type="submit" name="submit" value="SAADA" />
+                    <input id="saada" class="button_text rohnupp" type="submit" name="submit" value="'.icl_t('skptheme', 'FormSaada', 'SEND').'" />
                 </div>
 
             </form>';

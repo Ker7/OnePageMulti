@@ -27,6 +27,7 @@ if (have_posts()) {
           </div>
 
           <div id="toggle-bar" class="">
+                <div id="mnavlangsw" class="col nspan_x_of_4"><?php other_languages(); ?></div>
             <a class="naviconTume mtoggle"> </a>
           </div>
         </div>
@@ -37,7 +38,6 @@ if (have_posts()) {
         <div class="section group">
             <div id="pc">
                 <div id="navnimi" class="mbtn col span_1_of_4">
-                    <!--<div class="logodivtume"></div>-->
                     <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a>
                 </div>
 
@@ -88,6 +88,7 @@ if (have_posts()) {
         <div id="rkolnTume"></div>
     </div>
 
+    <div id="servicesteenused"></div>
     <div id="teenusedSingle">
 
     <?php require('req-teenusedPage.php'); ?>

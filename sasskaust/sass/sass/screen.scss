@@ -135,7 +135,7 @@ div#content
 /*** HEADER : MENU ***/
 
 /* To see a menu in your header, you'll need to first add one in WordPress Admin */
-.menu ul
+/*.menu ul
 {
     list-style: none;
     margin: 0;
@@ -163,7 +163,7 @@ div#content
 .menu-item a:hover
 {
     color: #5d8a05;
-}
+}*/
 
 
 
@@ -456,7 +456,7 @@ div#footer
             }
             input.cap {
                 float:left;
-                width: 120px;
+                width: 130px;
                 /*text-transform: uppercase;*/
             }
         }
@@ -701,10 +701,9 @@ div#footer
 }
 
 #navnupud {
-	margin-top: 28px;
+	margin-top: 32px;
 }
 #mnavnimi { /* panin tavalise navnime siia */
-	height: 80px;
 	.logodiv {
 		height: 80px;
 		background: url(img/logo.png) 16px center no-repeat;
@@ -715,6 +714,12 @@ div#footer
 		background: url(img/logotume.png) 16px center no-repeat;
         background-size: 165px 27px;
 	}
+
+	height: 80px;
+    width: 34%;
+	@media only screen and (max-width: 600px) {
+		width: 200px;
+    }
 }
 
 #mnavkontakt {
@@ -834,7 +839,7 @@ div#footer
 }
 
 .kontblk {
-    padding-top: 28px;
+    padding-top: 32px;
 }
 
 .kontext {
@@ -863,7 +868,7 @@ div#footer
 		/*margin-left: 0;*/
 		/*margin-right: 0;*/
     }
-	@media only screen and (max-width: 420px) {
+	@media only screen and (max-width: 510px) {
 		display:none;
 		/*.nspan_3_of_4 {*/
 		/*	float: right*/
@@ -876,7 +881,7 @@ div#footer
     /*margin-left: calc(15% - 30px);*/
     margin-right: calc(15% - 30px);
     text-decoration: none;
-	@media only screen and (max-width: 580px) {
+	@media only screen and (max-width: 650px) {
 		display:none;
     }
 }
@@ -895,16 +900,31 @@ div#footer
     color: black;
 }
 
-#navnupud a {
-	font-size: 0.8em;
-    font-weight: 300;
-    display: inline;
-    text-decoration: none;
-    /*color: #404f59; 30.09 asendavad heleTcol ja tumeTcol */
+#navnupud {
+  div > ul > li {
+      display: inline;
+      margin-right: 20px;
+    a {
+      color: #919ba2;
+      font-size: 0.8em;
+      font-weight: 300;
+      text-decoration: none;
+      /*color: #404f59; 30.09 asendavad heleTcol ja tumeTcol */
+    }
+    a:hover {
+      color: #59A400;
+    }
+  }
+/*#navnupud a:hover {*/
+
 }
 
-#navnupud a:hover {
-    color: #4ba000;
+#mnavlangsw {
+  padding-top: 32px;
+  a {
+    font-size: 0.8em;
+    color: #919ba2;
+  }
 }
 
 div#pc {
@@ -1823,11 +1843,15 @@ margin: 0 auto;
 }
 
 .span_2_of_4 {
-    width: 49.2%;
+    /*width: 49.2%;*/
 }
 
 .span_1_of_4 {
     width: 23.8%;
+}
+/* PC logo div */
+.span_n_of_4 {
+  width: 200px;
 }
 
 /* Teenuse blokkides sees olevad jaotused laienevad erinevalt */
@@ -1842,23 +1866,20 @@ margin: 0 auto;
 
 
 /* mobile nav ribas olevad nimi kontakt ja menu-togle nupp */
-
-
 .nspan_1_of_4 {	/* logo */
     width: 34%;
 	@media only screen and (max-width: 580px) {
 		width: 45%;
-		min-width: 180px;
+		/*width: 180px;*/
     }
 }
-
 .nspan_2_of_4 {
-    width: 48%;	/* logofix- tel ja email */
-	@media only screen and (max-width: 580px) {
+    width: 42%;	/* logofix- tel ja email */
+	@media only screen and (max-width: 650px) {
 		/*margin-left: calc(20% - 10px);*/
 		/*margin-left: 0;*/
 		/*margin-right: 10px;*/
-		width: 30%;
+		width: 135px;
     }
 }
 
@@ -1894,32 +1915,11 @@ div#mobile, #mmenu, #mmenu a {
     /*}*/
 }
 
-@media only screen and (max-width: 1160px) { /* 480 */
+@media screen and (max-width: 1160px) { /* tetetetee 960 */
 
     #teenused {
         padding-top: 50px;
     }
-
-    /*.tsection {*/
-    /*    padding-left: 5%;*/
-    /*    padding-right: 5%;*/
-    /*}*/
-
-    .mnavbtn {
-        margin-right: 0px;
-    }
-}
-
-@media screen and (max-width: 1160px) { /* tetetetee 960 */
-
-    /*#teenused {*/
-    /*    padding-top: 40px;*/
-    /*}*/
-
-    /*.tsection {*/
-    /*    padding-left: 2%;*/
-    /*    padding-right: 2%;*/
-    /*}*/
 
     /* menuyy mobile asjad */
     #navnupud, #navnimi, #navkontakt {
@@ -1986,45 +1986,85 @@ div#mobile, #mmenu, #mmenu a {
     The dropdown menu
     */
 
-    #mmenu a {
+    #mmenu > div {
+      display:block;
+      overflow: auto;
+      background-color: #202f38;
+      color: white;
+      ul > li > a {
         display:block;
-        overflow: auto;
-		color: white;
-        /*background-color:#b6f000;*/
-
-        /*background-color: #DDD;*/
-        background-color: #202f38;
-        opacity: 0.94;
-
         text-transform:uppercase;
         text-decoration: none;
+        text-align: center;
         letter-spacing:.2em;
-        /*margin:2px 0;*/
         padding:6px 0 6px 8px;
 
-        box-sizing: border-box;
-    }
+		color: white;
+      }
 
-	#mmenu a:first-child {
+
+
+
+      ul > li:first-child {
 		padding-top: 18px;
-	}
-	#mmenu a:last-child {
+      }
+      ul > li:last-child {
 		padding-bottom: 18px;
-	}
+      }
+
+      ul > li > a:visited {
+          color:white;
+          padding-left:8px;
+      }
+      ul > li > a:hover {
+          color: #4BA000;
+          padding-left:8px;
+      }
+
+    /*#mmenu a:before {*/
+    /*    content: "2192";*/
+    /*    padding-right:8px;*/
+    /*}*/
+
+
+   }
+
+    /*#mmenu a {*/
+        /*display:block;*/
+        /*overflow: auto;*/
+		/*color: white;*/
+        /*background-color: #202f38;*/
+        /*opacity: 0.94;*/
+
+        /*text-transform:uppercase;*/
+        /*text-decoration: none;*/
+        /*text-align: center;*/
+        /*letter-spacing:.2em;*/
+        /*padding:6px 0 6px 8px;*/
+
+        /*box-sizing: border-box;*/
+    /*}*/
+
+	/*#skpmainmenu li, #mmenu a:first-child {*/
+		/*padding-top: 18px;*/
+	/*}*/
+	/*#skpmainmenu li, #mmenu a:last-child {*/
+		/*padding-bottom: 18px;*/
+	/*}*/
 
     /*#mmenu a:visited {*/
     /*    color:white;*/
     /*    padding-left:8px;*/
     /*}*/
-    #mmenu a:hover {
-        color: #4BA000;
+    /*#mmenu a:hover {*/
+        /*color: #4BA000;*/
         /*padding-left:8px;*/
-    }
+    /*}*/
 
-    #mmenu a:before {
+    /*#mmenu a:before {*/
         /*content: "2192";*/
-        padding-right:8px;
-    }
+        /*padding-right:8px;*/
+    /*}*/
 }
 
 @media only screen and (max-width: 780px) { /* 480 komm */

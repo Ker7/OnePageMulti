@@ -17,7 +17,7 @@ if (have_posts()) {
     <div id="ylaribatume" >
       <div class="section group">
         <div id="mobile">
-          <div id="mnavnimi" class="mbtn col nspan_1_of_4"> <!-- mnavnimi oli ..-->
+          <div id="mnavnimi" class="mbtn col"> <!-- mnavnimi oli ..-->
             <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a> <!-- retina systeem -->
           </div>
 
@@ -27,6 +27,7 @@ if (have_posts()) {
           </div>
 
           <div id="toggle-bar" class="">
+                <div id="mnavlangsw" class="col nspan_x_of_4"><?php other_languages(); ?></div>
             <a class="naviconTume mtoggle"> </a>
           </div>
         </div>
@@ -37,7 +38,6 @@ if (have_posts()) {
         <div class="section group">
             <div id="pc">
                 <div id="navnimi" class="mbtn col span_1_of_4">
-                    <!--<div class="logodivtume"></div>-->
                     <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a>
                 </div>
 
@@ -56,7 +56,11 @@ if (have_posts()) {
     <div id="piltTume" class="section group">
         <div id="banner" class="section group mcenter">
           <div class="banhead-cont">
-            <h1><?php echo (isset($postTitle)? mb_ucfirst( mb_convert_case($postTitle, MB_CASE_LOWER, "UTF-8"), 'utf8' ) :'Teenused') ?></h1>
+            <h1><?php
+
+            echo (isset($postTitle)? mb_ucfirst( mb_convert_case($postTitle, MB_CASE_LOWER, "UTF-8"), 'utf8' ) :'Teenused')
+
+            ?></h1>
             <?php /*
             <h2><?php echo constant('inf-ehtxt1') ?></h2>
             <h3><?php echo constant('inf-ehtxt2') ?></h3>
@@ -91,6 +95,7 @@ if (have_posts()) {
         <div id="rkolnTume"></div>
     </div>
 
+    <div id="servicesteenused"></div>
     <div id="teenusedSingle">
 
     <?php require('req-teenusedTeenustes.php'); ?>

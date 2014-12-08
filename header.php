@@ -51,6 +51,25 @@
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/addition/jquery_udraggable.js"></script>
 
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/addition/js.js"></script>
+
+    <script><?php
+echo 'delayMsg = function(msg, delay) {
+    setTimeout( function() {
+      bootbox.dialog({
+        message: msg,
+        buttons: {
+          main: {
+            label: "'.icl_t('skptheme', 'FormSulge', 'CLOSE').'",
+            className: "btn-success",
+            callback: function() {
+            }
+          }
+        }
+      });
+    }
+    , delay);
+}';
+    ?></script>
 </head>
 <body>
   <div id="pwrap">

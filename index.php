@@ -4,16 +4,20 @@
     <div id="ylariba" >
         <div class="section group">
             <div id="mobile">
-                <div id="mnavnimi" class="mbtn col nspan_1_of_4"> <!-- mnavnimi oli ..-->
-                    <div class="logodiv"></div> <!-- retina systeem -->
+                <div id="mnavnimi" class="mbtn col nspan_1_of_4">
+                    <div class="logodiv"></div>
                 </div>
 
                 <div id="mnavkontakt" class="col nspan_2_of_4">
-                    <span class="kontblk kontext htel"><?php echo constant('inf-etel') ?></span>
+                    <span class="kontblk kontext htel">
+                <?php
+                    echo constant('inf-etel') ?></span>
                     <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
                 </div>
 
+
                 <div id="toggle-bar" class="">
+                <div id="mnavlangsw" class="col nspan_x_of_4"><?php other_languages(); ?></div>
                     <a class="navicon mtoggle"> </a>
                 </div>
             </div>
@@ -23,8 +27,10 @@
 
         <div class="section group">
             <div id="pc">
-                <div id="navnimi" class="mbtn col span_1_of_4">
+                <div id="navnimi" class="mbtn col span_n_of_4">
                     <div class="logodiv"></div>
+                    <?php //do_action('icl_language_selector'); ?>
+                    <!-- div id="langsw"><a href="#">EE</a><a href="#">EN</a><a href="#">RU</a></div -->
                 </div>
 
                 <div id="navkontakt" class="col span_1_of_4">
@@ -41,9 +47,13 @@
 
     <div id="pilt" class="section group">
         <div id="banner" class="section group mcenter">
-            <h2><?php echo constant('inf-ehtxt1') ?></h2>
+            <h2><?php
+
+            echo constant('inf-ehtxt1');
+
+            ?></h2>
             <h3><?php echo constant('inf-ehtxt2') ?></h3>
-            <div class="rohnupp3" onclick="keriTo('#fcont', 1200)"><p>PAKU KINNISVARA</p></div>
+            <div class="rohnupp3" onclick="keriTo('#fcont', 1200)"><p><?php echo icl_t('skptheme', 'EsimeneSuurNupp', 'OFFER REAL ESTATE'); ?></p></div>
         </div>
         <?php
             $args = array (
@@ -69,7 +79,18 @@
         <div id="rkoln"></div>
     </div>
 
+    <div id="servicesteenused"></div>
     <div id="teenused">
+
+<?php
+
+  //$menu_name = 'skpmainmenu';
+  //$mitems = wp_get_nav_menu_items( $menu_name );
+  //
+  //print_r($mitems);
+
+?>
+
 
     <?php require('req-teenused.php'); ?>
 
@@ -97,6 +118,8 @@
             }
         }
     wp_reset_postdata();
+
+/*
 
         $args = array (
             'post_type'              => 'attachment',
@@ -235,5 +258,7 @@
         </div>
 
     </div>
+
+    <?php  */ ?>
 
 <?php get_footer(); ?>
