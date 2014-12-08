@@ -119,7 +119,7 @@
         }
     wp_reset_postdata();
 
-/*
+
 
         $args = array (
             'post_type'              => 'attachment',
@@ -163,8 +163,16 @@
 
                 $thumbImgUrl = $uploadsUrl.$thumbRelImgPath.'/'.$imgMeta['sizes']['gallaythumb']['file']; //thumbnail 150x medium, gallaythumb on 290x290-max size
 
+                // Eemaldan Keele kirjed piltide aadressist
+
+                $fullImgUrl = str_replace('?lang=en','',$fullImgUrl);
+                $fullImgUrl = str_replace('?lang=ru','',$fullImgUrl);
+
+                $thumbImgUrl = str_replace('?lang=en','',$thumbImgUrl);
+                $thumbImgUrl = str_replace('?lang=ru','',$thumbImgUrl);
+
                 $allGalSrc[$k]['full'] = $fullImgUrl;   //fulli ei kauta
-                $allGalSrc[$k]['thumb'] = $thumbImgUrl;
+                $allGalSrc[$k]['thumb'] = str_replace('?lang=en','',$thumbImgUrl);
                 $allGalSrc[$k]['caption'] = $imgCaption;    //pildi tekst
                 $allGalSrc[$k]['pid'] = $k; //pildicounteri mille järgi vahetab pilte
                 $k++;
@@ -258,7 +266,5 @@
         </div>
 
     </div>
-
-    <?php  */ ?>
 
 <?php get_footer(); ?>

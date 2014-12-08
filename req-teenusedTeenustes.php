@@ -74,7 +74,7 @@
                 // või võta yhendust
                 ?></p></div>
             <div class="sptekst2">
-                <span>või kirjuta </span>
+                <span><?php echo icl_t('skptheme', 'voiKirjuta', 'or write') ?> </span>
                 <a class="" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
             </div>
         </div>

@@ -290,7 +290,7 @@ function skpmenudata_contact_menu_atts( $atts, $item, $args )
 //$context – the name of the plugin, in a human readable format
 //$name – the name of the string which helps the user (or translator) understand what’s being translated.
 //$value – the string that needs to be translated
-//hilejm use: icl_t($context, $name, $value) => echo icl_t('skptheme', 'FormSulge', 'CLOSE');
+//hilejm use: icl_t($context, $name, $value) => echo icl_t('skptheme', 'voiKirjuta', 'or write');
 
 icl_register_string('skptheme', 'EsimeneSuurNupp', 'OFFER REAL ESTATE');
 icl_register_string('skptheme', 'HinnaparingPealkiri', 'PRICE INQUIRY');
@@ -309,9 +309,9 @@ icl_register_string('skptheme', 'FormKommentaarid', 'Remarks');
 icl_register_string('skptheme', 'FormSisestaKood', 'Enter the code');
 icl_register_string('skptheme', 'FormSaada', 'SEND');
 icl_register_string('skptheme', 'FormSulge', 'CLOSE');
-//icl_register_string('skptheme', '', '');
-//icl_register_string('skptheme', '', '');
-//icl_register_string('skptheme', '', '');
+icl_register_string('skptheme', 'SoovidMyyaMidagi', 'Are you planning to sell standing timber, a forest property or cutting rights?');
+icl_register_string('skptheme', 'SaadaPakkumine', 'SEND OFFER');
+icl_register_string('skptheme', 'voiKirjuta', 'or write');
 //icl_register_string('skptheme', '', '');
 //icl_register_string('skptheme', '', '');
 
