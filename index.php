@@ -109,7 +109,7 @@
                 echo '<div id="tutvustus">'
                         .'<div class="tsection">'
                             .'<div class="tutspan1">'
-                                .'<h2>TUTVUSTUS</h2>'
+                                .'<h2>'.icl_t('skptheme', 'tutvustus', 'INTRODUCTION').'</h2>'
                                 .'<h3>'.apply_filters( 'get_the_content', $myposts->post->post_title ).'</h3>'
                                 .'</div>'
                                 .'<div class="tutspan2">'

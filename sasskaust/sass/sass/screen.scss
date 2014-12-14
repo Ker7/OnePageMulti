@@ -132,46 +132,6 @@ div#content
 }
 
 
-/*** HEADER : MENU ***/
-
-/* To see a menu in your header, you'll need to first add one in WordPress Admin */
-/*.menu ul
-{
-    list-style: none;
-    margin: 0;
-}
-.menu ul ul
-{
-    display: none;
-}
-.menu li
-{
-    display: inline;
-    float: left;
-    padding: 0 8px 0 4px;
-}
-.menu-item
-{
-
-}
-.menu-item a
-{
-    font-size: 30px;
-    text-decoration: none;
-    color: #3eaf00;
-}
-.menu-item a:hover
-{
-    color: #5d8a05;
-}*/
-
-
-
-/*** HEADER : OTHER ***/
-
-
-/*** CONTENT : POSTS AND PAGES ***/
-
 /* Entry and Page Titles */
 h1.entry-title
 {
@@ -491,65 +451,9 @@ div#footer
     }
 }
 
-/*@-moz-document url-prefix(){*/
-/*  textarea {font-size:0.8em;color:red;}*/
-/*}*/
-/*#zinputazz::-webkit-input-placeholder {*/
-/*	/*color: #606a71;*/
-/*	/*color: red;*/
-/*}*/
-
-/*input[placeholder], [placeholder], *[placeholder] {*/
-/*	color: red;*/
-/*}*/
-/*input::-webkit-input-placeholder {color:#606a71;}*/
-/*input::-moz-placeholder{color:#606a71}*/
-/*input:-ms-input-placeholder{color:red} ei veel ::? */
-
-/*.zzfelem {*/
-/*    color: #909da3;*/
-/*    width: calc(100% - 13px);*/
-/*    height: 40px;*/
-/*    background-color: rgb(22, 39, 50);*/
-/*    border-color: #697a86;*/
-
-    /* text pad pole vist siia hea, peab arvestama sellega laiuste puhul*/
-/*    padding-left:10px;*/
-/*    padding-right:-10px;*/
-/**/
-/*    -webkit-box-shadow: none;*/
-/*    -moz-box-shadow: none;*/
-/*    box-shadow: none;*/
-/**/
-/*    border-width: 1px;*/
-/*    border-color: #909da3;*/
-/*    border-right-color: rgb(24, 24, 24);*/
-/*    border-bottom-color: rgb(24, 24, 24);*/
-/*}*/
-
-/* vormi esimene elem firefoxis liiga yleval... kesktee chrome ja foxi vahel..... */
-/*@-moz-document url-prefix() {*/
-/*	#zzteenusmenu {*/
-/*		padding-top: 10px;*/
-    /*-moz-box-sizing: border-box;*/
-    /*     box-sizing: border-box;*/
-/*	}*/
-/*}*/
-
-
-/*#zzfel8 {*/
-/*    padding-top: 10px;*/
-/*    font-size: 0.8em;*/
-/*    width: calc(100% - 15px);*/
-/*    height: 80px;*/
-/*    resize: none;*/
-/*}*/
-
 .zzvaliteenus {
     width: 100%;
 }
-
-
 
 /* VORMIPASA LOPP */
 
@@ -564,18 +468,11 @@ div#footer
 	text-align: center;
 	font-size: 1em;
 	background-color: #4ba000;
-	border-width: 1px 0px 0px 0px ;
-	/*border-top-width: 1px;*/
-	/*border-color: red;*/
+	border-width: 1px 0px 0px 0px;
     border-style: solid;
 	border-color: #56c94b;
     -moz-border-top-colors: #56c94b;
     cursor: pointer;
-
-    /*@media only screen and (max-width: 420px) {*/
-		/*margin: 0px auto;*/
-        /*width: 100%;*/
-    /*}*/
 }
 .rohbtn:hover {
 	background-color: #5bc100;
@@ -652,6 +549,93 @@ div#footer
     margin: 0 auto;
 }
 
+#swrap {
+  background-color: rgb(36,106,36);  /* taustakoht */
+  padding-bottom: 10px;
+
+  .swrappet {
+  background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+
+    padding-bottom: 10px;
+
+    .sheader {
+      min-height: 300px;
+      border-bottom: 1px dashed #ccc;
+
+
+      background: url(img/kolmparemup200.png) top right no-repeat;
+      background-size: 517px 235px;
+
+	.logodiv {
+		height: 200px;
+        /*width: 165px;*/
+		background: url(img/skp_logo.png) 80px 120px no-repeat;
+        background-size: 250px 40px;
+	}
+
+      h1 {
+        margin-left: 80px;
+        font-size: 3em;
+        font-weight: 400;
+      }
+
+    }
+
+    .sbody {
+      padding-top: 20px;
+      padding-left: 80px;
+      padding-right: 80px;
+
+        @media only screen and (max-width: 600px) {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+    }
+
+    p {
+      color: #606a71;
+      font-size: 0.9em;
+    }
+    h3 {
+      color: #000000;
+      font-size: 1.4em;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    h4 {
+      color: #59a400;
+      font-size: 1.1em;
+      font-weight: normal;
+      margin-bottom: 17px;
+    }
+    h5 {
+      color: #000000;
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    strong {
+      font-weight: bold;
+    }
+
+        li {
+      display: block; /*inline*/
+      background: url('img/tahtis_punkt.png') no-repeat left top;
+      background-size: 14px 11px;
+      background-position: 3px 5px;
+      padding-left: 32px;
+      margin-bottom: 10px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9em;
+      color: #606A71;
+    }
+
+  }
+
+}
+
 #main {
     max-width: 1600px;
     background-color: #202f38;
@@ -659,7 +643,6 @@ div#footer
 }
 
 #dragscroll {
-    /*position: absolute;   Mingi imelik asi , keskel jäi teatud laiuse peale.. peaks eemaldama selle dragscroll divvi  */
     max-width: inherit;
 }
 
@@ -701,18 +684,26 @@ div#footer
 }
 
 #navnupud {
-	margin-top: 32px;
+	margin-top: 30px;
 }
 #mnavnimi { /* panin tavalise navnime siia */
 	.logodiv {
 		height: 80px;
 		background: url(img/logo.png) 16px center no-repeat;
         background-size: 165px 27px;
+        @media only screen and (max-width: 400px) {
+            background: url(img/logo.png) 8px center no-repeat;
+            background-size: 165px 27px;
+        }
 	}
 	.logodivtume {
 		height: 80px;
 		background: url(img/logotume.png) 16px center no-repeat;
         background-size: 165px 27px;
+        @media only screen and (max-width: 400px) {
+            background: url(img/logotume.png) 8px center no-repeat;
+            background-size: 165px 27px;
+        }
 	}
 
 	height: 80px;
@@ -720,12 +711,19 @@ div#footer
 	@media only screen and (max-width: 600px) {
 		width: 200px;
     }
+	@media only screen and (max-width: 400px) {
+		width: 173px;
+    }
 }
 
 #mnavkontakt {
 	a:hover {
 		color: #5bc100;
 	}
+
+	@media only screen and (max-width: 400px) {
+		width: 0px;
+    }
 }
 
 #mnavnupud {
@@ -839,7 +837,7 @@ div#footer
 }
 
 .kontblk {
-    padding-top: 32px;
+    padding-top: 30px;
 }
 
 .kontext {
@@ -920,11 +918,16 @@ div#footer
 }
 
 #mnavlangsw {
-  padding-top: 32px;
+  padding-top: 30px;
   a {
     font-size: 0.8em;
+    font-weight: 400;
     color: #919ba2;
+    text-decoration: none;
   }
+    a:hover {
+      color: #59A400;
+    }
 }
 
 div#pc {
@@ -1229,10 +1232,7 @@ div#pc {
       background: url('img/tahtis_punkt.png') no-repeat left top;
       background-size: 14px 11px;
       background-position: 3px 5px;
-      /*height: 35px;*/
       padding-left: 32px;
-      /*padding-top: 10px;*/
-      /*margin-top: 10px;*/
       margin-bottom: 10px;
       font-family: 'Raleway', sans-serif;
       font-size: 0.9em;
@@ -1970,6 +1970,10 @@ div#mobile, #mmenu, #mmenu a {
         border-bottom: 5px solid;
         border-color: #202F38;
         font-size:0;
+        @media only screen and (max-width: 400px) {
+          margin: 15px;
+          margin-top: 30px;
+        }
     }
     div#mobile .naviconTume {
         float: right;
@@ -1980,6 +1984,10 @@ div#mobile, #mmenu, #mmenu a {
         border-bottom: 5px solid;
         border-color: #919ba2;
         font-size:0;
+        @media only screen and (max-width: 400px) {
+          margin: 15px;
+          margin-top: 30px;
+        }
     }
 
     /*
@@ -1997,13 +2005,9 @@ div#mobile, #mmenu, #mmenu a {
         text-decoration: none;
         text-align: center;
         letter-spacing:.2em;
-        padding:6px 0 6px 8px;
-
+        padding: 6px 0 6px 8px;
 		color: white;
       }
-
-
-
 
       ul > li:first-child {
 		padding-top: 18px;
@@ -2020,51 +2024,7 @@ div#mobile, #mmenu, #mmenu a {
           color: #4BA000;
           padding-left:8px;
       }
-
-    /*#mmenu a:before {*/
-    /*    content: "2192";*/
-    /*    padding-right:8px;*/
-    /*}*/
-
-
    }
-
-    /*#mmenu a {*/
-        /*display:block;*/
-        /*overflow: auto;*/
-		/*color: white;*/
-        /*background-color: #202f38;*/
-        /*opacity: 0.94;*/
-
-        /*text-transform:uppercase;*/
-        /*text-decoration: none;*/
-        /*text-align: center;*/
-        /*letter-spacing:.2em;*/
-        /*padding:6px 0 6px 8px;*/
-
-        /*box-sizing: border-box;*/
-    /*}*/
-
-	/*#skpmainmenu li, #mmenu a:first-child {*/
-		/*padding-top: 18px;*/
-	/*}*/
-	/*#skpmainmenu li, #mmenu a:last-child {*/
-		/*padding-bottom: 18px;*/
-	/*}*/
-
-    /*#mmenu a:visited {*/
-    /*    color:white;*/
-    /*    padding-left:8px;*/
-    /*}*/
-    /*#mmenu a:hover {*/
-        /*color: #4BA000;*/
-        /*padding-left:8px;*/
-    /*}*/
-
-    /*#mmenu a:before {*/
-        /*content: "2192";*/
-        /*padding-right:8px;*/
-    /*}*/
 }
 
 @media only screen and (max-width: 780px) { /* 480 komm */
@@ -2083,16 +2043,6 @@ div#mobile, #mmenu, #mmenu a {
 	.tutspan2 {
 		margin-top: 30px;
 	}
-
-/*    .primtext {
-    font-size: 1.5em;
-}
-.primtext1 {
-    font-size: 1.3em;
-}*/
-/*.kontext {*/
-/*    font-size: 0.8em;*/
-/*}*/
 
 }
 

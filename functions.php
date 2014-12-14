@@ -9,6 +9,9 @@
 	define('TEENUSE_KATEGOORIA', 2);		// Piltide kategooria
 	define('TAUST_KATEGOORIA', 4);			// Piltide kategooria
 	define('SKPINFO_KATEGOORIA', 7);		// Üks post kategooria,, Kasutan cat nime 'skpinfo'
+    define('KAMP_ET', 20);    //eesti keelse kampaania kategooria ID
+    define('KAMP_EN', 21);
+    define('KAMP_RU', 22);
 	//constant('TAUST_POST_ID')
 
 	$locale = get_locale();
@@ -260,9 +263,15 @@ add_filter( 'nav_menu_link_attributes', 'skpmenudata_contact_menu_atts', 10, 3 )
 function skpmenudata_contact_menu_atts( $atts, $item, $args )
 {
   // The ID of the target menu item
-  $menu_targets1 = array(214,213,215); //teenustelingid
-  $menu_targets2 = array(218,220,221); //Hinnap lingid
-  $menu_targets3 = array(219,222,223); //kontakt
+  //$menu_targets1 = array(214,213,215); //teenustelingid MINU LOCALIS
+  //$menu_targets2 = array(218,220,221); //Hinnap lingid
+  //$menu_targets3 = array(219,222,223); //kontakt
+  //$menu_targets1 = array(338,345,346); //teenustelingid AMAZING AMAZING
+  //$menu_targets2 = array(341,351,352); //Hinnap lingid
+  //$menu_targets3 = array(342,353,354); //kontakt
+  $menu_targets1 = array(273,272,263); //teenustelingid AMAZING AMAZING
+  $menu_targets2 = array(279,278,267); //Hinnap lingid
+  $menu_targets3 = array(281,280,269); //kontakt
   // inspect $item
   foreach($menu_targets1 as $menu_target1){
     if ($item->ID == $menu_target1) {
@@ -290,7 +299,7 @@ function skpmenudata_contact_menu_atts( $atts, $item, $args )
 //$context – the name of the plugin, in a human readable format
 //$name – the name of the string which helps the user (or translator) understand what’s being translated.
 //$value – the string that needs to be translated
-//hilejm use: icl_t($context, $name, $value) => echo icl_t('skptheme', 'voiKirjuta', 'or write');
+//hilejm use: icl_t($context, $name, $value) => echo icl_t('skptheme', 'tutvustus', 'INTRODUCTION');
 
 icl_register_string('skptheme', 'EsimeneSuurNupp', 'OFFER REAL ESTATE');
 icl_register_string('skptheme', 'HinnaparingPealkiri', 'PRICE INQUIRY');
@@ -312,6 +321,7 @@ icl_register_string('skptheme', 'FormSulge', 'CLOSE');
 icl_register_string('skptheme', 'SoovidMyyaMidagi', 'Are you planning to sell standing timber, a forest property or cutting rights?');
 icl_register_string('skptheme', 'SaadaPakkumine', 'SEND OFFER');
 icl_register_string('skptheme', 'voiKirjuta', 'or write');
+icl_register_string('skptheme', 'tutvustus', 'INTRODUCTION');
 //icl_register_string('skptheme', '', '');
 //icl_register_string('skptheme', '', '');
 

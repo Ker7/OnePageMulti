@@ -242,49 +242,16 @@ div#container {
   margin: 4px 4px 4px 4px;
 }
 
-/*** HEADER : MENU ***/
-/* To see a menu in your header, you'll need to first add one in WordPress Admin */
-/*.menu ul
-{
-    list-style: none;
-    margin: 0;
-}
-.menu ul ul
-{
-    display: none;
-}
-.menu li
-{
-    display: inline;
-    float: left;
-    padding: 0 8px 0 4px;
-}
-.menu-item
-{
-
-}
-.menu-item a
-{
-    font-size: 30px;
-    text-decoration: none;
-    color: #3eaf00;
-}
-.menu-item a:hover
-{
-    color: #5d8a05;
-}*/
-/*** HEADER : OTHER ***/
-/*** CONTENT : POSTS AND PAGES ***/
 /* Entry and Page Titles */
 /* Media Alignment */
-/* line 194, sasskaust/sass/sass/screen.scss */
+/* line 154, sasskaust/sass/sass/screen.scss */
 .alignright {
   /* Style for right-aligned images in posts */
   padding: 8px 0 8px 8px;
   float: right;
 }
 
-/* line 200, sasskaust/sass/sass/screen.scss */
+/* line 160, sasskaust/sass/sass/screen.scss */
 .alignleft {
   /* Style for left-aligned images in posts */
   padding: 8px 8px 8px 0;
@@ -292,114 +259,114 @@ div#container {
 }
 
 /* Entry Content */
-/* line 208, sasskaust/sass/sass/screen.scss */
+/* line 168, sasskaust/sass/sass/screen.scss */
 .entry-content {
   /* Style that affects actual entry/post content */
 }
 
-/* line 229, sasskaust/sass/sass/screen.scss */
+/* line 189, sasskaust/sass/sass/screen.scss */
 .entry-utility {
   /* Style for the entry utility, which sits below a post and provides info like categories, tags, feeds, and an edit link (for authors) */
 }
 
-/* line 233, sasskaust/sass/sass/screen.scss */
+/* line 193, sasskaust/sass/sass/screen.scss */
 .entry-meta {
   /* Style for the entry metadata (author, etc.) */
 }
 
-/* line 237, sasskaust/sass/sass/screen.scss */
+/* line 197, sasskaust/sass/sass/screen.scss */
 .skip-link {
   /* Style for the skip link */
   /*position: absolute;
   left: -9000px;*/
 }
 
-/* line 243, sasskaust/sass/sass/screen.scss */
+/* line 203, sasskaust/sass/sass/screen.scss */
 .navigation {
   /* Style for the navigation links (next/previous post) on a given post */
 }
 
 /*** CONTENT : COMMENTS ***/
-/* line 251, sasskaust/sass/sass/screen.scss */
+/* line 211, sasskaust/sass/sass/screen.scss */
 div#comments {
   /* Style that affects the DIV containing all the comments */
 }
 
-/* line 255, sasskaust/sass/sass/screen.scss */
+/* line 215, sasskaust/sass/sass/screen.scss */
 .comments h3 {
   /* H3 header style for comments */
 }
 
-/* line 259, sasskaust/sass/sass/screen.scss */
+/* line 219, sasskaust/sass/sass/screen.scss */
 .comments ol {
   /* Comments are displayed as ordered lists by default, so you want to style that list so it looks the way you want */
 }
 
-/* line 263, sasskaust/sass/sass/screen.scss */
+/* line 223, sasskaust/sass/sass/screen.scss */
 .comments ol li {
   /* Style each list item in the comments ordered list */
 }
 
-/* line 267, sasskaust/sass/sass/screen.scss */
+/* line 227, sasskaust/sass/sass/screen.scss */
 .comments img {
   /* Style for the user avatar beside each comment */
   float: left;
   margin: 0 12px 8px 0;
 }
 
-/* line 273, sasskaust/sass/sass/screen.scss */
+/* line 233, sasskaust/sass/sass/screen.scss */
 .comments .comment {
   /* Style that applies to each individual comment in a series of comments */
 }
 
-/* line 278, sasskaust/sass/sass/screen.scss */
+/* line 238, sasskaust/sass/sass/screen.scss */
 .children ul li {
   /* A style that refers to the children (as in, responses to) any given comment */
 }
 
-/* line 283, sasskaust/sass/sass/screen.scss */
+/* line 243, sasskaust/sass/sass/screen.scss */
 .comment-reply-link {
   /* Style for the "Reply" link on a comment */
 }
 
-/* line 287, sasskaust/sass/sass/screen.scss */
+/* line 247, sasskaust/sass/sass/screen.scss */
 .comment-meta {
   /* Style for metadata for a comment */
 }
 
-/* line 291, sasskaust/sass/sass/screen.scss */
+/* line 251, sasskaust/sass/sass/screen.scss */
 div#respond {
   /* DIV that contains the comment response form */
 }
 
-/* line 295, sasskaust/sass/sass/screen.scss */
+/* line 255, sasskaust/sass/sass/screen.scss */
 div#respond h3 {
   /* H3 header for the comment response form */
 }
 
 /*** CONTENT : SIDEBAR ***/
-/* line 302, sasskaust/sass/sass/screen.scss */
+/* line 262, sasskaust/sass/sass/screen.scss */
 div#primary {
   /* Primary Widget Area DIV */
 }
 
-/* line 306, sasskaust/sass/sass/screen.scss */
+/* line 266, sasskaust/sass/sass/screen.scss */
 div#secondary {
   /* Secondary Widget Area DIV */
 }
 
-/* line 310, sasskaust/sass/sass/screen.scss */
+/* line 270, sasskaust/sass/sass/screen.scss */
 .widget-area {
   /* Class that applies to BOTH widget areas */
 }
 
-/* line 314, sasskaust/sass/sass/screen.scss */
+/* line 274, sasskaust/sass/sass/screen.scss */
 .xoxo {
   /* Class that applies to each item in each widget area (an unordered list class) */
 }
 
 /*** FOOTER ***/
-/* line 321, sasskaust/sass/sass/screen.scss */
+/* line 281, sasskaust/sass/sass/screen.scss */
 div#footer {
   background-color: #202f38;
   max-width: 1600px;
@@ -409,13 +376,13 @@ div#footer {
 }
 
 /* VORMIPASA ALGUS */
-/* line 332, sasskaust/sass/sass/screen.scss */
+/* line 292, sasskaust/sass/sass/screen.scss */
 #fcont {
   max-width: 800px;
   margin: 0px auto 0px auto;
   padding: 0px 20px 40px 20px;
 }
-/* line 338, sasskaust/sass/sass/screen.scss */
+/* line 298, sasskaust/sass/sass/screen.scss */
 #fcont h2 {
   padding-top: 80px;
   text-align: center;
@@ -424,12 +391,12 @@ div#footer {
   font-weight: 300;
 }
 @media screen and (max-width: 580px) {
-  /* line 338, sasskaust/sass/sass/screen.scss */
+  /* line 298, sasskaust/sass/sass/screen.scss */
   #fcont h2 {
     font-size: 2.5em;
   }
 }
-/* line 349, sasskaust/sass/sass/screen.scss */
+/* line 309, sasskaust/sass/sass/screen.scss */
 #fcont p {
   /*padding: 30px 20px 0px 20px;*/
   text-align: center;
@@ -441,39 +408,39 @@ div#footer {
   font-size: inherit;
 }
 
-/* line 361, sasskaust/sass/sass/screen.scss */
+/* line 321, sasskaust/sass/sass/screen.scss */
 #form_container {
   /*overflow: hidden;*/
   /*margin-top: 40px;*/
   /*font-size: 1em;*/
 }
 
-/* line 367, sasskaust/sass/sass/screen.scss */
+/* line 327, sasskaust/sass/sass/screen.scss */
 .form-block {
   margin-top: 40px;
   margin-bottom: 25px;
   width: calc(49%);
 }
 
-/* line 373, sasskaust/sass/sass/screen.scss */
+/* line 333, sasskaust/sass/sass/screen.scss */
 .form-block:nth-child(1) {
   /* molemad on blokid */
   float: left;
 }
 
-/* line 377, sasskaust/sass/sass/screen.scss */
+/* line 337, sasskaust/sass/sass/screen.scss */
 .form-block:nth-child(2) {
   /*width: calc(46%);*/
   float: right;
 }
 
 @media screen and (max-width: 580px) {
-  /* line 383, sasskaust/sass/sass/screen.scss */
+  /* line 343, sasskaust/sass/sass/screen.scss */
   .form-block:nth-child(1), .form-block:nth-child(2) {
     width: 100%;
   }
 }
-/* line 388, sasskaust/sass/sass/screen.scss */
+/* line 348, sasskaust/sass/sass/screen.scss */
 .fcol {
   /*max-width: 360px;*/
   /* siin tegelt +10 paddingu p├żrast */
@@ -482,7 +449,7 @@ div#footer {
   box-sizing: border-box;
 }
 
-/* line 397, sasskaust/sass/sass/screen.scss */
+/* line 357, sasskaust/sass/sass/screen.scss */
 #teenusform input[type="text"], #teenusform select, #teenusform textarea {
   width: 100%;
   background-color: #162732;
@@ -496,25 +463,25 @@ div#footer {
   font-size: inherit;
   font-family: inherit;
 }
-/* line 417, sasskaust/sass/sass/screen.scss */
+/* line 377, sasskaust/sass/sass/screen.scss */
 #teenusform select {
   height: 50px;
   /*width: 100%;*/
   padding: 6px;
   /*padding-right:-10px;*/
 }
-/* line 423, sasskaust/sass/sass/screen.scss */
+/* line 383, sasskaust/sass/sass/screen.scss */
 #teenusform input[type="text"] {
   /*width: 100%;*/
   height: 50px;
   padding-left: 10px;
 }
-/* line 428, sasskaust/sass/sass/screen.scss */
+/* line 388, sasskaust/sass/sass/screen.scss */
 #teenusform #teenusmenu option.topt {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-/* line 432, sasskaust/sass/sass/screen.scss */
+/* line 392, sasskaust/sass/sass/screen.scss */
 #teenusform textarea {
   resize: none;
   height: 110px;
@@ -522,13 +489,13 @@ div#footer {
   padding-left: 10px;
   padding-top: 6px;
 }
-/* line 439, sasskaust/sass/sass/screen.scss */
+/* line 399, sasskaust/sass/sass/screen.scss */
 #teenusform .capfloat {
   float: left;
   width: 100%;
   margin-bottom: 30px;
 }
-/* line 444, sasskaust/sass/sass/screen.scss */
+/* line 404, sasskaust/sass/sass/screen.scss */
 #teenusform .capfloat .capcont {
   width: 200px;
   margin: 0px auto;
@@ -536,14 +503,14 @@ div#footer {
   /*margin-right: auto;*/
   overflow: auto;
 }
-/* line 452, sasskaust/sass/sass/screen.scss */
+/* line 412, sasskaust/sass/sass/screen.scss */
 #teenusform .capfloat .capcont img {
   float: left;
   /*w=54 captcha constructis*/
   margin-top: 12px;
   margin-right: 12px;
 }
-/* line 457, sasskaust/sass/sass/screen.scss */
+/* line 417, sasskaust/sass/sass/screen.scss */
 #teenusform .capfloat .capcont input.cap {
   float: left;
   width: 130px;
@@ -551,95 +518,48 @@ div#footer {
 }
 
 /*#909DA3*/
-/* line 469, sasskaust/sass/sass/screen.scss */
+/* line 429, sasskaust/sass/sass/screen.scss */
 ::-webkit-input-placeholder {
   color: #697377;
 }
 
-/* line 473, sasskaust/sass/sass/screen.scss */
+/* line 433, sasskaust/sass/sass/screen.scss */
 :-moz-placeholder {
   /* Firefox 18- */
   color: #909DA3;
 }
 
-/* line 477, sasskaust/sass/sass/screen.scss */
+/* line 437, sasskaust/sass/sass/screen.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #909DA3;
 }
 
-/* line 481, sasskaust/sass/sass/screen.scss */
+/* line 441, sasskaust/sass/sass/screen.scss */
 :-ms-input-placeholder {
   color: #909DA3;
 }
 
-/* line 485, sasskaust/sass/sass/screen.scss */
+/* line 445, sasskaust/sass/sass/screen.scss */
 .fsubmit {
   /*	display: inline-block;*/
   width: 320px;
   margin: 25px auto 20px auto;
 }
 @media only screen and (max-width: 420px) {
-  /* line 485, sasskaust/sass/sass/screen.scss */
+  /* line 445, sasskaust/sass/sass/screen.scss */
   .fsubmit {
     width: 80%;
   }
 }
 
-/*@-moz-document url-prefix(){*/
-/*  textarea {font-size:0.8em;color:red;}*/
-/*}*/
-/*#zinputazz::-webkit-input-placeholder {*/
-/*	/*color: #606a71;*/
-/*	/*color: red;*/
-/*}*/
-/*input[placeholder], [placeholder], *[placeholder] {*/
-/*	color: red;*/
-/*}*/
-/*input::-webkit-input-placeholder {color:#606a71;}*/
-/*input::-moz-placeholder{color:#606a71}*/
-/*input:-ms-input-placeholder{color:red} ei veel ::? */
-/*.zzfelem {*/
-/*    color: #909da3;*/
-/*    width: calc(100% - 13px);*/
-/*    height: 40px;*/
-/*    background-color: rgb(22, 39, 50);*/
-/*    border-color: #697a86;*/
-/* text pad pole vist siia hea, peab arvestama sellega laiuste puhul*/
-/*    padding-left:10px;*/
-/*    padding-right:-10px;*/
-/**/
-/*    -webkit-box-shadow: none;*/
-/*    -moz-box-shadow: none;*/
-/*    box-shadow: none;*/
-/**/
-/*    border-width: 1px;*/
-/*    border-color: #909da3;*/
-/*    border-right-color: rgb(24, 24, 24);*/
-/*    border-bottom-color: rgb(24, 24, 24);*/
-/*}*/
-/* vormi esimene elem firefoxis liiga yleval... kesktee chrome ja foxi vahel..... */
-/*@-moz-document url-prefix() {*/
-/*	#zzteenusmenu {*/
-/*		padding-top: 10px;*/
-/*-moz-box-sizing: border-box;*/
-/*     box-sizing: border-box;*/
-/*	}*/
-/*}*/
-/*#zzfel8 {*/
-/*    padding-top: 10px;*/
-/*    font-size: 0.8em;*/
-/*    width: calc(100% - 15px);*/
-/*    height: 80px;*/
-/*    resize: none;*/
-/*}*/
-/* line 548, sasskaust/sass/sass/screen.scss */
+/* line 454, sasskaust/sass/sass/screen.scss */
 .zzvaliteenus {
   width: 100%;
 }
 
 /* VORMIPASA LOPP */
-/* line 556, sasskaust/sass/sass/screen.scss */
+/* line 460, sasskaust/sass/sass/screen.scss */
 .rohbtn, .rohnupp4 {
   color: white;
   /*width: 320px;*/
@@ -650,24 +570,18 @@ div#footer {
   font-size: 1em;
   background-color: #4ba000;
   border-width: 1px 0px 0px 0px;
-  /*border-top-width: 1px;*/
-  /*border-color: red;*/
   border-style: solid;
   border-color: #56c94b;
   -moz-border-top-colors: #56c94b;
   cursor: pointer;
-  /*@media only screen and (max-width: 420px) {*/
-  /*margin: 0px auto;*/
-  /*width: 100%;*/
-  /*}*/
 }
 
-/* line 580, sasskaust/sass/sass/screen.scss */
+/* line 477, sasskaust/sass/sass/screen.scss */
 .rohbtn:hover, .rohnupp4:hover {
   background-color: #5bc100;
 }
 
-/* line 584, sasskaust/sass/sass/screen.scss */
+/* line 481, sasskaust/sass/sass/screen.scss */
 .rohnupp, .rohnupp2 {
   color: white;
   width: 320px;
@@ -684,24 +598,24 @@ div#footer {
   cursor: pointer;
 }
 @media only screen and (max-width: 420px) {
-  /* line 584, sasskaust/sass/sass/screen.scss */
+  /* line 481, sasskaust/sass/sass/screen.scss */
   .rohnupp, .rohnupp2 {
     margin: 0px auto;
     width: 100%;
   }
 }
 
-/* line 605, sasskaust/sass/sass/screen.scss */
+/* line 502, sasskaust/sass/sass/screen.scss */
 .rohnupp:hover, .rohnupp2:hover {
   background-color: #5bc100;
 }
 
-/* line 609, sasskaust/sass/sass/screen.scss */
+/* line 506, sasskaust/sass/sass/screen.scss */
 .rohnupp2 {
   width: 240px;
 }
 
-/* line 613, sasskaust/sass/sass/screen.scss */
+/* line 510, sasskaust/sass/sass/screen.scss */
 .rohnupp3 {
   /*@extend .rohnupp;*/
   color: white;
@@ -724,18 +638,18 @@ div#footer {
   /*    /*padding-bottom: 10px;*/
   /*}*/
 }
-/* line 639, sasskaust/sass/sass/screen.scss */
+/* line 536, sasskaust/sass/sass/screen.scss */
 .rohnupp3 p {
   padding-top: 20px;
 }
 
-/* line 643, sasskaust/sass/sass/screen.scss */
+/* line 540, sasskaust/sass/sass/screen.scss */
 .rohnupp3:hover {
   background-color: #5bc100;
 }
 
 /*** YOUR CSS ***/
-/* line 649, sasskaust/sass/sass/screen.scss */
+/* line 546, sasskaust/sass/sass/screen.scss */
 #pwrap {
   background-color: #202f38;
   /* taustakoht */
@@ -743,20 +657,109 @@ div#footer {
   margin: 0 auto;
 }
 
-/* line 655, sasskaust/sass/sass/screen.scss */
+/* line 552, sasskaust/sass/sass/screen.scss */
+#swrap {
+  background-color: #246a24;
+  /* taustakoht */
+  padding-bottom: 10px;
+}
+/* line 556, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet {
+  background-color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+/* line 563, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet .sheader {
+  min-height: 300px;
+  border-bottom: 1px dashed #ccc;
+  background: url(img/kolmparemup200.png) top right no-repeat;
+  background-size: 517px 235px;
+}
+/* line 571, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet .sheader .logodiv {
+  height: 200px;
+  /*width: 165px;*/
+  background: url(img/skp_logo.png) 80px 120px no-repeat;
+  background-size: 250px 40px;
+}
+/* line 578, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet .sheader h1 {
+  margin-left: 80px;
+  font-size: 3em;
+  font-weight: 400;
+}
+/* line 586, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet .sbody {
+  padding-top: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+@media only screen and (max-width: 600px) {
+  /* line 586, sasskaust/sass/sass/screen.scss */
+  #swrap .swrappet .sbody {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/* line 597, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet p {
+  color: #606a71;
+  font-size: 0.9em;
+}
+/* line 601, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet h3 {
+  color: #000000;
+  font-size: 1.4em;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+/* line 607, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet h4 {
+  color: #59a400;
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-bottom: 17px;
+}
+/* line 613, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet h5 {
+  color: #000000;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+/* line 619, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet strong {
+  font-weight: bold;
+}
+/* line 623, sasskaust/sass/sass/screen.scss */
+#swrap .swrappet li {
+  display: block;
+  /*inline*/
+  background: url("img/tahtis_punkt.png") no-repeat left top;
+  background-size: 14px 11px;
+  background-position: 3px 5px;
+  padding-left: 32px;
+  margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9em;
+  color: #606A71;
+}
+
+/* line 639, sasskaust/sass/sass/screen.scss */
 #main {
   max-width: 1600px;
   background-color: #202f38;
   margin: 0 auto;
 }
 
-/* line 661, sasskaust/sass/sass/screen.scss */
+/* line 645, sasskaust/sass/sass/screen.scss */
 #dragscroll {
-  /*position: absolute;   Mingi imelik asi , keskel j├żi teatud laiuse peale.. peaks eemaldama selle dragscroll divvi  */
   max-width: inherit;
 }
 
-/* line 666, sasskaust/sass/sass/screen.scss */
+/* line 649, sasskaust/sass/sass/screen.scss */
 #ylariba, #ylaribatume {
   z-index: 5000;
   /*width: 100%;*/
@@ -767,23 +770,23 @@ div#footer {
   max-width: 1600px;
 }
 
-/* line 676, sasskaust/sass/sass/screen.scss */
+/* line 659, sasskaust/sass/sass/screen.scss */
 #ylaribatume {
   background-color: #14191c;
 }
 
-/* line 681, sasskaust/sass/sass/screen.scss */
+/* line 664, sasskaust/sass/sass/screen.scss */
 #navnimi {
   height: 80px;
 }
-/* line 683, sasskaust/sass/sass/screen.scss */
+/* line 666, sasskaust/sass/sass/screen.scss */
 #navnimi .logodiv {
   height: 80px;
   /*width: 165px;*/
   background: url(img/logo.png) 16px center no-repeat;
   background-size: 165px 27px;
 }
-/* line 689, sasskaust/sass/sass/screen.scss */
+/* line 672, sasskaust/sass/sass/screen.scss */
 #navnimi .logodivtume {
   height: 80px;
   /*width: 165px;*/
@@ -791,47 +794,73 @@ div#footer {
   background-size: 165px 27px;
 }
 
-/* line 698, sasskaust/sass/sass/screen.scss */
+/* line 681, sasskaust/sass/sass/screen.scss */
 #navkontakt a:hover {
   color: #5bc100;
 }
 
-/* line 703, sasskaust/sass/sass/screen.scss */
+/* line 686, sasskaust/sass/sass/screen.scss */
 #navnupud {
-  margin-top: 32px;
+  margin-top: 30px;
 }
 
-/* line 706, sasskaust/sass/sass/screen.scss */
+/* line 689, sasskaust/sass/sass/screen.scss */
 #mnavnimi {
   /* panin tavalise navnime siia */
   height: 80px;
   width: 34%;
 }
-/* line 707, sasskaust/sass/sass/screen.scss */
+/* line 690, sasskaust/sass/sass/screen.scss */
 #mnavnimi .logodiv {
   height: 80px;
   background: url(img/logo.png) 16px center no-repeat;
   background-size: 165px 27px;
 }
-/* line 712, sasskaust/sass/sass/screen.scss */
+@media only screen and (max-width: 400px) {
+  /* line 690, sasskaust/sass/sass/screen.scss */
+  #mnavnimi .logodiv {
+    background: url(img/logo.png) 8px center no-repeat;
+    background-size: 165px 27px;
+  }
+}
+/* line 699, sasskaust/sass/sass/screen.scss */
 #mnavnimi .logodivtume {
   height: 80px;
   background: url(img/logotume.png) 16px center no-repeat;
   background-size: 165px 27px;
 }
+@media only screen and (max-width: 400px) {
+  /* line 699, sasskaust/sass/sass/screen.scss */
+  #mnavnimi .logodivtume {
+    background: url(img/logotume.png) 8px center no-repeat;
+    background-size: 165px 27px;
+  }
+}
 @media only screen and (max-width: 600px) {
-  /* line 706, sasskaust/sass/sass/screen.scss */
+  /* line 689, sasskaust/sass/sass/screen.scss */
   #mnavnimi {
     width: 200px;
   }
 }
+@media only screen and (max-width: 400px) {
+  /* line 689, sasskaust/sass/sass/screen.scss */
+  #mnavnimi {
+    width: 173px;
+  }
+}
 
-/* line 726, sasskaust/sass/sass/screen.scss */
+/* line 720, sasskaust/sass/sass/screen.scss */
 #mnavkontakt a:hover {
   color: #5bc100;
 }
+@media only screen and (max-width: 400px) {
+  /* line 719, sasskaust/sass/sass/screen.scss */
+  #mnavkontakt {
+    width: 0px;
+  }
+}
 
-/* line 734, sasskaust/sass/sass/screen.scss */
+/* line 732, sasskaust/sass/sass/screen.scss */
 #pilt, #piltTume {
   /*width: 100%;*/
   height: 728px;
@@ -840,12 +869,12 @@ div#footer {
   overflow: hidden;
 }
 
-/* line 748, sasskaust/sass/sass/screen.scss */
+/* line 746, sasskaust/sass/sass/screen.scss */
 #piltTume {
   height: 328px;
 }
 
-/* line 754, sasskaust/sass/sass/screen.scss */
+/* line 752, sasskaust/sass/sass/screen.scss */
 #rkoln, #rkolnTume {
   /*width: 100%;*/
   height: 728px;
@@ -858,20 +887,20 @@ div#footer {
   background-size: 517px 235px;
 }
 @media only screen and (max-width: 1016px) {
-  /* line 754, sasskaust/sass/sass/screen.scss */
+  /* line 752, sasskaust/sass/sass/screen.scss */
   #rkoln, #rkolnTume {
     background: url(img/kolmnurgadvasakul200.png) bottom left no-repeat;
     background-size: 517px 235px;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 754, sasskaust/sass/sass/screen.scss */
+  /* line 752, sasskaust/sass/sass/screen.scss */
   #rkoln, #rkolnTume {
     background: none;
   }
 }
 
-/* line 776, sasskaust/sass/sass/screen.scss */
+/* line 774, sasskaust/sass/sass/screen.scss */
 #rkolnTume {
   height: 328px;
   left: -150px;
@@ -879,13 +908,13 @@ div#footer {
   background-size: 517px 235px;
 }
 @media only screen and (max-width: 960px) {
-  /* line 776, sasskaust/sass/sass/screen.scss */
+  /* line 774, sasskaust/sass/sass/screen.scss */
   #rkolnTume {
     background: none;
   }
 }
 
-/* line 789, sasskaust/sass/sass/screen.scss */
+/* line 787, sasskaust/sass/sass/screen.scss */
 .taust {
   /*display: none;*/
   position: absolute;
@@ -901,7 +930,7 @@ div#footer {
   transition: all 2s ease-in-out;
   /*background: url(img/back2.jpg) 0px 0px no-repeat;*/
 }
-/* line 804, sasskaust/sass/sass/screen.scss */
+/* line 802, sasskaust/sass/sass/screen.scss */
 .taust img {
   display: block;
   /*max-width: 100%;*/
@@ -927,27 +956,27 @@ div#footer {
 /*    right: 0px;*/
 /*    background: url(img/kolmnurgad_paremal.png) 0 0 no-repeat;*/
 /*}*/
-/* line 833, sasskaust/sass/sass/screen.scss */
+/* line 831, sasskaust/sass/sass/screen.scss */
 .mbtn {
   cursor: pointer;
 }
 
-/* line 837, sasskaust/sass/sass/screen.scss */
+/* line 835, sasskaust/sass/sass/screen.scss */
 .primtext1 {
   font-size: 1.7em;
 }
 
-/* line 841, sasskaust/sass/sass/screen.scss */
+/* line 839, sasskaust/sass/sass/screen.scss */
 .kontblk {
-  padding-top: 32px;
+  padding-top: 30px;
 }
 
-/* line 845, sasskaust/sass/sass/screen.scss */
+/* line 843, sasskaust/sass/sass/screen.scss */
 .kontext {
   font-size: 1em;
 }
 
-/* line 849, sasskaust/sass/sass/screen.scss */
+/* line 847, sasskaust/sass/sass/screen.scss */
 .navbtn, .kontblk {
   padding-left: 1%;
   padding-right: 1%;
@@ -957,7 +986,7 @@ div#footer {
   color: black;
 }
 
-/* line 860, sasskaust/sass/sass/screen.scss */
+/* line 858, sasskaust/sass/sass/screen.scss */
 .htel {
   /*margin-left: calc(10% - 10px);*/
   /*margin-right: calc(10% - 10px);*/
@@ -966,7 +995,7 @@ div#footer {
   /*margin-right: calc(15% - 30px);*/
 }
 @media only screen and (max-width: 580px) {
-  /* line 860, sasskaust/sass/sass/screen.scss */
+  /* line 858, sasskaust/sass/sass/screen.scss */
   .htel {
     margin-left: calc(20% - 10px);
     /*margin-left: 0;*/
@@ -974,7 +1003,7 @@ div#footer {
   }
 }
 @media only screen and (max-width: 510px) {
-  /* line 860, sasskaust/sass/sass/screen.scss */
+  /* line 858, sasskaust/sass/sass/screen.scss */
   .htel {
     display: none;
     /*.nspan_3_of_4 {*/
@@ -983,7 +1012,7 @@ div#footer {
   }
 }
 
-/* line 878, sasskaust/sass/sass/screen.scss */
+/* line 876, sasskaust/sass/sass/screen.scss */
 .hemail {
   color: #4ba000;
   /*float: right;*/
@@ -992,19 +1021,19 @@ div#footer {
   text-decoration: none;
 }
 @media only screen and (max-width: 650px) {
-  /* line 878, sasskaust/sass/sass/screen.scss */
+  /* line 876, sasskaust/sass/sass/screen.scss */
   .hemail {
     display: none;
   }
 }
 
-/* line 889, sasskaust/sass/sass/screen.scss */
+/* line 887, sasskaust/sass/sass/screen.scss */
 .navbtn:hover, .mnavbtn:hover {
   color: #5bc100;
 }
 
 /* mobiili nav nuppude stiil, keskel box*/
-/* line 894, sasskaust/sass/sass/screen.scss */
+/* line 892, sasskaust/sass/sass/screen.scss */
 .mnavbtn {
   /*padding-top: 15px;*/
   margin-right: 20px;
@@ -1013,16 +1042,16 @@ div#footer {
   color: black;
 }
 
-/* line 903, sasskaust/sass/sass/screen.scss */
+/* line 901, sasskaust/sass/sass/screen.scss */
 #navnupud {
   /*#navnupud a:hover {*/
 }
-/* line 904, sasskaust/sass/sass/screen.scss */
+/* line 902, sasskaust/sass/sass/screen.scss */
 #navnupud div > ul > li {
   display: inline;
   margin-right: 20px;
 }
-/* line 907, sasskaust/sass/sass/screen.scss */
+/* line 905, sasskaust/sass/sass/screen.scss */
 #navnupud div > ul > li a {
   color: #919ba2;
   font-size: 0.8em;
@@ -1030,22 +1059,28 @@ div#footer {
   text-decoration: none;
   /*color: #404f59; 30.09 asendavad heleTcol ja tumeTcol */
 }
-/* line 914, sasskaust/sass/sass/screen.scss */
+/* line 912, sasskaust/sass/sass/screen.scss */
 #navnupud div > ul > li a:hover {
   color: #59A400;
 }
 
-/* line 922, sasskaust/sass/sass/screen.scss */
+/* line 920, sasskaust/sass/sass/screen.scss */
 #mnavlangsw {
-  padding-top: 32px;
+  padding-top: 30px;
 }
-/* line 924, sasskaust/sass/sass/screen.scss */
+/* line 922, sasskaust/sass/sass/screen.scss */
 #mnavlangsw a {
   font-size: 0.8em;
+  font-weight: 400;
   color: #919ba2;
+  text-decoration: none;
+}
+/* line 928, sasskaust/sass/sass/screen.scss */
+#mnavlangsw a:hover {
+  color: #59A400;
 }
 
-/* line 930, sasskaust/sass/sass/screen.scss */
+/* line 933, sasskaust/sass/sass/screen.scss */
 div#pc {
   height: 80px;
   width: 100%;
@@ -1054,22 +1089,22 @@ div#pc {
   display: block;
 }
 
-/* line 940, sasskaust/sass/sass/screen.scss */
+/* line 943, sasskaust/sass/sass/screen.scss */
 .text-black {
   color: #000;
 }
 
-/* line 944, sasskaust/sass/sass/screen.scss */
+/* line 947, sasskaust/sass/sass/screen.scss */
 .text-white {
   color: #fff;
 }
 
-/* line 948, sasskaust/sass/sass/screen.scss */
+/* line 951, sasskaust/sass/sass/screen.scss */
 .center {
   text-align: center;
 }
 
-/* line 952, sasskaust/sass/sass/screen.scss */
+/* line 955, sasskaust/sass/sass/screen.scss */
 #banner {
   z-index: 4;
   position: relative;
@@ -1079,7 +1114,7 @@ div#pc {
   min-width: 280px;
   color: white;
 }
-/* line 960, sasskaust/sass/sass/screen.scss */
+/* line 963, sasskaust/sass/sass/screen.scss */
 #banner h1 {
   /*font-weight: 300;*/
   font-size: 3.0em;
@@ -1099,7 +1134,7 @@ div#pc {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 1050px) {
-  /* line 960, sasskaust/sass/sass/screen.scss */
+  /* line 963, sasskaust/sass/sass/screen.scss */
   #banner h1 {
     /*top: 120px;*/
     /*left:0px;*/
@@ -1111,21 +1146,21 @@ div#pc {
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 960, sasskaust/sass/sass/screen.scss */
+  /* line 963, sasskaust/sass/sass/screen.scss */
   #banner h1 {
     font-size: 2em;
     /*padding-top: 120px;*/
     /*max-width: 560px;*/
   }
 }
-/* line 997, sasskaust/sass/sass/screen.scss */
+/* line 1000, sasskaust/sass/sass/screen.scss */
 #banner h2 {
   padding-top: 260px;
   font-size: 3.2em;
   margin: 0 auto;
 }
 @media screen and (max-width: 1050px) {
-  /* line 997, sasskaust/sass/sass/screen.scss */
+  /* line 1000, sasskaust/sass/sass/screen.scss */
   #banner h2 {
     padding-top: 220px;
     /* - */
@@ -1134,14 +1169,14 @@ div#pc {
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 997, sasskaust/sass/sass/screen.scss */
+  /* line 1000, sasskaust/sass/sass/screen.scss */
   #banner h2 {
     padding-top: 180px;
     max-width: 560px;
     font-size: 2.5em;
   }
 }
-/* line 1012, sasskaust/sass/sass/screen.scss */
+/* line 1015, sasskaust/sass/sass/screen.scss */
 #banner h3 {
   padding-top: 10px;
   font-size: 1.5em;
@@ -1149,20 +1184,20 @@ div#pc {
   margin: 0 auto;
 }
 @media screen and (max-width: 1050px) {
-  /* line 1012, sasskaust/sass/sass/screen.scss */
+  /* line 1015, sasskaust/sass/sass/screen.scss */
   #banner h3 {
     max-width: 550px;
     /*font-size: 1.5em;*/
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 1012, sasskaust/sass/sass/screen.scss */
+  /* line 1015, sasskaust/sass/sass/screen.scss */
   #banner h3 {
     /*font-size: 1.2em;*/
   }
 }
 
-/* line 1027, sasskaust/sass/sass/screen.scss */
+/* line 1030, sasskaust/sass/sass/screen.scss */
 .banhead-cont {
   display: block;
   position: absolute;
@@ -1174,19 +1209,19 @@ div#pc {
   vertical-align: bottom;
 }
 @media screen and (max-width: 1050px) {
-  /* line 1027, sasskaust/sass/sass/screen.scss */
+  /* line 1030, sasskaust/sass/sass/screen.scss */
   .banhead-cont {
     top: 130px;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 1027, sasskaust/sass/sass/screen.scss */
+  /* line 1030, sasskaust/sass/sass/screen.scss */
   .banhead-cont {
     top: 110px;
   }
 }
 
-/* line 1044, sasskaust/sass/sass/screen.scss */
+/* line 1047, sasskaust/sass/sass/screen.scss */
 .rohnupp4 {
   display: inline-block;
   position: relative;
@@ -1197,13 +1232,13 @@ div#pc {
   /*right: calc(35% - 360px);*/
   /*left: 72%;*/
 }
-/* line 1058, sasskaust/sass/sass/screen.scss */
+/* line 1061, sasskaust/sass/sass/screen.scss */
 .rohnupp4 p {
   margin-top: 19px;
   /*vertical-align: middle;*/
 }
 @media screen and (max-width: 640px) {
-  /* line 1044, sasskaust/sass/sass/screen.scss */
+  /* line 1047, sasskaust/sass/sass/screen.scss */
   .rohnupp4 {
     margin-left: 0px;
     width: 90%;
@@ -1220,13 +1255,13 @@ div#pc {
     padding-top: 30px;
     font-size: 2em;
 }*/
-/* line 1082, sasskaust/sass/sass/screen.scss */
+/* line 1085, sasskaust/sass/sass/screen.scss */
 .btxt-2 {
   font-size: 2em;
 }
 
 /* top-padding l├żheb querites v├żiksemaks! */
-/* line 1087, sasskaust/sass/sass/screen.scss */
+/* line 1090, sasskaust/sass/sass/screen.scss */
 #teenused {
   z-index: 5;
   position: relative;
@@ -1234,12 +1269,12 @@ div#pc {
   background-color: #fff;
   overflow: auto;
 }
-/* line 1093, sasskaust/sass/sass/screen.scss */
+/* line 1096, sasskaust/sass/sass/screen.scss */
 #teenused .headlink, #teenused h3, #teenused p {
   color: #606a71;
   font-size: 0.9em;
 }
-/* line 1097, sasskaust/sass/sass/screen.scss */
+/* line 1100, sasskaust/sass/sass/screen.scss */
 #teenused a {
   font-size: 0.8em;
   display: block;
@@ -1247,14 +1282,14 @@ div#pc {
   cursor: pointer;
   margin-bottom: 2em;
 }
-/* line 1104, sasskaust/sass/sass/screen.scss */
+/* line 1107, sasskaust/sass/sass/screen.scss */
 #teenused .headlink {
   /*color: #606a71;*/
   font-size: 1em;
   margin: 0px;
 }
 
-/* line 1114, sasskaust/sass/sass/screen.scss */
+/* line 1117, sasskaust/sass/sass/screen.scss */
 #teenusedSingle {
   /*@extend #teenused;*/
   z-index: 5;
@@ -1265,12 +1300,12 @@ div#pc {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 1123, sasskaust/sass/sass/screen.scss */
+/* line 1126, sasskaust/sass/sass/screen.scss */
 #teenusedSingle h3, #teenusedSingle p {
   color: #606a71;
   font-size: 0.9em;
 }
-/* line 1131, sasskaust/sass/sass/screen.scss */
+/* line 1134, sasskaust/sass/sass/screen.scss */
 #teenusedSingle .ttblok {
   float: left;
   height: 108px;
@@ -1278,40 +1313,40 @@ div#pc {
   /*padding-left: 1em;*/
   /*padding-right: 1em;*/
 }
-/* line 1139, sasskaust/sass/sass/screen.scss */
+/* line 1142, sasskaust/sass/sass/screen.scss */
 #teenusedSingle .ttblok img {
   width: 59px;
   height: auto;
 }
 @media screen and (max-width: 1100px) {
-  /* line 1131, sasskaust/sass/sass/screen.scss */
+  /* line 1134, sasskaust/sass/sass/screen.scss */
   #teenusedSingle .ttblok {
     width: 25%;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 1131, sasskaust/sass/sass/screen.scss */
+  /* line 1134, sasskaust/sass/sass/screen.scss */
   #teenusedSingle .ttblok {
     width: 33%;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 1131, sasskaust/sass/sass/screen.scss */
+  /* line 1134, sasskaust/sass/sass/screen.scss */
   #teenusedSingle .ttblok {
     width: 50%;
   }
 }
-/* line 1156, sasskaust/sass/sass/screen.scss */
+/* line 1159, sasskaust/sass/sass/screen.scss */
 #teenusedSingle .ttblok:hover {
   cursor: pointer;
 }
-/* line 1158, sasskaust/sass/sass/screen.scss */
+/* line 1161, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-rida {
   max-width: 1200px;
   margin: 0px auto;
   overflow: auto;
 }
-/* line 1164, sasskaust/sass/sass/screen.scss */
+/* line 1167, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu {
   position: relative;
   /*height: 200px;*/
@@ -1323,7 +1358,7 @@ div#pc {
   /*606a71;*/
   overflow: auto;
 }
-/* line 1175, sasskaust/sass/sass/screen.scss */
+/* line 1178, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-img {
   display: block;
   float: left;
@@ -1333,12 +1368,12 @@ div#pc {
   padding-top: 30px;
   padding-right: 45px;
 }
-/* line 1183, sasskaust/sass/sass/screen.scss */
+/* line 1186, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-img img {
   width: 100%;
   height: auto;
 }
-/* line 1189, sasskaust/sass/sass/screen.scss */
+/* line 1192, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-sisu, #teenusedSingle #teenused-sisu .teenus-sisu-page {
   display: block;
   float: left;
@@ -1346,51 +1381,48 @@ div#pc {
   padding: 15px;
   padding-top: 30px;
 }
-/* line 1196, sasskaust/sass/sass/screen.scss */
+/* line 1199, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-sisu h3, #teenusedSingle #teenused-sisu .teenus-sisu-page h3 {
   color: #000000;
   font-size: 1.4em;
   font-weight: normal;
   margin-bottom: 20px;
 }
-/* line 1202, sasskaust/sass/sass/screen.scss */
+/* line 1205, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-sisu h4, #teenusedSingle #teenused-sisu .teenus-sisu-page h4 {
   color: #59a400;
   font-size: 1.1em;
   font-weight: normal;
   margin-bottom: 17px;
 }
-/* line 1208, sasskaust/sass/sass/screen.scss */
+/* line 1211, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-sisu h5, #teenusedSingle #teenused-sisu .teenus-sisu-page h5 {
   color: #000000;
   font-size: 0.9em;
   font-weight: bold;
   margin-bottom: 15px;
 }
-/* line 1214, sasskaust/sass/sass/screen.scss */
+/* line 1217, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-sisu strong, #teenusedSingle #teenused-sisu .teenus-sisu-page strong {
   font-weight: bold;
 }
-/* line 1217, sasskaust/sass/sass/screen.scss */
+/* line 1220, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-sisu a, #teenusedSingle #teenused-sisu .teenus-sisu-page a {
   color: #59a400;
   /*008000;*/
 }
-/* line 1222, sasskaust/sass/sass/screen.scss */
+/* line 1225, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu .teenus-sisu-page {
   width: 100%;
 }
-/* line 1227, sasskaust/sass/sass/screen.scss */
+/* line 1230, sasskaust/sass/sass/screen.scss */
 #teenusedSingle #teenused-sisu li {
   display: block;
   /*inline*/
   background: url("img/tahtis_punkt.png") no-repeat left top;
   background-size: 14px 11px;
   background-position: 3px 5px;
-  /*height: 35px;*/
   padding-left: 32px;
-  /*padding-top: 10px;*/
-  /*margin-top: 10px;*/
   margin-bottom: 10px;
   font-family: 'Raleway', sans-serif;
   font-size: 0.9em;
@@ -2235,8 +2267,17 @@ div#mobile, #mmenu, #mmenu a {
     border-color: #202F38;
     font-size: 0;
   }
+}
+@media only screen and (max-width: 1160px) and (max-width: 400px) {
+  /* line 1964, sasskaust/sass/sass/screen.scss */
+  div#mobile .navicon {
+    margin: 15px;
+    margin-top: 30px;
+  }
+}
 
-  /* line 1974, sasskaust/sass/sass/screen.scss */
+@media screen and (max-width: 1160px) {
+  /* line 1978, sasskaust/sass/sass/screen.scss */
   div#mobile .naviconTume {
     float: right;
     height: 25px;
@@ -2247,22 +2288,27 @@ div#mobile, #mmenu, #mmenu a {
     border-color: #919ba2;
     font-size: 0;
   }
+}
+@media only screen and (max-width: 1160px) and (max-width: 400px) {
+  /* line 1978, sasskaust/sass/sass/screen.scss */
+  div#mobile .naviconTume {
+    margin: 15px;
+    margin-top: 30px;
+  }
+}
 
+@media screen and (max-width: 1160px) {
   /*
   The dropdown menu
   */
-  /* line 1989, sasskaust/sass/sass/screen.scss */
+  /* line 1997, sasskaust/sass/sass/screen.scss */
   #mmenu > div {
     display: block;
     overflow: auto;
     background-color: #202f38;
     color: white;
-    /*#mmenu a:before {*/
-    /*    content: "2192";*/
-    /*    padding-right:8px;*/
-    /*}*/
   }
-  /* line 1994, sasskaust/sass/sass/screen.scss */
+  /* line 2002, sasskaust/sass/sass/screen.scss */
   #mmenu > div ul > li > a {
     display: block;
     text-transform: uppercase;
@@ -2272,133 +2318,91 @@ div#mobile, #mmenu, #mmenu a {
     padding: 6px 0 6px 8px;
     color: white;
   }
-  /* line 2008, sasskaust/sass/sass/screen.scss */
+  /* line 2012, sasskaust/sass/sass/screen.scss */
   #mmenu > div ul > li:first-child {
     padding-top: 18px;
   }
-  /* line 2011, sasskaust/sass/sass/screen.scss */
+  /* line 2015, sasskaust/sass/sass/screen.scss */
   #mmenu > div ul > li:last-child {
     padding-bottom: 18px;
   }
-  /* line 2015, sasskaust/sass/sass/screen.scss */
+  /* line 2019, sasskaust/sass/sass/screen.scss */
   #mmenu > div ul > li > a:visited {
     color: white;
     padding-left: 8px;
   }
-  /* line 2019, sasskaust/sass/sass/screen.scss */
+  /* line 2023, sasskaust/sass/sass/screen.scss */
   #mmenu > div ul > li > a:hover {
     color: #4BA000;
     padding-left: 8px;
   }
-
-  /*#mmenu a {*/
-  /*display:block;*/
-  /*overflow: auto;*/
-  /*color: white;*/
-  /*background-color: #202f38;*/
-  /*opacity: 0.94;*/
-  /*text-transform:uppercase;*/
-  /*text-decoration: none;*/
-  /*text-align: center;*/
-  /*letter-spacing:.2em;*/
-  /*padding:6px 0 6px 8px;*/
-  /*box-sizing: border-box;*/
-  /*}*/
-  /*#skpmainmenu li, #mmenu a:first-child {*/
-  /*padding-top: 18px;*/
-  /*}*/
-  /*#skpmainmenu li, #mmenu a:last-child {*/
-  /*padding-bottom: 18px;*/
-  /*}*/
-  /*#mmenu a:visited {*/
-  /*    color:white;*/
-  /*    padding-left:8px;*/
-  /*}*/
-  /*#mmenu a:hover {*/
-  /*color: #4BA000;*/
-  /*padding-left:8px;*/
-  /*}*/
-  /*#mmenu a:before {*/
-  /*content: "2192";*/
-  /*padding-right:8px;*/
-  /*}*/
 }
 @media only screen and (max-width: 780px) {
   /* 480 komm */
-  /* line 2072, sasskaust/sass/sass/screen.scss */
+  /* line 2032, sasskaust/sass/sass/screen.scss */
   .col {
     margin: 0 0 0 0%;
     /* TOP ja BOTTOM 1% maha */
   }
 
-  /* line 2076, sasskaust/sass/sass/screen.scss */
+  /* line 2036, sasskaust/sass/sass/screen.scss */
   .span_3_of_3, .span_2_of_3, .span_1_of_3, .span_4_of_4, .span_3_of_4, .span_2_of_4, .span_1_of_4 {
     width: 100%;
   }
 
-  /* line 2080, sasskaust/sass/sass/screen.scss */
+  /* line 2040, sasskaust/sass/sass/screen.scss */
   .tutspan1, .tutspan2 {
     width: 100%;
   }
 
-  /* line 2083, sasskaust/sass/sass/screen.scss */
+  /* line 2043, sasskaust/sass/sass/screen.scss */
   .tutspan2 {
     margin-top: 30px;
   }
-
-  /*    .primtext {
-      font-size: 1.5em;
-  }
-  .primtext1 {
-      font-size: 1.3em;
-  }*/
-  /*.kontext {*/
-  /*    font-size: 0.8em;*/
-  /*}*/
 }
 @media only screen and (max-width: 1400px) {
-  /* line 2100, sasskaust/sass/sass/screen.scss */
+  /* line 2050, sasskaust/sass/sass/screen.scss */
   #galcont {
     height: 440px;
   }
-  /* line 2103, sasskaust/sass/sass/screen.scss */
+  /* line 2053, sasskaust/sass/sass/screen.scss */
   #galcont #galerii {
     /*height: 560px;*/
     /*background-color: #5b1def;*/
   }
-  /* line 2106, sasskaust/sass/sass/screen.scss */
+  /* line 2056, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida:last-child {
     top: 220px;
   }
-  /* line 2109, sasskaust/sass/sass/screen.scss */
+  /* line 2059, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida {
     height: 220px;
   }
-  /* line 2111, sasskaust/sass/sass/screen.scss */
+  /* line 2061, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida .galimg {
     width: 220px;
     height: 220px;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 2121, sasskaust/sass/sass/screen.scss */
+  /* line 2071, sasskaust/sass/sass/screen.scss */
   #galcont {
     height: 290px;
   }
-  /* line 2124, sasskaust/sass/sass/screen.scss */
+  /* line 2074, sasskaust/sass/sass/screen.scss */
   #galcont #galerii {
     /*height: 520px;*/
     /*background-color: #d17bb3;*/
   }
-  /* line 2127, sasskaust/sass/sass/screen.scss */
+  /* line 2077, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida:last-child {
     top: 145px;
   }
-  /* line 2130, sasskaust/sass/sass/screen.scss */
+  /* line 2080, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida {
     height: 145px;
   }
-  /* line 2132, sasskaust/sass/sass/screen.scss */
+  /* line 2082, sasskaust/sass/sass/screen.scss */
   #galcont #galerii .galrida .galimg {
     width: 145px;
     height: 145px;

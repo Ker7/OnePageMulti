@@ -37,7 +37,7 @@ if (have_posts()) {
 
         <div class="section group">
             <div id="pc">
-                <div id="navnimi" class="mbtn col span_1_of_4">
+                <div id="navnimi" class="mbtn col span_n_of_4">
                     <!--<div class="logodivtume"></div>-->
                     <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a>
                 </div>

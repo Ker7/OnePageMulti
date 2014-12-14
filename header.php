@@ -10,16 +10,15 @@
  if (isset($hcat[0])) {
    $cat = $hcat[0]->term_id;
  }
- if ($cat == constant('TEENUSE_KATEGOORIA')) {
+ if ($cat == constant('TEENUSE_KATEGOORIA') || $cat == 15 || $cat == 16 || is_page()) { // 15,16 HC teenuste kategooriad teistes keeltes
     $onTeenusePost = true;
     print mb_ucfirst( mb_convert_case(get_the_title(), MB_CASE_LOWER, "UTF-8"), 'utf8' );
  } else {
    bloginfo('description');
  }
-    ?>
-    </title>
+    ?></title>
 
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
 

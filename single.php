@@ -1,19 +1,52 @@
 <?php get_header();
 
+$landing = false;
+
 if (have_posts()) {
   while (have_posts()) : the_post();
 
   $postId = get_the_ID();
   $postTitle = get_the_title();
   $postSisu = get_the_content();
+  $pCat = get_the_category();
+  $cNum = $pCat[0]->term_id;
+
+  if ($cNum == constant('KAMP_ET') ||
+      $cNum == constant('KAMP_EN') ||
+      $cNum == constant('KAMP_RU')) {
+    $landing= true;
+  }
+
 
   endwhile;
 }
+?>
+<?php if ($landing == true) {
+  echo '<div id="swrap">'
+        .'<div class="swrappet">'
+          .'<div class="sheader">'
+
+            .'<a href="'.get_home_url().'"><div class="logodiv"></div></a>'
+            .''
+            .'<h1>'.$postTitle.'</h1>'
+          .'</div>'
+          .'<div class="sbody">'
+
+
+          .''.apply_filters( 'the_content', $post->post_content )
+
+          .'</div>'
+
+        .'</div>'
+      .'</div>';
+
+
+  echo '</div>';
+} else {
 
 ?>
 
     <div id="main">
-    <!--div id="taust"></div -->
     <div id="ylaribatume" >
       <div class="section group">
         <div id="mobile">
@@ -37,7 +70,7 @@ if (have_posts()) {
 
         <div class="section group">
             <div id="pc">
-                <div id="navnimi" class="mbtn col span_1_of_4">
+                <div id="navnimi" class="mbtn col span_n_of_4">
                     <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a>
                 </div>
 
@@ -56,15 +89,7 @@ if (have_posts()) {
     <div id="piltTume" class="section group">
         <div id="banner" class="section group mcenter">
           <div class="banhead-cont">
-            <h1><?php
-
-            echo (isset($postTitle)? mb_ucfirst( mb_convert_case($postTitle, MB_CASE_LOWER, "UTF-8"), 'utf8' ) :'Teenused')
-
-            ?></h1>
-            <?php /*
-            <h2><?php echo constant('inf-ehtxt1') ?></h2>
-            <h3><?php echo constant('inf-ehtxt2') ?></h3>
-            */ ?>
+            <h1><?php echo (isset($postTitle)? mb_ucfirst( mb_convert_case($postTitle, MB_CASE_LOWER, "UTF-8"), 'utf8' ) :'Teenused') ?></h1>
             <div class="rohnupp4" onclick="keriTo('#fcont', 1200)">
               <!--<p>SOOVIN PARIMAT HINDA</p>-->
               <p><?php echo lisaBlokk($postId, 'TeenusNupuTekst'); ?></p>
@@ -102,4 +127,8 @@ if (have_posts()) {
 
     </div>
 
-<?php get_footer(); ?>
+<?php get_footer();
+
+}
+
+?>
