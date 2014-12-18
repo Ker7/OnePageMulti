@@ -555,30 +555,46 @@ div#footer
 
   .swrappet {
   background-color: #fff;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 
     padding-bottom: 10px;
 
     .sheader {
-      min-height: 300px;
+      min-height: 220px;
       border-bottom: 1px dashed #ccc;
 
+      margin-left: 80px;
 
       background: url(img/kolmparemup200.png) top right no-repeat;
-      background-size: 517px 235px;
+      background-size: 507px 204px;
+
+      @media only screen and (max-width: 800px) {
+        background: none;
+        margin-left: 80px;  123 /* 123*/
+      }
 
 	.logodiv {
-		height: 200px;
-        /*width: 165px;*/
-		background: url(img/skp_logo.png) 80px 120px no-repeat;
-        background-size: 250px 40px;
+      height: 200px;
+      /*width: 165px;*/
+      background: url(img/skp_logo.png) left 120px no-repeat;
+      background-size: 250px 40px;
+
+      @media only screen and (max-width: 420px) {
+        height: 140px;
+        /*background: url(img/skp_logo.png) left 60px no-repeat;*/
+        /*background-size: 250px 40px;*/
+      }
 	}
 
       h1 {
-        margin-left: 80px;
         font-size: 3em;
         font-weight: 400;
+
+        @media only screen and (max-width: 600px) {
+          margin-left: 20px;
+          font-size: 2.5em;
+        }
       }
 
     }
@@ -587,11 +603,11 @@ div#footer
       padding-top: 20px;
       padding-left: 80px;
       padding-right: 80px;
+      @media only screen and (max-width: 600px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
 
-        @media only screen and (max-width: 600px) {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
     }
 
     p {

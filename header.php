@@ -10,7 +10,12 @@
  if (isset($hcat[0])) {
    $cat = $hcat[0]->term_id;
  }
- if ($cat == constant('TEENUSE_KATEGOORIA') || $cat == 15 || $cat == 16 || is_page()) { // 15,16 HC teenuste kategooriad teistes keeltes
+ if ($cat == constant('TEENUSE_KATEGOORIA') ||
+     $cat == constant('KAMP_ET') ||
+     $cat == constant('KAMP_EN') ||
+     $cat == constant('KAMP_RU') ||
+     $cat == 15 ||
+     $cat == 16 || is_page()) { // 15,16 HC teenuste kategooriad teistes keeltes
     $onTeenusePost = true;
     print mb_ucfirst( mb_convert_case(get_the_title(), MB_CASE_LOWER, "UTF-8"), 'utf8' );
  } else {
