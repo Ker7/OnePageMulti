@@ -571,19 +571,16 @@ div#footer
 
       @media only screen and (max-width: 800px) {
         background: none;
-        margin-left: 80px;  123 /* 123*/
+        margin-left: 80px;  /* 123*/
       }
 
 	.logodiv {
       height: 200px;
-      /*width: 165px;*/
-      background: url(img/skp_logo.png) left 120px no-repeat;
+      background: url(img/skp_logo.png) left center no-repeat;
       background-size: 250px 40px;
 
-      @media only screen and (max-width: 420px) {
+      @media only screen and (max-width: 600px) {
         height: 140px;
-        /*background: url(img/skp_logo.png) left 60px no-repeat;*/
-        /*background-size: 250px 40px;*/
       }
 	}
 
@@ -592,11 +589,13 @@ div#footer
         font-weight: 400;
 
         @media only screen and (max-width: 600px) {
-          margin-left: 20px;
           font-size: 2.5em;
         }
       }
 
+      @media only screen and (max-width: 600px) {
+          margin-left: 20px;
+      }
     }
 
     .sbody {
