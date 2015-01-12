@@ -269,7 +269,7 @@ function skpmenudata_contact_menu_atts( $atts, $item, $args )
   //$menu_targets1 = array(338,345,346); //teenustelingid AMAZING AMAZING
   //$menu_targets2 = array(341,351,352); //Hinnap lingid
   //$menu_targets3 = array(342,353,354); //kontakt
-  $menu_targets1 = array(273,272,263); //teenustelingid AMAZING AMAZING
+  $menu_targets1 = array(273,272,263); //teenustelingid Zone
   $menu_targets2 = array(279,278,267); //Hinnap lingid
   $menu_targets3 = array(281,280,269); //kontakt
   // inspect $item
@@ -314,6 +314,7 @@ icl_register_string('skptheme', 'FormKinnistu', 'Name of property');
 icl_register_string('skptheme', 'FormVald', 'Rular municipality');
 icl_register_string('skptheme', 'FormKyla', 'Village');
 icl_register_string('skptheme', 'FormKataster', 'Cadastral register number');
+icl_register_string('skptheme', 'FormHind', 'Price offer');
 icl_register_string('skptheme', 'FormKommentaarid', 'Remarks');
 icl_register_string('skptheme', 'FormSisestaKood', 'Enter the code');
 icl_register_string('skptheme', 'FormSaada', 'SEND');
@@ -322,6 +323,7 @@ icl_register_string('skptheme', 'SoovidMyyaMidagi', 'Are you planning to sell st
 icl_register_string('skptheme', 'SaadaPakkumine', 'SEND OFFER');
 icl_register_string('skptheme', 'voiKirjuta', 'or write');
 icl_register_string('skptheme', 'tutvustus', 'INTRODUCTION');
+icl_register_string('skptheme', '404tekst', 'Sorry! Page not found.');
 //icl_register_string('skptheme', '', '');
 //icl_register_string('skptheme', '', '');
 

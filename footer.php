@@ -95,6 +95,7 @@ $vel4= (isset($_POST['fel4'])?esc_attr(stripslashes($_POST['fel4'])):'');
 $vel5= (isset($_POST['fel5'])?esc_attr(stripslashes($_POST['fel5'])):'');
 $vel6= (isset($_POST['fel6'])?esc_attr(stripslashes($_POST['fel6'])):'');
 $vel7= (isset($_POST['fel7'])?esc_attr(stripslashes($_POST['fel7'])):'');
+$vel75= (isset($_POST['fel75'])?esc_attr(stripslashes($_POST['fel75'])):'');
 $vel8= (isset($_POST['fel8'])?esc_attr(stripslashes($_POST['fel8'])):'');
 
         echo    '</select>
@@ -122,6 +123,9 @@ $vel8= (isset($_POST['fel8'])?esc_attr(stripslashes($_POST['fel8'])):'');
                     </div>
                     <div class="fcol fcol8">
                         <input id="fel7" name="fel7" class="felem" type="text" maxlength="255" value="'. $vel7 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormKataster', 'Cadastral register number').'"/>
+                    </div>
+                    <div class="fcol fcol85">
+                        <input id="fel75" name="fel75" class="felem" type="text" maxlength="255" value="'. $vel75 .'" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormHind', 'Price offer').'"/>
                     </div>
                     <div class="fcol fcol9">
                         <textarea id="fel8" name="fel8" class="felem" type="text" maxlength="255" spellcheck="false" placeholder="'.icl_t('skptheme', 'FormKommentaarid', 'Remarks').'" >'.$vel8 .'</textarea>

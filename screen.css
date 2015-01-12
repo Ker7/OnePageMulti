@@ -484,7 +484,8 @@ div#footer {
 /* line 392, sasskaust/sass/sass/screen.scss */
 #teenusform textarea {
   resize: none;
-  height: 110px;
+  height: 50px;
+  /* 110px; */
   /*width: 100%;*/
   padding-left: 10px;
   padding-top: 6px;
