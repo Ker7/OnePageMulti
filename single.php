@@ -1,6 +1,7 @@
 <?php get_header();
 
 $landing = false;
+$blogpost = false;
 
 if (have_posts()) {
   while (have_posts()) : the_post();
@@ -16,36 +17,20 @@ if (have_posts()) {
       $cNum == constant('KAMP_RU')) {
     $landing= true;
   }
-
+  
+  if ($cNum == constant('BLOG_ET') ||
+      $cNum == constant('BLOG_EN') ||
+      $cNum == constant('BLOG_RU')) {
+    $blogpost= true;
+  }
 
   endwhile;
 }
 ?>
 <?php if ($landing == true) {
-  echo '<div id="swrap">'
-        .'<div class="swrappet">'
-          .'<div class="sheader">'
-
-            .'<a href="'.get_home_url().'"><div class="logodiv"></div></a>'
-            .''
-            .'<h1>'.$postTitle.'</h1>'
-          .'</div>'
-          .'<div class="sbody">'
-
-
-          .''.apply_filters( 'the_content', $post->post_content )
-
-          .'</div>'
-
-        .'</div>'
-      .'</div>';
-
-
-  echo '</div>';
+  include("single-landing-page.php");
 } else {
-
 ?>
-
     <div id="main">
     <div id="ylaribatume" >
       <div class="section group">
@@ -66,22 +51,23 @@ if (have_posts()) {
         </div>
       </div>
 
-        <?php require('req-menu-mob.php') ?>
+      <?php require('req-menu-mob.php') ?>
 
-        <div class="section group">
-            <div id="pc">
-                <div id="navnimi" class="mbtn col span_n_of_4">
-                    <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a>
-                </div>
+      <div class="section group">
+        <div id="pc">
+          <div id="navnimi" class="mbtn col span_n_of_4">
+              <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a>
+          </div>
 
-                <div id="navkontakt" class="col span_1_of_4">
-                    <span class="kontblk kontext tumeTcol"><?php echo constant('inf-etel') ?></span>
-                    <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
-                </div>
+          <div id="navkontakt" class="col span_1_of_4">
+              <span class="kontblk kontext tumeTcol"><?php echo constant('inf-etel') ?></span>
+              <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
+          </div>
 
-                <?php require('req-menu-pc.php') ?>
-            </div>
+          <?php require('req-menu-pc.php') ?>
+
         </div>
+      </div>
     </div>
 
     <div id="dragscroll">
@@ -90,10 +76,11 @@ if (have_posts()) {
         <div id="banner" class="section group mcenter">
           <div class="banhead-cont">
             <h1><?php echo (isset($postTitle)? mb_ucfirst( mb_convert_case($postTitle, MB_CASE_LOWER, "UTF-8"), 'utf8' ) :'Teenused') ?></h1>
-            <div class="rohnupp4" onclick="keriTo('#fcont', 1200)">
-              <!--<p>SOOVIN PARIMAT HINDA</p>-->
-              <p><?php echo lisaBlokk($postId, 'TeenusNupuTekst'); ?></p>
-            </div>
+            <?php if (!$blogpost) { ?>
+              <div class="rohnupp4" onclick="keriTo('#fcont', 1200)">
+                <p><?php echo lisaBlokk($postId, 'TeenusNupuTekst'); ?></p>
+              </div>
+            <?php } ?>
           </div>
         </div>
         <?php
@@ -123,7 +110,14 @@ if (have_posts()) {
     <div id="servicesteenused"></div>
     <div id="teenusedSingle">
 
-    <?php require('req-teenusedTeenustes.php'); ?>
+    <?php
+    // KUI ON BLOGIPOST SIIS BLOGISISU, muidu eeldab et on teenusepost
+    if ($blogpost) {
+      require('req-teenusedBlogis.php');
+    } else {
+      require('req-teenusedTeenustes.php');
+    }
+    ?>
 
     </div>
 

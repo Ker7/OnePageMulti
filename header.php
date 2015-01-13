@@ -10,13 +10,20 @@
  if (isset($hcat[0])) {
    $cat = $hcat[0]->term_id;
  }
- if ($cat == constant('TEENUSE_KATEGOORIA') ||
+ if ((
+     $cat == constant('TEENUSE_KATEGOORIA') ||
+     $cat == constant('TEENUSE_KATEGOORIA_EN') ||
+     $cat == constant('TEENUSE_KATEGOORIA_RU') ||
      $cat == constant('KAMP_ET') ||
      $cat == constant('KAMP_EN') ||
      $cat == constant('KAMP_RU') ||
-     $cat == 15 ||
-     $cat == 16 || is_page()) { // 15,16 HC teenuste kategooriad teistes keeltes
-    $onTeenusePost = true;
+     $cat == constant('BLOG_ET') ||
+     //$cat == constant('BLOG_EN') ||
+     //$cat == constant('BLOG_RU') ||
+     is_page()
+     ) && !is_home()) {
+    //$onTeenusePost = true;
+    //print "Tere";
     print mb_ucfirst( mb_convert_case(get_the_title(), MB_CASE_LOWER, "UTF-8"), 'utf8' );
  } else {
    bloginfo('description');

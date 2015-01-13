@@ -7,11 +7,17 @@
 
 	//tutvustuse posti kategooria nimi 'tutvustus'	 CUSTOM FIELDI OPTIONS'i PUHUL ON SEAL ID handmade!
 	define('TEENUSE_KATEGOORIA', 2);		// Piltide kategooria
+	define('TEENUSE_KATEGOORIA_EN', 15);		// Piltide kategooria
+	define('TEENUSE_KATEGOORIA_RU', 16);		// Piltide kategooria
 	define('TAUST_KATEGOORIA', 4);			// Piltide kategooria
 	define('SKPINFO_KATEGOORIA', 7);		// Üks post kategooria,, Kasutan cat nime 'skpinfo'
     define('KAMP_ET', 20);    //eesti keelse kampaania kategooria ID
     define('KAMP_EN', 21);
     define('KAMP_RU', 22);
+	
+    define('BLOG_ET', 24);
+    define('BLOG_EN', 25);
+    define('BLOG_RU', 26);
 	//constant('TAUST_POST_ID')
 
 	$locale = get_locale();
@@ -263,10 +269,10 @@ add_filter( 'nav_menu_link_attributes', 'skpmenudata_contact_menu_atts', 10, 3 )
 function skpmenudata_contact_menu_atts( $atts, $item, $args )
 {
   // The ID of the target menu item
-  //$menu_targets1 = array(214,213,215); //teenustelingid MINU LOCALIS
+  //$menu_targets1 = array(214,213,215); //teenustelingid LOCALIS
   //$menu_targets2 = array(218,220,221); //Hinnap lingid
   //$menu_targets3 = array(219,222,223); //kontakt
-  //$menu_targets1 = array(338,345,346); //teenustelingid AMAZING AMAZING
+  //$menu_targets1 = array(338,345,346); //teenustelingid  AMAZING
   //$menu_targets2 = array(341,351,352); //Hinnap lingid
   //$menu_targets3 = array(342,353,354); //kontakt
   $menu_targets1 = array(273,272,263); //teenustelingid Zone
