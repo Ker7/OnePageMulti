@@ -1,63 +1,182 @@
-<?php get_header(); ?>
+<?php get_header();
+
+$landing = false;
+$blogpost = false;
+
+?>
+    <div id="main">
+    <div id="ylaribatume" >
+      <div class="section group">
+        <div id="mobile">
+          <div id="mnavnimi" class="mbtn col"> <!-- mnavnimi oli ..-->
+            <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a> <!-- retina systeem -->
+          </div>
+
+          <div id="mnavkontakt" class="col nspan_2_of_4">
+            <span class="tumeTcol kontblk kontext htel"><?php echo constant('inf-etel') ?></span>
+            <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
+          </div>
+
+          <div id="toggle-bar" class="">
+                <div id="mnavlangsw" class="col nspan_x_of_4"><?php other_languages(); ?></div>
+            <a class="naviconTume mtoggle"> </a>
+          </div>
+        </div>
+      </div>
+
+      <?php require('req-menu-mob.php') ?>
+
+      <div class="section group">
+        <div id="pc">
+          <div id="navnimi" class="mbtn col span_n_of_4">
+              <a href="<?php echo get_home_url() ?>"><div class="logodivtume"></div></a>
+          </div>
+
+          <div id="navkontakt" class="col span_1_of_4">
+              <span class="kontblk kontext tumeTcol"><?php echo constant('inf-etel') ?></span>
+              <a class="kontblk kontext hemail" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
+          </div>
+
+          <?php require('req-menu-pc.php') ?>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="dragscroll">
+
+    <div id="piltTume" class="section group">
+        <div id="banner" class="section group mcenter">
+          <div class="banhead-cont">
+            <h1><?php echo 'SKP Invest Metsa blogi'.((is_month())?' - '.get_the_time('F Y'):'') ?></h1>
+
+          </div>
+        </div>
+        <?php
+            $args = array (
+                'post_type'              => 'attachment',
+                'post_status'            => array('inherit', 'publish'),
+                'category_name'          => 'taustapiltmedia',
+            );
+            // The Query
+            $myposts = new WP_Query( $args );
+            if ( $myposts->have_posts() ) {
+                $k = 0; //post counter, esimene pilt tuleb auto visible(display:block)
+                while ( $myposts->have_posts() ) {
+                    $myposts->the_post();
+                    echo  '<div class="taust" style="opacity:'.($k==0?'1':'0').'"> <img alt="'.$myposts->post->post_excerpt.'" src="'.$myposts->post->guid.'" /> </div>';
+                    //echo 'jeo: '.$myposts->post->post_excerpt;
+                    $k++;
+                }
+            } else {
+                // no posts found FIXED PILT, msg?
+            }
+            wp_reset_postdata();
+        ?>
+        <div id="rkolnTume"></div>
+    </div>
+
+    <!--div id="servicesteenused"></div>
+    <div id="teenusedSingle">
+	    <div id="teenused-sisu"-->
+            <div class="blog-frame">
+             <div class="blog-inner-frame">
+			  <div class="blog-previews">
+				<?php while ( have_posts() ) : the_post();
+				
+				echo '<div class="blog-post-'.get_the_ID().'" style="">'
+                        .'<h1 style=" font-size: 24px;
+                                    font-weight: 600;
+                                    background-color: gray;">'.$post->post_title.'</h1>'
+                        .'<h5>'.$post->post_date.'</h5>'
+                        //.apply_filters( 'the_content', $post->post_content )	//TAHTIS format reset siinb
+                        .apply_filters( 'the_content', get_the_excerpt() )	//TAHTIS format reset siinb
+						//.get_the_excerpt()
+					.'</div><!-- #post-'.get_the_ID().'-->'; 
+				endwhile; 
+		  echo '</div><!-- end previews -->';
+/*		  echo '<div id="blog-latest" style="width:300px;
+							float: left;
+							background-color: #eee;
+							border: red 1px dashed;
+							margin-left: 40px;">'
+				  .'<h3 style="font-size: 24px;
+							   font-weight: 600;
+							   background-color: gray;">Viimased postitused T!</h3>'
+			  .'</div><!-- #blog-latest -->';*/ ?>
+
+			        <div class="blog-archive">
+
+						<div class="headline">Arhiiv</div>
+
+						<div class="ayb ar-year-2015">
+							<div class="ayb-name">2015 (3)</div>
+		
+							<div class="amb ar-month-1">
+								<div class="amb-name">Jaanuar (1)</div>
+								
+								<div class="att ar-blogpost-1">
+									<a href="#">Blogipost nimega üks meist on eriline.</a>
+								</div>
+								
+							</div>
+		
+							<div class="amb ar-month-2">
+								<div class="amb-name">Veebruar (2)</div>
+								
+								<div class="att ar-blogpost-2">
+									<a href="#">Siin ei ole kala.</a>
+								</div>
+																
+								<div class="att ar-blogpost-3">
+									<a href="#">Blogipost nimega Teine meist on kummaline ja šallalallaa.</a>
+								</div>
+																
+								<div class="att ar-blogpost-4">
+									<a href="#">Soe puukoor läheb kergemini alla.</a>
+								</div>
+								
+								<div class="att ar-blogpost-2">
+									<a href="#">Siin ei ole kala.</a>
+								</div>
+																
+								<div class="att ar-blogpost-3">
+									<a href="#">Blogipost nimega Teine meist on kummaline ja šallalallaa.</a>
+								</div>
+																
+								<div class="att ar-blogpost-4">
+									<a href="#">Soe puukoor läheb kergemini alla.</a>
+								</div>
+								
+								<div class="att ar-blogpost-2">
+									<a href="#">Siin ei ole kala.</a>
+								</div>
+																
+								<div class="att ar-blogpost-3">
+									<a href="#">Blogipost nimega Teine meist on kummaline ja šallalallaa.</a>
+								</div>
+																
+								<div class="att ar-blogpost-4">
+									<a href="#">Soe puukoor läheb kergemini alla.</a>
+								</div>
+							</div>
+						</div>
+		
+						<div class="ayb ar-year">
+							<div class="ayb-name">2013 (0)</div>
+						</div>
+						<div class="ayb ar-year">
+							<div class="ayb-name">2012 (0)</div>
+						</div>
+						<div class="ayb ar-year">
+							<div class="ayb-name">2011 (0)</div>
+						</div>
+		
+					<!--div>< /-->
+			  
+				</div><!-- blog-inner-frame -->
  
-        <div id="container">
-            <div id="content">
+            </div><!-- #blog-previews -->
+        </div><!-- #blog-frame -->
  
-                <?php the_post(); ?>          
-
-				<h1 class="page-title"><?php _e( 'Category Archives:', 'hbd-theme' ) ?> <span><?php single_cat_title() ?></span></span></h1>
-				<?php $categorydesc = category_description(); if ( !empty($categorydesc) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
-
-				<?php rewind_posts(); ?>
-
-				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-				                <div id="nav-above" class="navigation">
-				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
-				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
-				                </div><!-- #nav-above -->
-				<?php } ?>            
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-				                <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-
-				                    <div class="entry-meta">
-				                        <span class="meta-prep meta-prep-author"><?php _e('By ', 'hbd-theme'); ?></span>
-				                        <span class="author vcard"><a class="url fn n" href="<?php echo get_author_link( false, $authordata->ID, $authordata->user_nicename ); ?>" title="<?php printf( __( 'View all posts by %s', 'hbd-theme' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
-				                        <span class="meta-sep"> | </span>
-				                        <span class="meta-prep meta-prep-entry-date"><?php _e('Published ', 'hbd-theme'); ?></span>
-				                        <span class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr></span>
-				                        <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t" ) ?>
-				                    </div><!-- .entry-meta -->
-
-				                    <div class="entry-summary">
-				<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'hbd-theme' )  ); ?>
-				                    </div><!-- .entry-summary -->
-
-				                    <div class="entry-utility">
-				                        <?php if ( $cats_meow = cats_meow(', ') ) : // Returns categories other than the one queried ?>
-										                        <span class="cat-links"><?php printf( __( 'Also posted in %s', 'hbd-theme' ), $cats_meow ) ?></span>
-										                        <span class="meta-sep"> | </span>
-										<?php endif ?>
-				                        <span class="meta-sep"> | </span>
-				                        <?php the_tags( '<span class="tag-links"><span class="entry-utility-prep entry-utility-prep-tag-links">' . __('Tagged ', 'hbd-theme' ) . '</span>', ", ", "</span>\n\t\t\t\t\t\t<span class=\"meta-sep\">|</span>\n" ) ?>
-				                        <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'hbd-theme' ), __( '1 Comment', 'hbd-theme' ), __( '% Comments', 'hbd-theme' ) ) ?></span>
-				                        <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t\n" ) ?>
-				                    </div><!-- #entry-utility -->
-				                </div><!-- #post-<?php the_ID(); ?> -->
-
-				<?php endwhile; ?>            
-
-				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-				                <div id="nav-below" class="navigation">
-				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
-				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
-				                </div><!-- #nav-below -->
-				<?php } ?>                 
- 
-            </div><!-- #content -->
-        </div><!-- #container -->
- 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

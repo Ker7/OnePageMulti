@@ -113,7 +113,7 @@ if (have_posts()) {
     <?php
     // KUI ON BLOGIPOST SIIS BLOGISISU, muidu eeldab et on teenusepost
     if ($blogpost) {
-      require('req-teenusedBlogis.php');
+      require('req-singleBlogis.php');
     } else {
       require('req-teenusedTeenustes.php');
     }

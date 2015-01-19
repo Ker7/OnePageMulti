@@ -127,6 +127,18 @@ jQuery(document).ready(function($) {
         $(this).children('.tn-regImg').show();
         $(this).children('.tn-hovImg').hide();
     });
+    
+    //Kui Blogi Arhiivis aasta peale klikitakse, siis selle aasta konteineri .amb (Kuud) classiga laste display'd toggletakse
+    $('.ayb-name').click(function(){
+        $(this).toggleClass('aybgreen');
+        $(this).parent().children('.amb').toggle();
+    });
+        
+    //Kui Blogi Arhiivis kuu peale klikitakse, siis selle aasta konteineri .att (Postituste pealkirjad) classiga laste display'd toggletakse
+    $('.amb-name').click(function(){
+        $(this).toggleClass('ambold');
+        $(this).parent().children('.att').toggle();
+    });
 });
 
 

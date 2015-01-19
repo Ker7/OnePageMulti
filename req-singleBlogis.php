@@ -30,85 +30,70 @@
   wp_reset_postdata();
 
     $tstring .= '</div>';
-
     $tstring .=  '<div id="teenused-sisu">'
-                    //.'<div class="teenus-sisu-img">'
-                    //    .lisaBlokk($post->ID, 'TeenusPilt')
-                    //    //.$post->ID
-                    //.'</div>'
-                    //.'<div class="teenus-sisu-sisu">'
-                    //  //.get_the_content()
-                    //  .apply_filters( 'the_content', $post->post_content )
-                    //.'</div>'
                     .'<div class="previewTeenus" style="border: blue 1px dashed;
-                                                    width: 600px;
-                                                    float: left;">'
+                                                        width: 600px;
+                                                        float: left;">'
                         .'<h1 style=" font-size: 24px;
                                     font-weight: 600;
                                     background-color: gray;">'.$postTitle.'</h1>'
                         .'<h5>'.$post->post_date.'</h5>'
+
                         .apply_filters( 'the_content', $post->post_content )
-
-
                     .'</div>'
 
-                    .'<div style="width:300px;
+                    .'<div id="blog-latest" style="width:300px;
                                   float: left;
                                   background-color: #eee;
                                   border: red 1px dashed;
                                   margin-left: 40px;">'
-                    .'<h1 style=" font-size: 24px;
-                                    font-weight: 600;
-                                    background-color: gray;">Viimased postitused T!</h1>';
+                        .'<h1 style="font-size: 24px;
+                                     font-weight: 600;
+                                     background-color: gray;">Viimased postitused T!</h1>';
+                          echo $tstring;
+                          $args = array('posts_per_page' => 5,
+                                        'orderby'          => 'post_date',
+                                        'order'            => 'DESC',
+                                        //'offset'=> 1,
+                                        'category' => 24  //WPML abil otsib ka teiste keelte kat'e
+                                      );
 
-    echo $tstring;
-                      
-                      
-                      
-$args = array(
-              'posts_per_page' => 5,
-              'orderby'          => 'post_date',
-              'order'            => 'DESC',
-              //'offset'=> 1,
-              'category' => 24  //WPML abil otsib ka teiste keelte kat'e
-              );
-
-$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post );
-  $ppermalink = get_the_permalink();
-  $ttitle = get_the_title();
-  //$ddate = get_the_date();
-  //$ddate = apply_filters("get_the_date",get_the_date(),get_option("date_format"));
-  //$ddate = apply_filters("get_the_date",get_the_date(),"Y m d");
-  $ddate = date('d F Y', strtotime(get_the_date()));
-
-  echo '<a style="color:#000" href="' . $ppermalink . '">' . $ttitle . '</a>'
-      .'<br />'
-      .'<p style="color:green;
-                  display: inline-block;" >
-                        '.$ddate.'</p> <li style="display: inline-block;
-                                                  float: right;">&nbsp</li>'; 
-
-
-?>
-		<!--a href="<?php the_permalink(); ?>"><?php echo get_the_title().'('.apply_filters("get_the_date",get_the_date(),get_option("date_format")).')'; ?></a-->
-	<br />
-<?php endforeach; 
-wp_reset_postdata();
-                      
-                      
-                      
-                      
-                    $tstring = '</div><!-- sis -->';//'</select>';
+                          $myposts = get_posts( $args );
+                          foreach ( $myposts as $post ) : setup_postdata( $post );
+                            $ppermalink = get_the_permalink();
+                            $ttitle = get_the_title();
+                            //$ddate = get_the_date();
+                            //$ddate = apply_filters("get_the_date",get_the_date(),get_option("date_format"));
+                            //$ddate = apply_filters("get_the_date",get_the_date(),"Y m d");
+                            $ddate = date('d F Y', strtotime(get_the_date()));
+                          
+                            echo '<a style="color:#000" href="' . $ppermalink . '">' . $ttitle . '</a>'
+                                .'<br />'
+                                .'<p style="color:green;
+                                          display:inline-block;" >
+                                  '.$ddate.'</p> <li style="display: inline-block;
+                                                            float: right;">&nbsp</li>'
+                              .'<br />';
+                          endforeach; 
+                          wp_reset_postdata();
+          $tstring = '</div>';
                     //smart_archives();
                     //Right Sidebar
+          $tstring .= '<div id="blog-archive" style="width:300px;
+                                  float: left;
+                                  background-color: #5b4c32;
+                                  border: red 1px dashed;
+                                  margin-top: 40px;
+                                  margin-left: 40px;">'
+                        .'<h1 style="font-size: 24px;
+                                     font-weight: 600;
+                                     background-color: gray;">Arhiiv T!</h1>'
+                    .'</div>';
                     
                     
                     
-        $tstring .= '</div>'
-
-                  //.'</div'
-                .'</div>';
+    $tstring .= '</div>'
+            .'</div>';
 
     echo $tstring;
 

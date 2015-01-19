@@ -15,9 +15,9 @@
     define('KAMP_EN', 21);
     define('KAMP_RU', 22);
 	
-    define('BLOG_ET', 24);
-    define('BLOG_EN', 25);
-    define('BLOG_RU', 26);
+    define('BLOG_ET', 23);//24);
+    define('BLOG_EN', 24);//25);
+    define('BLOG_RU', 25);//26);
 	//constant('TAUST_POST_ID')
 
 	$locale = get_locale();
@@ -272,12 +272,12 @@ function skpmenudata_contact_menu_atts( $atts, $item, $args )
   //$menu_targets1 = array(214,213,215); //teenustelingid LOCALIS
   //$menu_targets2 = array(218,220,221); //Hinnap lingid
   //$menu_targets3 = array(219,222,223); //kontakt
-  //$menu_targets1 = array(338,345,346); //teenustelingid  AMAZING
-  //$menu_targets2 = array(341,351,352); //Hinnap lingid
-  //$menu_targets3 = array(342,353,354); //kontakt
-  $menu_targets1 = array(273,272,263); //teenustelingid Zone
-  $menu_targets2 = array(279,278,267); //Hinnap lingid
-  $menu_targets3 = array(281,280,269); //kontakt
+  $menu_targets1 = array(338,345,346); //teenustelingid  AMAZING
+  $menu_targets2 = array(341,351,352); //Hinnap lingid
+  $menu_targets3 = array(342,353,354); //kontakt
+  //$menu_targets1 = array(273,272,263); //teenustelingid Zone
+  //$menu_targets2 = array(279,278,267); //Hinnap lingid
+  //$menu_targets3 = array(281,280,269); //kontakt
   // inspect $item
   foreach($menu_targets1 as $menu_target1){
     if ($item->ID == $menu_target1) {
