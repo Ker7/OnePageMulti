@@ -27,12 +27,8 @@
 //echo "Poste: ".$postCount.'<br />';
 //var_dump($myposts);
     foreach ( $myposts as $k => $post ) : setup_postdata( $post );
-        //echo "-------------------------------------------";
-        //echo 'Post: '.($k).'<br />';
-
         $algusTag = ($k % 3 == 0);
         $lopuTag = (($k % 3 == 2) || ($k+1 == $postCount));
-
 
         if ($algusTag) {
             echo '<div class="tsection group">';
@@ -47,7 +43,7 @@
                     .'</a>'
                         .'<div class="tn-cont tcol tspan_3_of_4">'
                             .'<a class="headlink" href="'.get_site_url().'/'.$post->post_name.'">'.'<h3>'.mb_strtoupper(apply_filters( 'get_the_content', $post->post_title )).'</h3></a>'
-                            .'<p>'.lisaBlokk($post->ID, "TeenusTekstLyhike").'</p>'
+                            .'<p>'.wp_strip_all_tags( lisaBlokk($post->ID, "TeenusTekstLyhike") ).'</p>'
                             .'<a onclick="preT('.($k+1).');">'.lisaBlokk($post->ID, "TeenusNupuTekst").' ></a>'
                         .'</div>'
                         .'<div class="tblock"> </div>'

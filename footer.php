@@ -1,6 +1,9 @@
             <!--</div><!-- #main -->
 
                 <div id="footer">
+					<?php
+					global $joonistaHinnaParing;
+					if ($joonistaHinnaParing) { ?>
                     <div id="fcont">
                         <h2><?php echo icl_t('skptheme', 'HinnaparingPealkiri', 'PRICE INQUIRY'); ?></h2>
                         <p><?php echo constant('inf-ehptxt') ?></p>
@@ -153,7 +156,9 @@ if ($sent==false) {
 ?>
                         </div><!-- form cont -->
                     </div><!-- fcont -->
-
+					
+					<?php } //$joonistaHinnaParing ?>
+					
                     <div id="colophon">
 
                         <div id="kontakt">

@@ -1,7 +1,9 @@
 <?php get_header();
 
+global $joonistaHinnaParing;
 $landing = false;
 $blogpost = false;
+
 
 if (have_posts()) {
   while (have_posts()) : the_post();
@@ -22,6 +24,7 @@ if (have_posts()) {
       $cNum == constant('BLOG_EN') ||
       $cNum == constant('BLOG_RU')) {
     $blogpost= true;
+    $joonistaHinnaParing = false;
   }
 
   endwhile;
@@ -30,7 +33,18 @@ if (have_posts()) {
 <?php if ($landing == true) {
   include("single-landing-page.php");
 } else {
-?>
+  if ($blogpost){ ?>
+    <!-- For FB!!! -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  <?php } ?>
+
     <div id="main">
     <div id="ylaribatume" >
       <div class="section group">

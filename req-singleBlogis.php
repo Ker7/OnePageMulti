@@ -1,135 +1,79 @@
-<!-- div -->
+<div class="blog-frame">
+             <div class="blog-inner-frame">
+			  <div id="blog-post-single" class="blog-previews">
+                <?php
+                $args = array('posts_per_page' => constant('POSTS_PER_BLOG_MAIN'),
+                  'orderby'          => 'post_date',
+                  'order'            => 'DESC',
+                  //'offset'=> 1,
+                  'category' => constant('BLOG_ET')  //WPML abil otsib ka teiste keelte kat'e
+                );
+
+                //$myposts = get_posts( $args );
+                //foreach ( $myposts as $post ) : setup_postdata( $post );
+                global $post;
+                while ( have_posts() ) : the_post(); ?>
+				    <div class="blog-post blog-pid-<?php the_ID(); ?>">
+						<?php	//Kui headerimg on lisatud...
+						$blogHeader = eemaldaAP(lisaBlokk($post->ID, "HeaderPilt"));
+						if (strlen($blogHeader)>32) {
+							echo '<div class="blog-preview-header">'.$blogHeader.'</div>';
+						} ?>
+                        <h1 class="blog-post-title"><?php echo $post->post_title; ?></h1>
+                        <h5 class="blog-post-date"><?php the_time('j.m.Y'); ?></h5>
+                        <?php //echo '<p class="blog-post-excerpt">'.apply_filters( 'the_content', get_the_excerpt() ).'</p>'; ?>
+                        <?php echo apply_filters( 'the_content', get_the_content() ); ?></p>
+						
+						<div class="fb-like"
+							 data-href="<?php echo get_permalink(get_the_ID()); ?>"
+							 data-colorscheme="dark"
+							 data-width="242"
+							 data-layout="standard"
+							 data-action="like"
+							 data-show-faces="false"
+							 data-share="true"></div>
+						
+					</div><!-- #post-<?php the_ID(); ?> -->
+				<?php endwhile;
+                      //endforeach; 
+                      //wp_reset_postdata();?>
+		        </div><!-- end previews -->
+
+				<div class="blog-archive">
+					<div class="headline"><?php echo icl_t('skptheme', 'Blogis_Arhiivi_Pealkiri', 'Archive'); ?></div>
 <?php
-
-  $args = array( 'posts_per_page' => 65, 'category' => constant('TEENUSE_KATEGOORIA') );
-  $myposts = get_posts( $args );
-  $postCount = count($myposts);
-
-  $tstring = '<div id="teenused-rida" class="center">';
-
-  $imgA = array();
-  $hhhA = array();
-
-  foreach ( $myposts as $k => $post ) : setup_postdata( $post );
-
-    $cTitle = mb_strtoupper(apply_filters( 'get_the_content', $post->post_title ));
-
-    if ($cTitle==$postTitle) {
-      $fieldname = "TeenusIkoonHover";
-    } else {
-      $fieldname = "TeenusIkoon";
-    }
-
-    $tstring .= '<a href="'.get_site_url().'?p='.$post->ID.'"><div class="ttblok">';
-    $tstring .= '<div class="teenus-hover-holder" style="display:none;">'.eemaldaAP(lisaBlokk($post->ID, 'TeenusIkoonHover')).'</div>';
-    $tstring .= eemaldaAP(lisaBlokk($post->ID, $fieldname));
-    $tstring .= '<h3>'.$cTitle.'</h3>';
-    $tstring .= '</div></a>';
-
-  endforeach;
-  wp_reset_postdata();
-
-    $tstring .= '</div>';
-    $tstring .=  '<div id="teenused-sisu">'
-                    .'<div class="previewTeenus" style="border: blue 1px dashed;
-                                                        width: 600px;
-                                                        float: left;">'
-                        .'<h1 style=" font-size: 24px;
-                                    font-weight: 600;
-                                    background-color: gray;">'.$postTitle.'</h1>'
-                        .'<h5>'.$post->post_date.'</h5>'
-
-                        .apply_filters( 'the_content', $post->post_content )
-                    .'</div>'
-
-                    .'<div id="blog-latest" style="width:300px;
-                                  float: left;
-                                  background-color: #eee;
-                                  border: red 1px dashed;
-                                  margin-left: 40px;">'
-                        .'<h1 style="font-size: 24px;
-                                     font-weight: 600;
-                                     background-color: gray;">Viimased postitused T!</h1>';
-                          echo $tstring;
-                          $args = array('posts_per_page' => 5,
-                                        'orderby'          => 'post_date',
-                                        'order'            => 'DESC',
-                                        //'offset'=> 1,
-                                        'category' => 24  //WPML abil otsib ka teiste keelte kat'e
-                                      );
-
-                          $myposts = get_posts( $args );
-                          foreach ( $myposts as $post ) : setup_postdata( $post );
-                            $ppermalink = get_the_permalink();
-                            $ttitle = get_the_title();
-                            //$ddate = get_the_date();
-                            //$ddate = apply_filters("get_the_date",get_the_date(),get_option("date_format"));
-                            //$ddate = apply_filters("get_the_date",get_the_date(),"Y m d");
-                            $ddate = date('d F Y', strtotime(get_the_date()));
-                          
-                            echo '<a style="color:#000" href="' . $ppermalink . '">' . $ttitle . '</a>'
-                                .'<br />'
-                                .'<p style="color:green;
-                                          display:inline-block;" >
-                                  '.$ddate.'</p> <li style="display: inline-block;
-                                                            float: right;">&nbsp</li>'
-                              .'<br />';
-                          endforeach; 
-                          wp_reset_postdata();
-          $tstring = '</div>';
-                    //smart_archives();
-                    //Right Sidebar
-          $tstring .= '<div id="blog-archive" style="width:300px;
-                                  float: left;
-                                  background-color: #5b4c32;
-                                  border: red 1px dashed;
-                                  margin-top: 40px;
-                                  margin-left: 40px;">'
-                        .'<h1 style="font-size: 24px;
-                                     font-weight: 600;
-                                     background-color: gray;">Arhiiv T!</h1>'
-                    .'</div>';
-                    
-                    
-                    
-    $tstring .= '</div>'
-            .'</div>';
-
-    echo $tstring;
-
+$args = array('posts_per_page' => 0,
+			  'orderby'          => 'post_date',
+			  'order'            => 'DESC',
+			  'category' => constant('BLOG_ET'));	//WPML abil otsib ka teiste keelte kat'e
+$myposts = get_posts( $args );
+$arhiiv = array();	//array kuhu kogun postid
+foreach ( $myposts as $post ) : setup_postdata( $post );
+  $arhiiv[get_the_time('Y')][get_the_time('n')][] = array(
+									'id' => get_the_ID(),
+									'permalink' => get_the_permalink(),
+									'title' => get_the_title());
+endforeach; 
+wp_reset_postdata();
+//print_r($arhiiv);
+foreach($arhiiv as $yname => $ayear){
+	$aastasPostitusi = countYearPost($ayear);
+	echo '<div class="ayb">'
+			.'<div class="ayb-name">'.$yname.' ('.($aastasPostitusi).')</div>';
+	foreach($ayear as $mname => $amonth){
+		echo '<div class="amb">'
+				.'<div class="amb-name">'.teeNumberKuuks($mname).' ('.count($amonth).')</div>';
+		foreach($amonth as $ablogpost){
+			echo '<div class="att ar-blogpost-'.$ablogpost['id'].'">'
+					.'<a href="'.$ablogpost['permalink'].'">'.$ablogpost['title'].'</a>'
+				.'</div>';
+		}
+		echo '</div><!-- .amb -->';
+	}
+	echo '</div><!-- .ayb -->';
+}
 ?>
-<div id="saadapakkumine" class="center">
-    <div class="spcont">
-        <div class="spbl1">
-            <p><?php
-                $sissej = "";
-                $sissej.= lisaBlokk($post->ID, 'TeenusNupuSissejuh');
-                $pikk = mb_strlen($sissej, 'UTF-8');
-                if ($pikk>3) {
-                  echo $sissej;
-                } else {
-                  echo 'LIKE NO-COMMENT SHARE';
-                }
-              ?></p>
-        </div>
-        <div class="spbl2">
-            <div class="rohnupp2 mcenter" onclick="keriTo('#fcont', 1200)"><p><?php
-                //echo lisaBlokk($post->ID, 'TeenusNupuTekst');
-                //echo (isset($postTitle)? mb_ucfirst( mb_convert_case($postTitle, MB_CASE_LOWER, "UTF-8"), 'utf8' ) :'Teenused') ;
-                $lisatekst = "";
-                $lisatekst.= lisaBlokk($post->ID, 'TeenusNupuTekst');
-                $pikkus = mb_strlen($lisatekst, 'UTF-8');
-                if ($pikkus>3) {
-                  echo mb_strtoupper($lisatekst, 'UTF-8');
-                } else {
-                  echo '![TeenusNupuTekst]';
-                }
-                // või võta yhendust
-                ?></p></div>
-            <div class="sptekst2">
-                <span><?php echo icl_t('skptheme', 'voiKirjuta', 'or write') ?> </span>
-                <a class="" href="mailto:<?php echo constant('inf-email') ?>"><?php echo constant('inf-email') ?></a>
-            </div>
-        </div>
-    </div>
-</div>
+				</div><!-- blog-inner-frame -->
+ 
+            </div><!-- #blog-previews -->
+        </div><!-- #blog-frame -->

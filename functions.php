@@ -10,15 +10,27 @@
 	define('TEENUSE_KATEGOORIA_EN', 15);		// Piltide kategooria
 	define('TEENUSE_KATEGOORIA_RU', 16);		// Piltide kategooria
 	define('TAUST_KATEGOORIA', 4);			// Piltide kategooria
-	define('SKPINFO_KATEGOORIA', 7);		// Üks post kategooria,, Kasutan cat nime 'skpinfo'
+	define('SKPINFO_KATEGOORIA', 7);		// Ãœks post kategooria,, Kasutan cat nime 'skpinfo'
     define('KAMP_ET', 20);    //eesti keelse kampaania kategooria ID
     define('KAMP_EN', 21);
     define('KAMP_RU', 22);
 	
-    define('BLOG_ET', 23);//24);
-    define('BLOG_EN', 24);//25);
-    define('BLOG_RU', 25);//26);
+	
+    //define('BLOG_ET', 24);		//Local
+    //define('BLOG_EN', 25);
+    //define('BLOG_RU', 26);
+    define('BLOG_ET', 23);		// Amazing
+    define('BLOG_EN', 24);
+    define('BLOG_RU', 25);
+
 	//constant('TAUST_POST_ID')
+	
+    define('POSTS_PER_BLOG_MAIN', 5);	// Mitu blogiposti previewd on blogi esilehel?
+	
+	//Blogis ei tohi olla hinnaÃ¤ringut
+	global $joonistaHinnaParing;
+	$joonistaHinnaParing = true;
+	
 
 	$locale = get_locale();
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
@@ -186,8 +198,8 @@ function lisaBlokk($postId, $fieldName) {
 		return ( get_post_meta($postId, $fieldName, $single = true) );
 	}
 }
-/* Eemaldab stringis ankru ja paragrafi tähised
-   kasutan seda teenuse pildi urli töötlemiseks
+/* Eemaldab stringis ankru ja paragrafi tÃ¤hised
+   kasutan seda teenuse pildi urli tÃ¶Ã¶tlemiseks
    */
 function eemaldaAP( $content ) {
     $content =
@@ -205,7 +217,7 @@ add_action( 'init', 'olab_register_taxonomy_for_images' );
 
 /* Now add the category field to the Media Library table.
  * This will also add a filter to the table to allow search of attachments by category.
- * Super useful if you’ve got a bunch of files you need to categorize.
+ * Super useful if youâ€™ve got a bunch of files you need to categorize.
  **/
  /** Add a category filter to images */
 function olab_add_image_category_filter() {
@@ -263,7 +275,7 @@ function mb_ucfirst($string, $encoding)
 }
 
 
-//proovin koodi et menüüasjadele data-target lisada
+//proovin koodi et menÃ¼Ã¼asjadele data-target lisada
 add_filter( 'nav_menu_link_attributes', 'skpmenudata_contact_menu_atts', 10, 3 );
 
 function skpmenudata_contact_menu_atts( $atts, $item, $args )
@@ -301,10 +313,17 @@ function skpmenudata_contact_menu_atts( $atts, $item, $args )
   return $atts;
 }
 
+// Catogry lehel (BLOGI pealeht) kuvatakse max 5 viimast postitust
+function limit_posts_per_archive_page() {
+	if ( is_category( array(constant('BLOG_ET'),constant('BLOG_EN'),constant('BLOG_RU'),) )) set_query_var('posts_per_archive_page', constant('POSTS_PER_BLOG_MAIN')); // or use variable key: posts_per_page
+}
+
+add_filter('pre_get_posts', 'limit_posts_per_archive_page');
+
 //icl_register_string($context, $name, $value)
-//$context – the name of the plugin, in a human readable format
-//$name – the name of the string which helps the user (or translator) understand what’s being translated.
-//$value – the string that needs to be translated
+//$context â€“ the name of the plugin, in a human readable format
+//$name â€“ the name of the string which helps the user (or translator) understand whatâ€™s being translated.
+//$value â€“ the string that needs to be translated
 //hilejm use: icl_t($context, $name, $value) => echo icl_t('skptheme', 'tutvustus', 'INTRODUCTION');
 
 icl_register_string('skptheme', 'EsimeneSuurNupp', 'OFFER REAL ESTATE');
@@ -330,9 +349,47 @@ icl_register_string('skptheme', 'SaadaPakkumine', 'SEND OFFER');
 icl_register_string('skptheme', 'voiKirjuta', 'or write');
 icl_register_string('skptheme', 'tutvustus', 'INTRODUCTION');
 icl_register_string('skptheme', '404tekst', 'Sorry! Page not found.');
+icl_register_string('skptheme', 'Blogis_Arhiivi_Pealkiri', 'Archive');
+icl_register_string('skptheme', 'Kuu-Jan', 'January');
+icl_register_string('skptheme', 'Kuu-Veb', 'February');
+icl_register_string('skptheme', 'Kuu-Mar', 'March');
+icl_register_string('skptheme', 'Kuu-Apr', 'April');
+icl_register_string('skptheme', 'Kuu-Mai', 'May');
+icl_register_string('skptheme', 'Kuu-Jun', 'June');
+icl_register_string('skptheme', 'Kuu-Jul', 'July');
+icl_register_string('skptheme', 'Kuu-Aug', 'August');
+icl_register_string('skptheme', 'Kuu-Sep', 'September');
+icl_register_string('skptheme', 'Kuu-Okt', 'October');
+icl_register_string('skptheme', 'Kuu-Nov', 'November');
+icl_register_string('skptheme', 'Kuu-Det', 'December');
 //icl_register_string('skptheme', '', '');
 //icl_register_string('skptheme', '', '');
 
+function teeNumberKuuks($int){
+	switch($int){
+		case(1):return icl_t('skptheme', 'Kuu-Jan', 'January');
+		case(2):return icl_t('skptheme', 'Kuu-Veb', 'February');
+		case(3):return icl_t('skptheme', 'Kuu-Mar', 'March');
+		case(4):return icl_t('skptheme', 'Kuu-Apr', 'April');
+		case(5):return icl_t('skptheme', 'Kuu-Mai', 'May');
+		case(6):return icl_t('skptheme', 'Kuu-Jun', 'June');
+		case(7):return icl_t('skptheme', 'Kuu-Jul', 'July');
+		case(8):return icl_t('skptheme', 'Kuu-Aug', 'August');
+		case(9):return icl_t('skptheme', 'Kuu-Sep', 'September');
+		case(10):return icl_t('skptheme', 'Kuu-Okt', 'October');
+		case(11):return icl_t('skptheme', 'Kuu-Nov', 'November');
+		case(12):return icl_t('skptheme', 'Kuu-Det', 'December');
+		default:return ;
+	}
+}
+
+function countYearPost($yyear){
+	$poste = 0;
+	foreach($yyear as $mmonths){
+		$poste += count($mmonths);
+	}
+	return $poste;
+}
 // keelte linkida kuvamine
 function other_languages(){
     $languages = icl_get_languages('skip_missing=0&orderby=code');
